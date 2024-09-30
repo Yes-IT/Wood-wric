@@ -1,0 +1,20 @@
+{% include "partials/header.njk" %}
+<section class="hero contact">
+    <div>
+        <img src="{{hero}}" alt="hero image" />
+        <h1>{{title}}</h1>
+    </div>
+</section>
+<section>
+    <div>
+        {{contents}}
+        {%- if contactType == 'success' -%}
+        <div style="min-width:400px;"> </div>
+
+        {%- else -%}
+        {% include "partials/contact-form.njk" %}
+        {%- endif -%}
+
+    </div>
+</section>
+{% include "partials/footer.njk" %}

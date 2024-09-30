@@ -1,0 +1,93 @@
+{% include "partials/header.njk" %}
+	<style>html{overflow:hidden}body{overflow-x: hidden;perspective: 8px;perspective-origin: 0}</style>
+	<section class="home-header index-header">
+		<div class="parallax">
+            <h1 class="sr-only">You are the wood industry</h1>
+			<img src="/imgs/youare.svg" alt=" "/><br><br>
+			<div class="relative" id="embed-toggle">
+                <img src="/imgs/vid-home.png.jpg" class="video-poster"  />
+                <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
+            </div>
+            <div id="video-embed" class="video-embed"></div>
+            <p>{{intro}}</p>
+			<div class="square-graphics"></div>
+            <div class="square-graphics"></div>
+            <div class="square-graphics"></div>
+            <div class="event-buttons">
+              <a href="#signup"><div>Subscribe to WIRC Updates</div></a>
+            </div>
+		</div>
+	</section>
+     <section class="index">
+        <div class="hcards">
+                {% for card in cards %}
+                    <div class="hcard">
+                        <img src="{{card.img}}" alt="{{card.title}}"/>
+                        <h3>{{card.title}}</h3>
+                        <p>{{card.copy}}</p>
+                        <a href="{{card.url}}"><div>{{card.btnLabel}}</div></a>
+                    </div>
+                {% endfor %}
+        </div>
+    </section>
+    <section class="did-you-know py-10">
+        <h2 class="cards-heading pb-1 mb-0 pt-16">Did You Know?</h2>
+        <p class="text-center pt-1 pb-5">Here are a few key findings from our <a href="/workforce-analysis/" class="underline text-primary">workforce analysis</a> of the wood industry.</p>
+        <div class="lg:flex justify-center gap-10 flex-wrap">
+            {% for card in didYouKnow.cards %}
+                <div class="dcard mb-4 lg:w-300 mh-270 lg:h-330 px-4 py-2 flex flex-col justify-center items-center text-white text-center relative">
+                    <img src="{{card.img}}" class="absolute w-full h-full object-cover z-1" alt=""/>
+                    <div class="relative z-10">
+                        {% if card.icon %}
+                            <div class="bg-white rounded-full w-70 h-70 p-2 mx-auto flex flex-col justify-center items-center">
+                                <img src="{{ card.icon }}" width="50" height="50" alt="">
+                            </div>
+                        {% endif %}
+                        <h3 class="">{{card.headline}}</h3>
+                        <p class="font-medium">{{card.copy}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="related-articles">
+        <h2 class="cards-heading">Read More About the Industry</h2>
+        {%- set articles = collections['blog'] | slice(3)-%}
+        {%- set articles = articles[0] -%}
+        {% include "partials/related-articles.njk" %}
+    </section>
+	<section class="sbs-photos-alt">
+		<div>
+			<div>
+				{{contents}}
+				<a href="/about"><div>About Us</div></a>
+			</div>
+		</div>
+	</section>
+	<script>
+		document.body.addEventListener('scroll', function() {
+			let stat = document.querySelector('.stat')
+			document.body.offsetHeight - stat.getBoundingClientRect().top > 300 && stat.classList.add('animate')
+		});
+
+        
+    var embedToggle = document.getElementById('embed-toggle');
+        var embed = document.getElementById('video-embed');
+        var embedCode = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ftLS7Iny5wY?autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        embedToggle.addEventListener('click',function click(event) {
+            event.preventDefault();
+            embedToggle.parentNode.removeChild(embedToggle);
+            embed.classList.add('active');
+            embed.innerHTML = embedCode;
+            // document.getElementById('play-overlay').style.display = 'none';
+        });
+    
+    window.addEventListener('load', function (evt) {
+        //modal
+        MicroModal.init({
+            disableScroll: true
+        });
+    })
+	</script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+{% include "partials/footer.njk" %}

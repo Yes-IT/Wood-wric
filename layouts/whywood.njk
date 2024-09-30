@@ -1,0 +1,91 @@
+{% include "partials/header.njk" %}
+	<style>#nav{transform:translateZ(500px)}</style>
+	<section class="hero">
+		<div>
+			<img src="{{hero}}" alt="hero image"/>
+			<h1>{{title}}</h1>
+		</div>
+	</section>
+	<section class="why-wood">
+		<div>
+			{{contents}}
+		</div>
+	</section>
+	<section class="slider">
+		<div>
+			<input type="radio" name="slider" checked/>
+			<input type="radio" name="slider" />
+			<input type="radio" name="slider" id="rb-1"/>
+			<input type="radio" name="slider" id="rb-2"/>
+			<div id="slide-1" data-slide-trigger="#rb-1">
+				<div class="arrow-button left"></div>
+				<img src="{{slider.left.img}}" alt="{{slider.left.title}} background"/>
+				<div>
+					<h3>{{slider.left.title}}</h3>
+					<p>{{slider.left.copy}}</p>
+				</div>
+				<div>
+					<h3>{{slider.left.title}}</h3>
+					<ul>
+						{% for bullet in slider.left.bullets %}
+							<li class="bullet-neg">{{bullet.title}}
+								<p>{{bullet.copy}}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div id="slide-2" data-slide-trigger="#rb-2">
+				<div class="arrow-button right"></div>
+				<img src="{{slider.right.img}}" alt="{{slider.right.title}} background"/>
+				<div>
+					<h3>{{slider.right.title}}</h3>
+					<p>{{slider.right.copy}}</p>
+				</div>
+				<div>
+					<h3>{{slider.right.title}}</h3>
+					<ul>
+						{% for bullet in slider.right.bullets %}
+							<li class="bullet-check-mark">{{bullet.title}}
+								<p>{{bullet.copy}}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="cards" tabindex="0">
+		<div>
+			<h2>{{cardTitle}}</h2>
+			<div>
+				{% for card in cards %}
+					<div>
+						<img src="{{card.img}}" alt="{{card.title}} background"/>
+						<div>
+							<img src="{{card.icon}}" alt="{{card.title}} icon"/>
+							<h3>{{card.title}}</h3>
+							<div>Learn More ›</div>
+						</div>
+						<div>
+							<h3>{{card.title}}</h3>
+							<p>{{card.copy}}</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+    </section>
+    <script>
+        var triggers = document.querySelectorAll('[data-slide-trigger');
+        triggers.forEach(function (el) {
+            el.addEventListener('click', function (event) {
+                console.log(el.dataset);
+
+                var rb = document.querySelector(el.dataset.slideTrigger);
+                rb.checked = true;
+            })
+        })
+
+    </script>
+{% include "partials/footer.njk" %}

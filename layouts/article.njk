@@ -1,0 +1,53 @@
+{% if image %}
+    {% set ogImage = siteConfig.siteUrl + image %}
+{% endif %}
+{% include "partials/header.njk" %}
+{% set footer = {
+    title: "Find the Right Career in the Wood Industry",
+    btnLabel: "Explore Careers",
+    url: "/careers"
+} %}
+{%- set heroImagePositionStyle =  '' -%}
+{% if heroPosition %}
+{%- set heroImagePositionStyle = 'style="object-position: ' + heroPosition + ';"'-%}
+{% endif %}
+<div class="gradient-container">
+<section class="hero">
+    <div class="article-hero">
+        <img src="{{image}}" id="article-hero-img" {{ heroImagePositionStyle }} alt=""/>
+        <div class="article-category">Article</div>
+        <h1>{{title}}</h1>
+    </div>
+</section>
+<section>
+    <div class="article-body">
+        {{contents}}    
+
+        {% include "partials/social-share.njk" %}
+    </div>
+    {% if postCta.headline %}
+        <div class="article-cta text-center">
+            <h3>{{postCta.headline}}</h3>
+            <a href="{{postCta.url}}" class="btn">{{postCta.label}}</a>
+        </div>
+        <br><br><br>
+    {% endif %}
+    
+</section>
+<section><br><br>
+    <h2 class="cards-heading">Read More About the Industry</h2>
+    {% if relatedArticles | length %}
+        {%- set articles = relatedArticles | getRelatedArticlesByIds(collections.blog) -%}
+    {% else %}
+    {%- set articles = collection | getRelatedArticles(collections, path) -%}
+    {% endif %}
+    {% include "partials/related-articles.njk" %}
+</section>
+</div>
+{% if quizId %}
+{% set quiz = quizId | findByField('id', quizzes) %}
+<script>
+    var quizData = JSON.parse('{{ quiz | toJson}}');
+</script>
+{% endif %}
+{% include "partials/footer.njk" %}

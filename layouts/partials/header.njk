@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+{% include 'partials/head.njk' %}
+<body>
+    <!-- Google Tag Manager (noscript) viq -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPJ5N8K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% if not hideNav %}
+	<header>
+		<nav id="nav">
+			<div>
+				<a href="/">
+					<div class="img"></div>
+				</a>
+				<div id="menu">
+					<input type="checkbox"/>
+					<div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul>
+						<li><a href="/why-wood">Why Wood</a></li>
+						<li><a href="/get-started">Get Started</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/videos">Videos</a></li>
+						<li><a href="/blog">Blog</a></li>
+						<li><a href="/events">Events</a></li>
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="/careers">Explore Careers</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+    </header>
+    {% endif %}

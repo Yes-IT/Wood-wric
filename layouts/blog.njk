@@ -1,0 +1,68 @@
+{% include "partials/header.njk" %}
+{% set footer = {
+title: "Find the Right Career in the Wood Industry",
+btnLabel: "Explore Careers",
+url: "/careers"
+} %}
+{% if pagination %}
+{% set postsCollection = pagination.files %}
+{% else %}
+{% set postsCollection = blog %}
+{% endif %}
+{%- set additionalHeadScripts -%}
+{%- endset -%}
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<section class="default">
+    <h2 class="cards-heading">Articles</h2>
+    <div class="mgrid">
+        {% for item in postsCollection %}
+        <div class="mgrid-item {{ 'large' if loop.index == 1 or loop.index == 8 }} {{'mgrid-sizer' if loop.index == 2}}">
+            <a href="/{{item.path}}">
+                <div class="img">
+                    <img src="{{item.thumbnail}}" alt="" class="" />
+                    <div class="overlay"></div>
+                </div>
+                <div class="copy">
+                    <h3 class="">
+                        {%- if item.shortTitle -%}
+                            {{item.shortTitle}}
+                        {%- else -%}
+                            {{item.title}}
+                        {%- endif -%}
+                    </h3>
+                    <p class="excerpt">{{item.excerpt}}</p>
+                    <span class="">Read More 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 12" width="6" heigth="12">
+                            <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5">
+                                <path d="M1.5 1.5l3 4M1.5 10.5l3-4" />
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% include "partials/pagination.njk" %}
+</section>
+</div>
+{% if quizId %}
+{% set quiz = quizId | findByField('id', quizzes) %}
+<script>
+    var quizData = JSON.parse('{{ quiz | toJson}}');
+</script>
+{% endif %}
+<script>
+    window.addEventListener('load', function () {
+
+        var elem = document.querySelector('.mgrid');
+        var msnry = new Masonry(elem, {
+            // options
+            itemSelector: '.mgrid-item',
+            columnWidth: '.mgrid-sizer',
+            percentPosition: true
+        });
+    });
+
+</script>
+{% include "partials/footer.njk" %}

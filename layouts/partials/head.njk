@@ -1,0 +1,60 @@
+<head>
+    {%- if not canonical -%}
+    {% set canonical = (siteConfig.siteUrl + '/' + path + '/')%}
+    {%- endif -%}
+    {% set canonical = canonical | cleanUrl %}
+	<meta charset="UTF-8"/>
+    <title>{{seo.pageTitle}}{{siteConfig.seoSuffix}}</title>
+    <link rel="canonical" href="{{ canonical }}">
+	<meta name="description" content="{{seo.description}}"/>
+	<meta property="og:site_name" content="{{siteConfig.siteName}}"/>
+    {%- set ogImage = ogImage | default(siteConfig.siteUrl+ "/imgs/logo.svg") -%}
+    <meta property="og:image" content="{{ogImage}}"/>
+    <meta name="description" content="{{og.description}}"/>
+    <meta property="og:url" content="{{ canonical}}" />
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:title" content="{{seo.pageTitle}}"/>
+	<meta name="twitter:description" content="{{seo.description}}"/>
+	<meta name="twitter:image" content="https://{{siteConfig.siteUrl}}/imgs/logo.svg"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="google-site-verification" content="idBZAm92FzipY7vxc4OCHrxfxgL5_kv3YpzXMwj0Bwo" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#008783">
+	<meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/youwood.css">
+
+	{% if styleSheets %}
+		{% for sheet in styleSheets %}
+			<link rel="stylesheet" href="{{ sheet}}">
+		{% endfor %}
+	{% endif %}
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "LocalBusiness",
+			"name": "{{siteConfig.siteName}}",
+			"url": "{{siteConfig.siteUrl}}",
+			"logo": "{{siteConfig.siteUrl}}/imgs/logo.svg",
+			"image": "{{siteConfig.siteUrl}}/imgs/logo.svg"
+		}
+	</script>
+    <!-- Google Tag Manager ind -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T5X33W6');</script>
+        <!-- End Google Tag Manager ind -->
+
+    {% if context !== 'production' %}
+    <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=s49clacl9esbt8scw9szua" async="true"></script>
+    {% endif %}
+    {% if additionalHeadScripts %}
+        {{additionalHeadScripts}}
+    {% endif %}
+	<script>!function(s,a,e,v,n,t,z){if(s.saq)return;n=s.saq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!s._saq)s._saq=n;n.push=n;n.loaded=!0;n.version='1.0';n.queue=[];t=a.createElement(e);t.async=!0;t.src=v;z=a.getElementsByTagName(e)[0];z.parentNode.insertBefore(t,z)}(window,document,'script','https://tags.srv.stackadapt.com/events.js');saq('ts', 'I0BJwBbq_NRhSw5wk1uMyw');</script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>

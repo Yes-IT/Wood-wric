@@ -1,0 +1,252 @@
+
+{% include "partials/header.njk" %}
+<div class="lp-container lp-{{path}}">
+<style>html{overflow:hidden}body{overflow-x: hidden;perspective: 8px;perspective-origin: 0}</style>
+<section class="index-header">
+    <div class="parallax lp-parallax lp-parallax-1">
+        <h1 class="sr-only">{{jumboSvgAltText}}</h1>
+        <img src="{{jumboSvg}}" width="577" alt=" "/><br><br>
+        {% if video.embed %}
+        <div class="relative" id="embed-toggle">
+            <img src="{{video.poster}}" class="video-poster"  />
+            <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
+        </div>
+        <div id="video-embed" class="video-embed"></div>
+        {% endif %}
+        <div class="video-caption">{{video.caption}}</div>
+        <div class="square-graphics" id="sg-1"></div>
+        <div class="square-graphics" id="sg-2"></div>
+        <div class="square-graphics" id="sg-3"></div>
+    </div>
+</section>
+<section class="mb3">
+    <h3 class="text-center">{{calloutSection.headline}}</h3>
+    <div class="callout-section-container">
+        <div class="callout-section-grid">
+            <div>
+                <ul class="right-bullets">
+                    <li>{{calloutSection.copyItems[0].copy | md}}</li>
+                    <li>{{calloutSection.copyItems[1].copy | md}}</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="left-bullets">
+                    <li>{{calloutSection.copyItems[2].copy | md}}</li>
+                    <li>{{calloutSection.copyItems[3].copy | md}}</li>
+                </ul>
+            </div>
+        </div>
+        <img src="{{calloutSection.img}}" class="callout-section-img" alt="">
+    </div>
+    {% if calloutSection.cta.url %}
+    <div class="text-center">
+        <br><br>
+        <a href="{{calloutSection.cta.url}}" class="btn">{{calloutSection.cta.label}}</a>
+    </div>
+    {% endif %}
+</section>
+<section class="mb3 index-header relative">
+    <div class="parallax lp-parallax height-auto">
+        <div class="square-graphics"></div>
+        <div class="square-graphics"></div>
+        <div class="square-graphics"></div>
+    </div>
+</section>
+<section class="mb3 index-header">
+    <div class="quiz-grid">
+        <div>
+            <div class="cta-blocks">
+                {% for item in ctaBlocks %}
+                    <div class="cta-block">
+                        <div class="cta-block-text">
+                            <div class="cta-block-subhead">{{item.subhead}}</div>
+                            <div class="cta-block-headline">{{item.headline}}</div>
+                            <div class="cta-block-copy">{{item.copy}}</div>
+                            <a href="{{item.url}}" class="cta-block-link">
+                                {{item.linkLabel}}
+                                <svg width="7" height="10" viewbox="0 0 7 10">
+                                    <line x1="2" y1="0" x2="7" y2="5"></line>
+                                    <line x1="2" y1="10" x2="7" y2="5"></line>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cta-img-overlay"></div>
+                        <img src="{{item.image}}" class="cta-block-img" />
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="quiz-container">
+            <div id="quiz"></div>
+        </div>
+    </div>
+</section>
+{% if quotes.length %}
+<section class="quote-container-bg relative" data-carousel data-cycle-time="15000">
+<div>
+    {%- for quote in quotes -%}
+    <div class="quote-carousel-item carousel__item {{ 'active show animated' if loop.index0 == 0}}">
+        <div class="quote-container layout-{{quote.imageLayout}} ">
+            <div class="c1">
+                <div class="copy-container">
+                    <div class="quotation">{{quote.copy}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="92" height="85" viewBox="0 0 92 85"><path fill="#FFF" d="M20.15 85c5.614 0 10.326-1.93 14.136-5.789C38.096 75.352 40 70.376 40 64.283c0-4.671-1.103-8.632-3.308-11.882-2.206-3.25-5.314-5.585-9.324-7.007L38.496 0H19.55L5.414 42.652C3.208 48.34 1.754 52.655 1.053 55.6.35 58.545 0 61.44 0 64.283 0 70.173 1.905 75.1 5.714 79.06 9.524 83.02 14.336 85 20.15 85zm52 0c5.614 0 10.326-1.93 14.136-5.789C90.096 75.352 92 70.376 92 64.283c0-4.671-1.103-8.632-3.308-11.882-2.206-3.25-5.314-5.585-9.324-7.007L90.496 0H71.55L57.414 42.652c-2.206 5.687-3.66 10.003-4.361 12.948C52.35 58.545 52 61.44 52 64.283c0 5.89 1.905 10.816 5.714 14.776C61.524 83.02 66.336 85 72.15 85z"/></svg>
+                    </div>
+                    <div class="attribution">{{quote.attestant}}
+                        <div class="attestant-details">{{quote.attestantDetails}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="c2"><img src="{{quote.img}}" class="quote-img" /></div>
+        </div>
+    </div>
+    {%- endfor -%}
+</div>
+{% if quotes.length > 1 %}
+<div class="dots-container">
+    <div></div>
+    <div class="dots-col">
+        <div class="dots">
+            {%- for i in quotes -%}
+            <span data-dot="{{loop.index0}}" class="dot {{ 'active' if loop.index0 == 0}}"></span>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+{% endif %}
+</section>
+{% endif %}
+{%- if carousel.length -%}
+<div class="content-carousel mb4" id="content-carousel" data-carousel>
+    <div class="content-carousel__container">
+        {%- for item in carousel -%}
+        <div class="carousel__item content-carousel__item gradient-container {{ 'active' if loop.index0 == 0}} item-{{loop.index}}">
+            <div class="content-carousel__img">
+                <img src="{{item.img}}" alt="{{item.headline | escape }}" class="lazy">
+            </div>
+            <div class="content-carousel__copy">
+                <div class="content-carousel__headline">{{item.headline}}</div>
+                <div>
+                    {{item.copy}}
+                    {% if item.button.url %}
+                    <br><a href="{{item.button.url}}" class="btn">{{item.button.label}}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+    <div class="dots">
+        {%- for i in carousel -%}
+        <span data-dot="{{loop.index0}}" class="dot {{ 'active' if loop.index0 == 0}}"></span>
+        {%- endfor -%}
+    </div>
+</div>
+{%- endif -%}
+{% if events %}
+<section class="gradient-container pb4">
+    {% set events = events | sortEvents  %}
+    <h2 class="cards-heading">{{eventsHeadline}}</h2>
+    <p class="text-center" style="max-width: 715px;margin:auto;">
+        {{eventsIntro}}
+    </p>
+    <div class="cards-container">
+        {% for event in events %}
+        {% if loop.index <= 3 %}
+            <div class="card" data-after-value="{{event.date}}">
+                <div class="card-img-container">
+                    <img src="{{event.img}}" alt="{{event.name}} image" class="card-img"/>
+                </div>
+                <div class="card-details">
+                    <div class="card-label">{{event.dateDisplay }}</div>
+                    <h3 class="card-title">{{event.name}}</h3>
+                    <p class="card-description">{{event.description | md}}</p>
+                    <div class="card-location">{{event.location}}</div>
+                    <div class="card-links">
+                        <a href="{{event.info}}" class="btn btn-outline">More Info</a>
+                        <a href="{{event.rsvp}}" class="btn" target="_blank">RSVP</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="text-center">
+        <a href="/events" class="primary-color">View All Events
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 12" width="6" heigth="12">
+                <g fill="none" fill-rule="evenodd" stroke="#018783" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5">
+                    <path d="M1.5 1.5l3 4M1.5 10.5l3-4"/>
+                </g>
+            </svg>
+        </a>
+    </div>
+    </section>
+{% endif %}
+<section class="footer" id="footer">
+    <div>
+        <h2>Not Sure Where to Start? We Can Help</h2>
+        <a data-micromodal-trigger="modal-1"><div>Contact Us</div></a>
+    </div>
+</section>
+</div>
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <div class="modal__title">Contact US</div>
+                <div id="form">
+                    <script>
+                            // Select the node that will be observed for mutations
+                        var targetNode = document.querySelector('#form');
+                        // Options for the observer (which mutations to observe)
+                        var config = { childList: true};
+                        // Callback function to execute when mutations are observed
+                        var callback = function (mutationsList, observer) {
+                            var select = document.querySelector('[data-name="interest"]');
+                            if(select){
+                                select.options[select.options.length] = new Option('Select an interest...', '', true, true);
+                                observer.disconnect();
+                            }
+                        };
+                        // Create an observer instance linked to the callback function
+                        var observer = new MutationObserver(callback);
+                        // Start observing the target node for configured mutations
+                        observer.observe(targetNode, config);
+                    </script>
+                    {{form}}
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script>
+    var embedToggle = document.getElementById('embed-toggle');
+        var embed = document.getElementById('video-embed');
+        var embedCode = '{{video.embed}}';
+        embedToggle.addEventListener('click',function click(event) {
+            event.preventDefault();
+            embedToggle.parentNode.removeChild(embedToggle);
+            embed.classList.add('active');
+            embed.innerHTML = embedCode;
+            document.getElementById('play-overlay').style.display = 'none';
+        });
+    
+    window.addEventListener('load', function (evt) {
+        //modal
+        MicroModal.init({
+            disableScroll: true
+        });
+    })
+</script>
+{% if quizId %}
+{% set quiz = quizId | findByField('id', quizzes) %}
+<script>
+    var quizData = JSON.parse('{{ quiz | toJson}}');
+</script>
+{% endif %}
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+{% include "partials/footer.njk" %}

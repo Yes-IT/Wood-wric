@@ -1,0 +1,56 @@
+{% include "partials/header.njk" %}
+	<section class="hero">
+		<div>
+			<img src="{{hero}}" alt="hero image"/>
+			<h1>{{title}}</h1>
+		</div>
+	</section>
+	<section class="why-wood">
+		<div>
+			{{contents}}
+		</div>
+	</section>
+	<section class="roles">
+		<div>
+			{% for role in careers | sortCareers %}
+				<div>
+					<input type="checkbox"  style="z-index: 111199;"/>
+					<img src="{{role.img}}" alt="{{role.title}} image"/>
+					<h3>{{role.title}} ›</h3>
+					<div style="z-index: 111112;">
+						<img src="{{role.largeImg}}" alt="{{role.title}} image"/>
+						<div class="close"></div>
+						<div>
+							<h3>{{role.title}} - ${{(role.salary | replace(",", "") / 1000) | round }}K</h3>
+							<h2>What they do</h2>
+							<p>{{role.what}}</p>
+							<h2>Requirements</h2>
+							<p>{{role.requirements}}</p>
+							<h2>Skills</h2>
+							<p>{{role.skills}}</p>
+							<h2>Certificates</h2>
+							<p>{{role.certificates}}</p>
+							<h2>Education</h2>
+							<p>{{role.education}}</p>
+							<h2>Salary</h2>
+							<p>The median annual wage is ${{role.salary}}.</p>
+							<a href="/get-started"><div>How to get started</div></a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	<script>
+		var lastScrollTop = 0
+		document.querySelectorAll('.roles input').forEach((i)=>{i.addEventListener('click',(e)=>{e.target.checked ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll')})})
+		document.addEventListener('scroll',()=>{
+			var scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop
+			if(!document.querySelector('.roles input:checked')) {
+				lastScrollTop = scrollTop
+				return
+			}
+			scrollTop !== lastScrollTop && window.scrollTo(0, lastScrollTop)
+		})
+	</script>
+{% include "partials/footer.njk" %}

@@ -1,0 +1,31 @@
+
+<div class="cards-container">
+    {% for item in articles %}
+    {% if loop.index <= 3 %}
+    <div class="card">
+        <div class="card-img-container">
+            <a href="/{{item.path}}"><img src="{{item.thumbnail}}" alt="{{event.name}} image" class="card-img"/></a>
+        </div>
+        <div class="card-details">
+            <a href="/{{item.path}}">
+                <h3 class="card-title small">
+                    {%- if item.shortTitle -%}
+                            {{item.shortTitle}}
+                        {%- else -%}
+                            {{item.title}}
+                        {%- endif -%}
+                </h3>
+            </a>
+            <p class="card-description mh" style="min-height: 122px;">{{item | getExcerpt}}</p>
+            <a href="/{{item.path}}" class="card-link">Read More
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 12" width="6" heigth="12">
+                    <g fill="none" fill-rule="evenodd" stroke="#018783" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5">
+                        <path d="M1.5 1.5l3 4M1.5 10.5l3-4"/>
+                    </g>
+                    </svg>
+            </a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

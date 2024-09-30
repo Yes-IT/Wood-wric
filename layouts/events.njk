@@ -1,0 +1,36 @@
+{% include "partials/header.njk" %}
+	<section class="hero">
+		<div>
+			<img src="{{hero}}" alt="hero image"/>
+			<h1>{{title}}</h1>
+		</div>
+	</section>
+	<section class="events default">
+		<div>
+			<div>
+                {% if events %}
+                    {% set events = events | sortEvents  %}
+                    {% for event in events %}
+                        <div class="event" data-after-value="{{event.date}}">
+                            <div class="event-img-container">
+                                <img src="{{event.img}}" alt="{{event.name}} image" class="event-img"/>
+                            </div>
+                            <div class="event-details">
+                                <div class="event-date">{{event.dateDisplay }}</div>
+                                <h3 class="event-title">{{event.title}}</h3>
+                                <p class="event-description">{{event.description | md}}</p>
+                                <div class="event-location">{{event.location}}</div>
+                                <div class="event-buttons">
+                                    <a href="{{event.info}}" target="_blank" class="event-more-info"><div>More Info</div></a>
+                                    <a href="{{event.rsvp}}" target="_blank"><div>RSVP</div></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+			<div>
+			<div>
+			</div>
+		</div>
+	</section>
+{% include "partials/footer.njk" %}

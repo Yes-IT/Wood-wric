@@ -1,0 +1,27 @@
+<section class="container text-center">
+<div class="pagination  uppercase">
+{% set btnClass = ''%}
+{%- set leftArrow -%}
+<svg width="7" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#008783" d="M2.356 6.295l4.47-4.47-1.06-1.06-5.531 5.53 5.53 5.53 1.06-1.06z" fill-rule="evenodd"/></svg>
+{%- endset  -%}
+{%- set rightArrow -%}
+<svg width="7" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#008783" d="M4.705 6.295l-4.47-4.47 1.06-1.06 5.53 5.53-5.53 5.53-1.06-1.06z" fill-rule="evenodd"/></svg>
+{%- endset  -%}
+
+{%- if pagination.first and pagination.num > 1 -%}
+<!-- <a href="/{{ pagination.first.path }}" class="">{{leftArrow}}</a> -->
+{%- endif -%}
+{% if pagination.previous %}
+<a href="/{{ pagination.previous.path }}" class="{{btnClass}}">{{leftArrow}}{{leftArrow}} Previous</a>
+{% endif %} 
+{% if pagination.prev%}
+<a href="/{{ pagination.prev.path }}" class="{{btnClass}}">{{leftArrow}}{{leftArrow}} Previous</a>
+{% endif %} 
+{% if pagination.next %}
+<a href="/{{ pagination.next.path }}" class="{{btnClass}}">Next {{rightArrow}}{{rightArrow}}</a>
+{% endif %}
+{%- if pagination.last -%}
+<!-- <a href="/{{ pagination.last.path }}" class="{{btnClass}}">{{rightArrow}}</a> -->
+{%- endif -%}
+</div>
+</section>

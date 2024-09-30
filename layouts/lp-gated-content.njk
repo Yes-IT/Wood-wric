@@ -1,0 +1,77 @@
+{%- set styleSheets = ['/lp.css'] -%}
+<style>
+    header #nav {
+        box-shadow: none;
+    }
+    .lp-copy a{
+        text-decoration: underline;
+        color: #008783;
+    }
+    #form ._form{
+        background: white;
+        box-shadow: 1px 14px 16px 0px #00000036;
+    }
+    #form ._form div._form-title{
+        color:#B48361 !important;
+        font: 24px "Montserrat",sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+    ._form ._form_label{
+        display: none !important;
+    }
+    ._form ._form-label{
+        font-weight: normal !important;
+        font: 16px "Montserrat",sans-serif;
+        color: #252525;
+    }
+    ._form_element:has(._checkbox-radio) fieldset{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        align-content: center;
+    }
+
+    ._form_element:has(._checkbox-radio) fieldset  ._row{
+
+        width:94%;
+    }
+    ._form_element:has(._checkbox-radio) fieldset ._row._checkbox-radio{
+        width: 5%;
+        align-items: center;
+    }
+    ._form_element:has(._checkbox-radio) fieldset ._row._checkbox-radio label{
+        display: none;
+    }
+</style>
+{% if hero.img  %}
+    {% set ogImage = siteConfig.siteUrl + hero.img  %}
+{% endif %}
+{% include "partials/header.njk" %}
+<div class="lp-container lp-{{ path }} px-4">
+    <section class="mw-1440 mx-auto" style="background: url('{{ hero.bg }}') no-repeat;">
+        <div class="grid lg:grid-cols-[1fr_35%] items-center mx-auto px-8 lg:px-0">
+            <img src="{{ hero.img }}" class="relative lg:left-32 lg:mb-0 lg:mt-24 mb-10" alt="">
+            <div class="relative lg:-left-24">
+                <div class="lp-headline  text-48 font-display font-bold uppercase ">
+                   {{ hero.copy }}
+                </div>
+                <a href="#form" class="btn">{{ hero.ctaLabel }}</a>
+            </div>
+        </div>
+    </section>
+    <div class="pt-16 mw-1045 mx-auto grid lg:grid-cols-[1fr_54%] gap-20">
+        <div class="lp-copy">
+            {{ copy | md | safe }}
+        </div>
+        <div id="form" class="mw-600">
+        {{ formEmbed }}
+        </div>
+    </div>
+</div>
+<script>
+    window._form_callback = function(id){
+        document.getElementById(`_form_${id}_`).innerHTML = `{{ sucessMessage | safe }}`
+    }
+</script>
+{% include "partials/footer.njk" %}

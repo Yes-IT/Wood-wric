@@ -1,0 +1,29 @@
+{% include "partials/header.njk" %}
+	<section class="hero">
+		<div>
+			<img src="{{hero}}" alt="hero image"/>
+			<h1>{{title}}</h1>
+		</div>
+	</section>
+	<div class="intro">
+		<h2 style="max-width: 20ch;">{{ intro.headline }}</h2><br>
+		{{ intro.copy  | md }}
+	</div>
+	<section class="content-container alternating-images get-started relative pt-10">
+		{% set cls = cycler("img-right","img-left") %}
+		{% for section in sections %}
+			<div class="item-container {{ cls.next() }}  pb4 relative">
+					<img class="img" src="{{ section.image }}" alt="">
+				<div class="content">
+					<h2>{{section.title}}</h2>
+					{{section.copy | md }}
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+	<!--<section class="events-footer">
+		<div>
+			{{contents}}
+		</div>
+	</section>-->
+{% include "partials/footer.njk" %}

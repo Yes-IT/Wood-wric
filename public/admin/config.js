@@ -701,57 +701,18 @@ const config = {
     },
   ],
 },
-    {
-  label: "Get Started",
-  name: "get-started",
-  folder: "src/content/get-started",
+ {
+  label: "Why Wood",
+  name: "why-wood",
+  folder: "src/content/why-wood",
   create: true,
   editor: { preview: false },
   fields: [
-    { label: "Title", name: "title", widget: "string", required: true },
-    {
-      label: "Description",
-      name: "description",
-      widget: "text",
-      required: true,
-    },
-    {
-      label: "Steps",
-      name: "steps",
-      widget: "list",
-      fields: [
-        { label: "Title", name: "title", widget: "string", required: true },
-        { label: "Image", name: "image", widget: "image", required: true },
-        {
-          label: "Description",
-          name: "description",
-          widget: "object",
-          fields: [
-            {
-              label: "Text",
-              name: "text",
-              widget: "text",
-              required: true,
-            },
-            {
-              label: "Points",
-              name: "points",
-              widget: "list",
-              fields: [
-                {
-                  label: "Point",
-                  name: "point",
-                  widget: "text",
-                  required: true,
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
+    { label: "Heading", name: "heading", widget: "string", required: true },
+    { label: "Description", name: "description", widget: "text", required: true }
   ],
-},
+}
+
   {
   label: "Get Started",
   name: "get-started",

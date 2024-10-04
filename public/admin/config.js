@@ -667,27 +667,6 @@ const config = {
           widget: "text",
           required: true,
         },
-        {
-  label: "Videos",
-  name: "videos",
-  folder: "src/content/videos",
-  create: true,
-  editor: { preview: false },
-  fields: [
-    { name: "heading", label: "Heading", widget: "string", required: true },
-    { name: "description", label: "Description", widget: "text", required: true },
-    {
-      label: "Videos",
-      name: "videos",
-      widget: "list",
-      required: true,
-      fields: [
-        { name: "link", label: "Link", widget: "string", required: true },
-        { name: "image", label: "Image", widget: "image", required: true },
-        { name: "heading", label: "Heading", widget: "string", required: true },
-        { name: "description", label: "Description", widget: "text", required: true },
-      ],
-    },
   ],
 },
       ],

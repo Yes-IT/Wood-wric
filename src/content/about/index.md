@@ -1,41 +1,4 @@
 ---
-layout: about.njk
-title: About
-hero: /imgs/img2.jpg
-seo:
-  description: >-
-    WIRC provides a collection of wood industry tools and solutions to attract
-    and retain employees, while improving the overall perception of the
-    industry. 
-  pageTitle: About Us
-headings:
-  - heading: Heading 1
-  - heading: Heading 2
-  - heading: Heading 3
-  - heading: Heading 4
-descriptions:
-  - description: Description 1
-  - description: Description 2
-  - description: Description 3
-  - description: Description 4
-cards:
-  - title: Improve Perceptions
-    copy: >-
-      We partner with educators, legislators, associations and the media to
-      communicate what the wood industry of today (and tomorrow) really looks
-      like.
-    img: /imgs/icon-sawblade-primary.svg
-  - title: Strengthen Workforce
-    copy: >-
-      We work with trade schools, colleges, and workforce advocacy
-      organizations to develop programs that support people entering the wood
-      industry.
-    img: /imgs/icon-saw.svg
-  - title: Create Better Environments
-    copy: >-
-      We collaborate with our members and member companies to improve
-      engagement, satisfaction and work culture at every level.
-    img: /imgs/icon-chisel.svg
 execAssociations:
   - title: Architectural Woodwork Institute (AWI)
     img: /imgs/assoc-awi.png
@@ -49,10 +12,43 @@ execAssociations:
   - title: Wood Machinery Manufacturers of America (WMMA)
     img: /imgs/WIALogo_Web_4C.png
     url: https://woodindustry.org/
+cards:
+  - title: Improve Perceptions
+    copy: We partner with educators, legislators, associations and the media to
+      communicate what the wood industry of today (and tomorrow) really looks
+      like.
+    img: /imgs/icon-sawblade-primary.svg
+  - title: Strengthen Workforce
+    copy: We work with trade schools, colleges, and workforce advocacy organizations
+      to develop programs that support people entering the wood industry.
+    img: /imgs/icon-saw.svg
+  - title: Create Better Environments
+    copy: We collaborate with our members and member companies to improve
+      engagement, satisfaction and work culture at every level.
+    img: /imgs/icon-chisel.svg
+layout: about.njk
+title: About
+description: This is About Section
+headings:
+  - heading: Heading 1
+  - heading: Heading 2
+  - heading: Heading 3
+  - heading: Heading 4
+descriptions:
+  - description: Description 1
+  - description: Description 2
+  - description: Description 3
+  - description: Description 4
+hero: /imgs/img2.jpg
 footer:
   title: Get Involved and Support Our Mission
   btnLabel: Contact Us
   url: /contact
+seo:
+  description: "WIRC provides a collection of wood industry tools and solutions to
+    attract and retain employees, while improving the overall perception of the
+    industry. "
+  pageTitle: About Us
 ---
 ## Let’s Build Something Together
 

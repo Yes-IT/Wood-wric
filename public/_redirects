@@ -1,0 +1,9 @@
+<!-- # Redirect default Netlify subdomain to primary domain
+
+/go /wood-industry-passion/?utm_source=poster
+/work /?utm_source=handout -->
+
+# Redirect rules
+
+/go /spectacular-syrniki-a17634/?utm_source=poster 301!
+/work /?utm_source=handout 301!

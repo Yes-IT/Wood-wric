@@ -302,6 +302,33 @@ const config = {
                 idField,
             ],
         },
+        {
+            label: "About",
+            name: "about",
+            folder: "src/content/about",
+            create: true,
+            editor: { preview: false },
+            fields: [
+              { name: "title", label: "Title", widget: "string" },
+              { name: "description", label: "Description", widget: "text" },
+              {
+                label: "Headings",
+                name: "headings",
+                widget: "list",
+                fields: [
+                  { label: "Heading", name: "heading", widget: "string" },
+                ],
+              },
+              {
+                label: "Descriptions",
+                name: "descriptions",
+                widget: "list",
+                fields: [
+                  { label: "Description", name: "description", widget: "text" },
+                ],
+              },
+            ],
+          },
     ],
 };
 const data = yaml.dump(config, { noRefs: true });

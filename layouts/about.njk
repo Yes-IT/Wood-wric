@@ -9,20 +9,20 @@
 		<div>
 			<h2>{{title1}}</h2>
 			<p>{{description1}}</p>
-			<h2>{{title2}}</h2>
-			<p>{{description2}}</p>
-			<h2>{{title3}}</h2>
-			<p>{{description3}}</p>
-			<h2>{{title4}}</h2>
-			<p>{{description4}}</p>
+			<h2>{{cards[0].title2}}</h2>
+			<p>{{cards[0].description2}}</p>
+			<h2>{{cards[1].title3}}</h2>
+			<p>{{cards[1].description3}}</p>
+			<h2>{{cards[2].title4}}</h2>
+			<p>{{cards[2].description4}}</p>
 		</div>
 	</section>
 	<section>
 		<div>
 			{% for card in cards %}
 				<div>
-					<img src="{{card.img}}" alt="{{card.title}} icon"/>
-					<h3>{{card.title}}</h3>
+					<img src="{{card.img}}" alt="{{card.title2}} icon"/>
+					<h3>{{card.title2}}</h3>
 					<p>{{card.copy}}</p>
 				</div>
 			{% endfor %}
@@ -39,7 +39,7 @@
 				{% endfor %}
 			</div>
 			<div class="grid lg:grid-cols-2 gap-4">
-				{% for assoc in associations %}
+				{% for assoc in execAssociations %}
 					<a href="{{assoc.url}}" target="_blank" title="{{assoc.title}}">
 						<img src="{{assoc.img}}" alt="{{assoc.title}} logo"/>
 					</a>

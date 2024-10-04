@@ -752,6 +752,64 @@ const config = {
     },
   ],
 },
+    {
+  label: "Why Wood",
+  name: "why-wood",
+  folder: "src/content/why-wood",
+  create: true,
+  editor: { preview: false },
+  fields: [
+    { label: "Heading", name: "heading", widget: "string", required: true },
+    {
+      label: "Description",
+      name: "description",
+      widget: "text",
+      required: true,
+    },
+    {
+      label: "Sections",
+      name: "sections",
+      widget: "list",
+      fields: [
+        { label: "Heading", name: "heading", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Points",
+          name: "points",
+          widget: "list",
+          fields: [
+            {
+              label: "Point",
+              name: "point",
+              widget: "text",
+              required: true,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Cards",
+      name: "cards",
+      widget: "list",
+      fields: [
+        { label: "Image", name: "image", widget: "image", required: true },
+        { label: "Header", name: "header", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+      ],
+    },
+  ],
+},
       ],
     },
   ],

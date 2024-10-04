@@ -8,6 +8,16 @@ seo:
     and retain employees, while improving the overall perception of the
     industry. 
   pageTitle: About Us
+headings:
+  - heading: Heading 1
+  - heading: Heading 2
+  - heading: Heading 3
+  - heading: Heading 4
+descriptions:
+  - description: Description 1
+  - description: Description 2
+  - description: Description 3
+  - description: Description 4
 cards:
   - title: Improve Perceptions
     copy: >-
@@ -54,4 +64,3 @@ employees, while improving the overall perception of the industry.
 Our mission is to ensure that the wood industry continues to thrive and evolve
 as a vital sector of the global economy, and that the workforce of the future
 is equipped with everything needed to help us get there.
-

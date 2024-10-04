@@ -1,5 +1,5 @@
 ---
-title: About section Heading 1
+title: About
 description: Description 1
 headings:
   - heading: Heading2

@@ -297,8 +297,8 @@ const config = {
       ],
     },
     {
-      label: "Landing Pages",
-      label_singular: "Landing Page",
+      label: "Home Pages",
+      label_singular: "Home Page",
       name: "langindPages",
       folder: "src/content/landing-pages",
       create: true,

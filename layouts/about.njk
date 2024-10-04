@@ -1,48 +1,43 @@
 {% include "partials/header.njk" %}
-<section class="hero">
-  <div>
-    <img src="{{hero}}" alt="hero image"/>
-    <h1>{{title}}</h1>
-  </div>
-</section>
-<section class="about">
-  <div>
-    {% for heading in headings %}
-      <h2>{{heading.heading}}</h2>
-    {% endfor %}
-    {% for description in descriptions %}
-      <p>{{description.description}}</p>
-    {% endfor %}
-  </div>
-</section>
-<section>
-  <div>
-    {% for card in cards %}
-      <div>
-        <img src="{{card.img}}" alt="{{card.title}} icon"/>
-        <h3>{{card.title}}</h3>
-        <p>{{card.copy}}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-<section class="associations">
-  <div>
-    <h2>WIRC Executive Committee</h2>
-    <div class="association-logos flex flex-wrap">
-      {% for assoc in execAssociations %}
-        <a href="{{assoc.url}}" target="_blank" title="{{assoc.title}}">
-          <img src="{{assoc.img}}" alt="{{assoc.title}} logo"/>
-        </a>
-      {% endfor %}
-    </div>
-    <div class="grid lg:grid-cols-2 gap-4">
-      {% for assoc in associations %}
-        <a href="{{assoc.url}}" target="_blank" title="{{assoc.title}}">
-          <img src="{{assoc.img}}" alt="{{assoc.title}} logo"/>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+	<section class="hero">
+		<div>
+			<img src="{{hero}}" alt="hero image"/>
+			<h1>{{title}}</h1>
+		</div>
+	</section>
+	<section class="about">
+		<div>
+			{{contents}}
+		</div>
+	</section>
+	<section>
+		<div>
+			{% for card in cards %}
+				<div>
+					<img src="{{card.img}}" alt="{{card.title}} icon"/>
+					<h3>{{card.title}}</h3>
+					<p>{{card.copy}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="associations">
+		<div>
+			<h2>WIRC Executive Committee</h2>
+			<div class="association-logos flex flex-wrap">
+				{% for assoc in execAssociations %}
+					<a href="{{assoc.url}}" target="_blank" title="{{assoc.title}}">
+						<img src="{{assoc.img}}" alt="{{assoc.title}} logo"/>
+					</a>
+				{% endfor %}
+			</div>
+			<div class="grid lg:grid-cols-2 gap-4">
+				{% for assoc in associations %}
+					<a href="{{assoc.url}}" target="_blank" title="{{assoc.title}}">
+						<img src="{{assoc.img}}" alt="{{assoc.title}} logo"/>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 {% include "partials/footer.njk" %}

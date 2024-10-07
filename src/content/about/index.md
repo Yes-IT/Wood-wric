@@ -1,8 +1,9 @@
 ---
-title: index
+title: About Us
 hero: /media/uploads/dan-feature-2-get-started.jpg
-seo.description: About page
-seo.pageTitle: About
+seo:
+  description: About page
+  pageTitle: About
 cards:
   - title: Hello
     copy: Aello 2

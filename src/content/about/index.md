@@ -1,6 +1,6 @@
 ---
 title: About Us
-layout: ../../../layouts/about.njk  # Make sure this points to the correct template
+layout: ../../layouts/about.njk  # Make sure this points to the correct template
 hero: /media/uploads/dan-feature-2-get-started.jpg
 seo:
   description: About page

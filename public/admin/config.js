@@ -632,40 +632,49 @@ const config = {
         idField,
       ],
     },
-    {
-      - name: about
-    label: About Page
-    folder: "src/content/about"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Hero Image", name: "hero", widget: "image" }
-      - { label: "SEO Description", name: "seo.description", widget: "text" }
-      - { label: "SEO Page Title", name: "seo.pageTitle", widget: "string" }
-      - label: "Cards"
-        name: "cards"
-        widget: "list"
-        fields:
-          - { label: "Card Title", name: "title", widget: "string" }
-          - { label: "Card Copy", name: "copy", widget: "text" }
-          - { label: "Card Image", name: "img", widget: "image" }
-      - label: "Executive Associations"
-        name: "execAssociations"
-        widget: "list"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Image", name: "img", widget: "image" }
-          - { label: "URL", name: "url", widget: "string" }
-      - label: "Footer Section"
-        name: "footer"
-        widget: "object"
-        fields:
-          - { label: "Footer Title", name: "title", widget: "string" }
-          - { label: "Button Label", name: "btnLabel", widget: "string" }
-          - { label: "Button URL", name: "url", widget: "string" }
-      ],
-    },
+       {
+        name: 'about',
+        label: 'About Page',
+        folder: 'src/content/about',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          { label: 'Title', name: 'title', widget: 'string' },
+          { label: 'Hero Image', name: 'hero', widget: 'image' },
+          { label: 'SEO Description', name: 'seo.description', widget: 'text' },
+          { label: 'SEO Page Title', name: 'seo.pageTitle', widget: 'string' },
+          {
+            label: 'Cards',
+            name: 'cards',
+            widget: 'list',
+            fields: [
+              { label: 'Card Title', name: 'title', widget: 'string' },
+              { label: 'Card Copy', name: 'copy', widget: 'text' },
+              { label: 'Card Image', name: 'img', widget: 'image' },
+            ],
+          },
+          {
+            label: 'Executive Associations',
+            name: 'execAssociations',
+            widget: 'list',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Image', name: 'img', widget: 'image' },
+              { label: 'URL', name: 'url', widget: 'string' },
+            ],
+          },
+          {
+            label: 'Footer Section',
+            name: 'footer',
+            widget: 'object',
+            fields: [
+              { label: 'Footer Title', name: 'title', widget: 'string' },
+              { label: 'Button Label', name: 'btnLabel', widget: 'string' },
+              { label: 'Button URL', name: 'url', widget: 'string' },
+            ],
+          },
+        ],
+      },
     {
       label: "Videos",
       name: "videos",

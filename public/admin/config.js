@@ -637,7 +637,7 @@ const config = {
         label: 'About Page',
         folder: 'src/content/about',
         create: true,
-        slug: '{{slug}}',
+        slug: 'index',
         fields: [
           { label: 'Title', name: 'title', widget: 'string' },
           { label: 'Hero Image', name: 'hero', widget: 'image' },

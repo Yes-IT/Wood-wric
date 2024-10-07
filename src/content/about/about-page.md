@@ -1,5 +1,5 @@
 ---
-title: About page
+title: index
 hero: /media/uploads/dan-feature-2-get-started.jpg
 seo.description: About page
 seo.pageTitle: About

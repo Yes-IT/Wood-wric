@@ -1,6 +1,4 @@
-
-
-{% block content %}
+{% if title and hero and cards and execAssociations and footer %}
   <section class="hero">
     <div>
       <img src="{{ hero }}" alt="hero image" />
@@ -33,4 +31,7 @@
       <a href="{{ footer.url }}" class="btn">{{ footer.btnLabel }}</a>
     </div>
   </footer>
-{% endblock %}
+{% else %}
+  <p>No data available</p>
+{% endif %}
+``` ⬤

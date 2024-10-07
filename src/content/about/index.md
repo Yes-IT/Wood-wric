@@ -1,4 +1,5 @@
 ---
+layout: about.njk
 title: dgdfg
 hero: /media/uploads/2023-map.jpg
 seo.description: dfgdg

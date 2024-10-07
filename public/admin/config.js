@@ -633,40 +633,37 @@ const config = {
       ],
     },
     {
-      label: "About",
-      name: "about",
-      folder: "src/content/about",
-      create: true,
-      editor: { preview: false },
-      fields: [
-        { name: "title1", label: "Title 1", widget: "string", required: true },
-        { name: "title2", label: "Title 2", widget: "string", required: true },
-        { name: "title3", label: "Title 3", widget: "string", required: true },
-        { name: "title4", label: "Title 4", widget: "string", required: true },
-        {
-          name: "description1",
-          label: "Description 1",
-          widget: "text",
-          required: true,
-        },
-        {
-          name: "description2",
-          label: "Description 2",
-          widget: "text",
-          required: true,
-        },
-        {
-          name: "description3",
-          label: "Description 3",
-          widget: "text",
-          required: true,
-        },
-        {
-          name: "description4",
-          label: "Description 4",
-          widget: "text",
-          required: true,
-        },
+      - name: about
+    label: About Page
+    folder: "src/content/about"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Hero Image", name: "hero", widget: "image" }
+      - { label: "SEO Description", name: "seo.description", widget: "text" }
+      - { label: "SEO Page Title", name: "seo.pageTitle", widget: "string" }
+      - label: "Cards"
+        name: "cards"
+        widget: "list"
+        fields:
+          - { label: "Card Title", name: "title", widget: "string" }
+          - { label: "Card Copy", name: "copy", widget: "text" }
+          - { label: "Card Image", name: "img", widget: "image" }
+      - label: "Executive Associations"
+        name: "execAssociations"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Image", name: "img", widget: "image" }
+          - { label: "URL", name: "url", widget: "string" }
+      - label: "Footer Section"
+        name: "footer"
+        widget: "object"
+        fields:
+          - { label: "Footer Title", name: "title", widget: "string" }
+          - { label: "Button Label", name: "btnLabel", widget: "string" }
+          - { label: "Button URL", name: "url", widget: "string" }
       ],
     },
     {

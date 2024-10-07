@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ seo.pageTitle | default(title) }}</title>
-  <meta name="description" content="{{ seo.description }}">
-  <link rel="stylesheet" href="/public/styles.css">
-</head>
-<body>
-  {% include "partials/header.njk" %}
+{% extends "layouts/base.njk" %}
 
-  <main>
-    {% block content %}{% endblock %}
-  </main>
+{% block content %}
+<section class="hero">
+  <div>
+    <img src="{{ hero }}" alt="hero image"/>
+    <h1>{{ title }}</h1>
+  </div>
+</section>
 
-  {% include "partials/footer.njk" %}
-</body>
-</html>
+<section class="cards">
+  <div>
+    {% for card in cards %}
+      <div class="card">
+        <img src="{{ card.img }}" alt="{{ card.title }} icon"/>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.copy }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<pre>{{ dump() }}</pre>
+{% endblock %}

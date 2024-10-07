@@ -632,7 +632,7 @@ const config = {
         idField,
       ],
     },
-   {
+{
   name: 'about',
   label: 'About Page',
   folder: 'src/content/about',
@@ -665,22 +665,20 @@ const config = {
         { label: 'URL', name: 'url', widget: 'string' },
       ],
     },
+    {
+      label: 'Footer Section',
+      name: 'footer',
+      widget: 'object',
+      fields: [
+        { label: 'Footer Title', name: 'title', widget: 'string' },
+        { label: 'Button Label', name: 'btnLabel', widget: 'string' },
+        { label: 'Button URL', name: 'url', widget: 'string' },
+      ],
+    },
     { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about.njk' }
   ],
-}
+},
 
-          {
-            label: 'Footer Section',
-            name: 'footer',
-            widget: 'object',
-            fields: [
-              { label: 'Footer Title', name: 'title', widget: 'string' },
-              { label: 'Button Label', name: 'btnLabel', widget: 'string' },
-              { label: 'Button URL', name: 'url', widget: 'string' },
-            ],
-          },
-        ],
-      },
     {
       label: "Videos",
       name: "videos",

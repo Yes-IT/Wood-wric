@@ -97,7 +97,7 @@ const seoFields = [
 const config = {
   backend: {
     name: "git-gateway",
-    branch: process.env.BRANCH || "master",
+    branch: process.env.BRANCH || "main",
   },
   load_config_file: false,
   media_folder: "public/media/uploads",

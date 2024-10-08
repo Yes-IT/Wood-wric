@@ -800,37 +800,54 @@ const config = {
         },
       ],
     },
-  {
-  label: "Get Started",
-  name: "get-started",
-  folder: "src/content/get-started",
-  create: true,
-  editor: { preview: false },
-  fields: [
-    { label: "Title", name: "title", widget: "string", required: true },
-    {
-      label: "Description",
-      name: "description",
-      widget: "text",
-      required: true,
-    },
-    {
-      label: "Steps",
-      name: "steps",
-      widget: "list",
+   {
+      label: "Get Started",
+      name: "get-started",
+      folder: "src/content/get-started",
+      create: true,
+      editor: { preview: false },
       fields: [
         { label: "Title", name: "title", widget: "string", required: true },
-        { label: "Image", name: "image", widget: "image", required: true },
+        { label: "Hero Image", name: "hero", widget: "image", required: true },
         {
-          label: "Content",
-          name: "content",
-          widget: "markdown", // or use "text" with editor preview false for plain text input
-          required: true
-        }
-      ]
-    }
-  ]
-},
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Steps",
+          name: "steps",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string", required: true },
+            { label: "Image", name: "image", widget: "image", required: true },
+            {
+              label: "Content",
+              name: "content",
+              widget: "markdown", // or use "text" with editor preview false for plain text input
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "getstarted.njk",
+        },
+      ],
+    },
     {
       label: "Why Wood",
       name: "why-wood",

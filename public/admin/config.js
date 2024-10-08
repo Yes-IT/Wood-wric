@@ -636,7 +636,7 @@ const config = {
   name: "home",
   label: "Home Page",
   folder: "src/content/",
-  create: true,
+  create: false,
   slug: "index",
   fields: [
     {
@@ -698,7 +698,7 @@ const config = {
       name: "about",
       label: "About Page",
       folder: "src/content/about",
-      create: true,
+      create: false,
       slug: "index",
       fields: [
         { label: "Title", name: "title", widget: "string" },
@@ -750,7 +750,7 @@ const config = {
       label: "Videos",
       name: "videos",
       folder: "src/content/videos",
-      create: true,
+      create: false,
       editor: { preview: false },
       fields: [
         {

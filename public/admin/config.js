@@ -632,7 +632,7 @@ const config = {
         idField,
       ],
     },
-    {
+   {
   name: "home",
   label: "Home Page",
   folder: "src/content/home",
@@ -657,6 +657,7 @@ const config = {
       widget: "list",
       fields: [
         { label: "Card Title", name: "title", widget: "string" },
+        { label: "Card image", name: "image", widget: "image" },
         { label: "Card Description", name: "description", widget: "text" },
         { label: "Card URL", name: "url", widget: "string" },
       ],
@@ -670,17 +671,7 @@ const config = {
         { label: "Title", name: "title", widget: "string" },
         { label: "Description", name: "description", widget: "text" },
         { label: "Image", name: "image", widget: "image" },
-      ],
-      max: 1, // Single entry
-    },
-    {
-      label: "Read More About Section",
-      name: "readMoreAbout",
-      widget: "list",
-      fields: [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Description", name: "description", widget: "text" },
-        { label: "Image", name: "image", widget: "image" },
+        { label: "Icon", name: "icon", widget: "image" },
       ],
       max: 1, // Single entry
     },

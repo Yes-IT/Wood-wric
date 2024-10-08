@@ -632,16 +632,15 @@ const config = {
         idField,
       ],
     },
- {
+{
   name: "home",
   label: "Home Page",
   folder: "src/content/",
   create: false, // Set to false to disallow creation of new entries
-  slug: "index",
   files: [
     {
-      name: "index",
       label: "Home Page",
+      name: "index",
       file: "src/content/index.md", // Specify the exact file to edit
       fields: [
         {
@@ -653,8 +652,8 @@ const config = {
             { label: "Hero URL 1", name: "url1", widget: "string" },
             { label: "Hero Image 2", name: "image2", widget: "image" },
             { label: "Hero URL 2", name: "url2", widget: "string" },
-            { label: "Hero Description", name: "description", widget: "text" },
-          ],
+            { label: "Hero Description", name: "description", widget: "text" }
+          ]
         },
         {
           label: "Second Section - Cards",
@@ -664,9 +663,9 @@ const config = {
             { label: "Card Title", name: "title", widget: "string" },
             { label: "Card Image", name: "image", widget: "image" },
             { label: "Card Description", name: "description", widget: "text" },
-            { label: "Card URL", name: "url", widget: "string" },
+            { label: "Card URL", name: "url", widget: "string" }
           ],
-          max: 2, // Limits to only 2 cards
+          max: 2 // Limits to only 2 cards
         },
         {
           label: "Did You Know Section",
@@ -676,9 +675,9 @@ const config = {
             { label: "Title", name: "title", widget: "string" },
             { label: "Description", name: "description", widget: "text" },
             { label: "Image", name: "image", widget: "image" },
-            { label: "Icon", name: "icon", widget: "image" },
+            { label: "Icon", name: "icon", widget: "image" }
           ],
-          max: 1, // Single entry
+          max: 1 // Single entry
         },
         {
           label: "About Section",
@@ -688,18 +687,74 @@ const config = {
             { label: "Title", name: "title", widget: "string" },
             { label: "Description", name: "description", widget: "text" },
             { label: "Image", name: "image", widget: "image" },
-            { label: "URL", name: "url", widget: "string" },
-          ],
+            { label: "URL", name: "url", widget: "string" }
+          ]
         },
         {
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "index.njk",
-        },
-      ],
-    },
+          default: "index.njk"
+        }
+      ]
+    }
   ],
+  // Separate field definitions for reuse if needed
+  fields: [
+    {
+      label: "Hero Section",
+      name: "hero",
+      widget: "object",
+      fields: [
+        { label: "Hero Image 1", name: "image1", widget: "image" },
+        { label: "Hero URL 1", name: "url1", widget: "string" },
+        { label: "Hero Image 2", name: "image2", widget: "image" },
+        { label: "Hero URL 2", name: "url2", widget: "string" },
+        { label: "Hero Description", name: "description", widget: "text" }
+      ]
+    },
+    {
+      label: "Second Section - Cards",
+      name: "cards",
+      widget: "list",
+      fields: [
+        { label: "Card Title", name: "title", widget: "string" },
+        { label: "Card Image", name: "image", widget: "image" },
+        { label: "Card Description", name: "description", widget: "text" },
+        { label: "Card URL", name: "url", widget: "string" }
+      ],
+      max: 2 // Limits to only 2 cards
+    },
+    {
+      label: "Did You Know Section",
+      name: "didYouKnow",
+      widget: "list",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "Icon", name: "icon", widget: "image" }
+      ],
+      max: 1 // Single entry
+    },
+    {
+      label: "About Section",
+      name: "about",
+      widget: "object",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "URL", name: "url", widget: "string" }
+      ]
+    },
+    {
+      label: "Layout",
+      name: "layout",
+      widget: "hidden",
+      default: "index.njk"
+    }
+  ]
 },
     {
       name: "about",

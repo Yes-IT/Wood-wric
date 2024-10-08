@@ -1,6 +1,7 @@
 ---
 heading: hgjjgtjtyuryf
 description: utyutyutyutyutyut
+layout:whywood.njk
 sliders:
   left_slider:
     heading: uytutuytuu

@@ -34,7 +34,7 @@
         <h2 class="cards-heading pb-1 mb-0 pt-16">Did You Know?</h2>
         <p class="text-center pt-1 pb-5">Here are a few key findings from our <a href="/workforce-analysis/" class="underline text-primary">workforce analysis</a> of the wood industry.</p>
         <div class="lg:flex justify-center gap-10 flex-wrap">
-            {% for card in didYouKnow.cards %}
+            {% for card in didYouKnow %}
                 <div class="dcard mb-4 lg:w-300 mh-270 lg:h-330 px-4 py-2 flex flex-col justify-center items-center text-white text-center relative">
                     <img src="{{card.image}}" class="absolute w-full h-full object-cover z-1" alt=""/>
                     <div class="relative z-10">

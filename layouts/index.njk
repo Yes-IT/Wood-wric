@@ -3,18 +3,18 @@
 	<section class="home-header index-header">
 		<div class="parallax">
             <h1 class="sr-only">You are the wood industry</h1>
-			<img src="/imgs/youare.svg" alt=" "/><br><br>
+			<img src="{{hero.image1}}" alt=" "/><br><br>
 			<div class="relative" id="embed-toggle">
-                <img src="/imgs/vid-home.png.jpg" class="video-poster"  />
-                <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
+                <img src="{{hero.image2}}" class="video-poster"  />
+                <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="{{hero.url1}}"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
             </div>
             <div id="video-embed" class="video-embed"></div>
-            <p>{{intro}}</p>
+            <p>{{hero.description}}</p>
 			<div class="square-graphics"></div>
             <div class="square-graphics"></div>
             <div class="square-graphics"></div>
             <div class="event-buttons">
-              <a href="#signup"><div>Subscribe to WIRC Updates</div></a>
+              <a href="{{hero.url2}}"><div>Subscribe to WIRC Updates</div></a>
             </div>
 		</div>
 	</section>
@@ -22,9 +22,9 @@
         <div class="hcards">
                 {% for card in cards %}
                     <div class="hcard">
-                        <img src="{{card.img}}" alt="{{card.title}}"/>
+                        <img src="{{card.image}}" alt="{{card.title}}"/>
                         <h3>{{card.title}}</h3>
-                        <p>{{card.copy}}</p>
+                        <p>{{card.description}}</p>
                         <a href="{{card.url}}"><div>{{card.btnLabel}}</div></a>
                     </div>
                 {% endfor %}
@@ -36,15 +36,15 @@
         <div class="lg:flex justify-center gap-10 flex-wrap">
             {% for card in didYouKnow.cards %}
                 <div class="dcard mb-4 lg:w-300 mh-270 lg:h-330 px-4 py-2 flex flex-col justify-center items-center text-white text-center relative">
-                    <img src="{{card.img}}" class="absolute w-full h-full object-cover z-1" alt=""/>
+                    <img src="{{card.image}}" class="absolute w-full h-full object-cover z-1" alt=""/>
                     <div class="relative z-10">
                         {% if card.icon %}
                             <div class="bg-white rounded-full w-70 h-70 p-2 mx-auto flex flex-col justify-center items-center">
                                 <img src="{{ card.icon }}" width="50" height="50" alt="">
                             </div>
                         {% endif %}
-                        <h3 class="">{{card.headline}}</h3>
-                        <p class="font-medium">{{card.copy}}</p>
+                        <h3 class="">{{card.title}}</h3>
+                        <p class="font-medium">{{card.description}}</p>
                     </div>
                 </div>
             {% endfor %}
@@ -59,8 +59,9 @@
 	<section class="sbs-photos-alt">
 		<div>
 			<div>
-				{{contents}}
-				<a href="/about"><div>About Us</div></a>
+				<h2>{{about.title}}</h2>
+                <p>{{about.description}}</p>
+				<a href="{{about.url}}"><div>About Us</div></a>
 			</div>
 		</div>
 	</section>

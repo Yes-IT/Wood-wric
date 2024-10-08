@@ -1,13 +1,14 @@
 {% include "partials/header.njk" %}
 <section class="hero">
     <div>
-        <img src="{{hero}}" alt="hero image" />
-        <h1>{{title}}</h1>
+        <img src="{{heroImage}}" alt="hero image" />
+        <h1>Vedios</h1>
     </div>
 </section>
 <section class="videos default h2-title text-center">
     <div style="max-width: 550px;">
-        {{contents}}
+        <h2>{{Title}}</h2>
+        <p>{{description}}</p>
     </div>
 </section>
 <section>
@@ -15,16 +16,16 @@
         {% for item in videoCallouts %}
         <div class="card">
             <div class="card-img-container">
-                <a href="{{item.url}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"><img src="{{item.img}}" alt="" class="card-img" /></a>
+                <a href="{{item.link}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"><img src="{{item.image}}" alt="" class="card-img" /></a>
             </div>
             <div class="card-details">
                 <a href="/{{item.path}}">
                     <h3 class="card-title">
-                       <a href="{{item.url}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"> {{item.title}} </a>
+                       <a href="{{item.link}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"> {{item.title}} </a>
                     </h3>
                 </a>
-                <p class="card-description mh" style="min-height: 122px;">{{item.copy}}</p>
-                <a href="{{item.url}}" class="card-link" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">Watch Now
+                <p class="card-description mh" style="min-height: 122px;">{{item.description}}</p>
+                <a href="{{item.link}}" class="card-link" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">Watch Now
                     <svg style="margin-left:2px;" width="16" height="12" viewbox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
                         <g fill="#008783" fill-rule="nonzero">
                             <path d="M12.823 2.684v9.286L.81 11.798V2.684h12.013zm-1 1H1.81v7.128l10.013.144V3.684z" />

@@ -679,50 +679,7 @@ const config = {
   ],
 },
 
-    {
-      label: "Videos",
-      name: "videos",
-      folder: "src/content/videos",
-      create: true,
-      editor: { preview: false },
-      fields: [
-        { label: "Hero Image", name: "heroImage", widget: "image", required: true },
-        { label: "Title", name: "title", widget: "string", required: true },
-        {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "Video Sections",
-          name: "sections",
-          widget: "list",
-          fields: [
-            { label: "Image", name: "image", widget: "image", required: true },
-            { label: "Link", name: "link", widget: "string", required: true },
-            { label: "Title", name: "title", widget: "string", required: true },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              required: true,
-            },
-          ],
-        },
-        {
-      label: 'Footer Section',
-      name: 'footer',
-      widget: 'object',
-      fields: [
-        { label: 'Footer Title', name: 'title', widget: 'string' },
-        { label: 'Button Label', name: 'btnLabel', widget: 'string' },
-        { label: 'Button URL', name: 'url', widget: 'string' },
-      ],
-    },
-          { label: 'Layout', name: 'layout', widget: 'hidden', default: 'videos.njk' }
-      ],
-    },
+  
     {
         label: "Get Started",
         name: "get-started",
@@ -773,7 +730,8 @@ const config = {
             ],
           },
         ],
-      },{
+      },
+      {
         label: "Why Wood",
         name: "why-wood",
         folder: "src/content/why-wood",

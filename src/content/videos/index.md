@@ -7,6 +7,10 @@ sections:
     link: https://www.youtube.com/watch?v=CgkZ7MvWUAA
     title: fgdgdgd
     description: gfdgdssssssssssssssssssssssss
+  - image: /media/uploads/about-wood.jpg
+    link: https://www.youtube.com/watch?v=CgkZ7MvWUAA
+    title: dfgdfg
+    description: dfgdfgdfgdfg
 footer:
   title: fgdfgfdgdf
   btnLabel: dfgdgdfgdsfgdfgds

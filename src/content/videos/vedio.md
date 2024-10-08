@@ -11,5 +11,5 @@ footer:
   title: fgdfgfdgdf
   btnLabel: dfgdgdfgdsfgdfgds
   url: https://www.youtube.com/watch?v=CgkZ7MvWUAA
-layout: vedios.njk
+layout: videos.njk
 ---

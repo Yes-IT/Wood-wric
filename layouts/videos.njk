@@ -1,14 +1,13 @@
 {% include "partials/header.njk" %}
 <section class="hero">
     <div>
-        <img src="{{heroImage}}" alt="hero image" />
-        <h1>Videos</h1> <!-- Fixed typo from "Vedios" to "Videos" -->
+        <img src="{{hero}}" alt="hero image" />
+        <h1>{{title}}</h1>
     </div>
 </section>
 <section class="videos default h2-title text-center">
     <div style="max-width: 550px;">
-        <h2>{{Title}}</h2>
-        <p>{{description}}</p>
+        {{contents}}
     </div>
 </section>
 <section>
@@ -16,21 +15,21 @@
         {% for item in videoCallouts %}
         <div class="card">
             <div class="card-img-container">
-                <a href="{{item.link}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">
-                    <img src="{{item.image}}" alt="Video thumbnail" class="card-img" />
-                </a>
+                <a href="{{item.url}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"><img src="{{item.img}}" alt="" class="card-img" /></a>
             </div>
             <div class="card-details">
-                <h3 class="card-title">
-                    <a href="{{item.link}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">{{item.title}}</a> <!-- Fixed duplicate <a> tags -->
-                </h3>
-                <p class="card-description mh" style="min-height: 122px;">{{item.description}}</p>
-                <a href="{{item.link}}" class="card-link" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">Watch Now
-                    <svg style="margin-left:2px;" width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+                <a href="/{{item.path}}">
+                    <h3 class="card-title">
+                       <a href="{{item.url}}" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}"> {{item.title}} </a>
+                    </h3>
+                </a>
+                <p class="card-description mh" style="min-height: 122px;">{{item.copy}}</p>
+                <a href="{{item.url}}" class="card-link" data-ga-event data-ga-category="Videos" data-ga-action="click" data-ga-label="{{item.title}}">Watch Now
+                    <svg style="margin-left:2px;" width="16" height="12" viewbox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
                         <g fill="#008783" fill-rule="nonzero">
-                            <path d="M12.823 2.684v9.286L.81 11.798V2.684h12.013zm-1 1H1.81v7.128l10.013.144V3.684z"/>
-                            <path d="M12.823 4.08v1H.81v-1z"/> 
-                            <path d="M2.567.805h12.98l-.015 9.35h-1.808v-1h.809l.012-7.351H3.565l.002.547h-1z"/>
+                            <path d="M12.823 2.684v9.286L.81 11.798V2.684h12.013zm-1 1H1.81v7.128l10.013.144V3.684z" />
+                            <path d="M12.823 4.08v1H.81v-1z" /> 
+                            <path d="M2.567.805h12.98l-.015 9.35h-1.808v-1h.809l.012-7.351H3.565l.002.547h-1z" />
                         </g>
                     </svg>
                 </a>
@@ -39,27 +38,21 @@
         {% endfor %}
     </div>
 </section>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded',function(){
     var items = document.querySelectorAll('[data-ga-event]');
-    items.forEach(function(item) {
+    items.forEach(function(item){
         item.addEventListener('click', function (e) {
             var category = item.dataset.gaCategory,
                 action = item.dataset.gaAction,
                 label = item.dataset.gaLabel;
-
-            // Ensure the dataLayer is defined before pushing
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'gaEvent',
-                    'category': category,
-                    'action': action,
-                    'label': label
-                });
+            if (dataLayer) {
+                dataLayer.push({'event': 'gaEvent', 'category':category, 'action':action, 'label':label});
             } 
         });
     });
-});
+})
+
 </script>
 {% include "partials/footer.njk" %}

@@ -1,8 +1,8 @@
 ---
 title: Irure nobis omnis ea
 hero: /media/uploads/dan-feature-2-get-started.jpg
-hero.title: Natus labore enim vo
-hero.description: Consequuntur volupta
+hero.title: Natus labore enim voj
+hero.description: Consequuntur voluptaj
 seo.description: Dolor temporibus dic
 seo.pageTitle: "Rerum lorem quaerat "
 cards:

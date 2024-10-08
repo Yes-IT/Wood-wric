@@ -8,7 +8,8 @@
 	</section>
 	<section class="why-wood">
 		<div>
-			{{contents}}
+			<h2>{{heading}}</h2>
+			{{description}}
 		</div>
 	</section>
 	<section class="slider">
@@ -19,38 +20,26 @@
 			<input type="radio" name="slider" id="rb-2"/>
 			<div id="slide-1" data-slide-trigger="#rb-1">
 				<div class="arrow-button left"></div>
-				<img src="{{slider.left.img}}" alt="{{slider.left.title}} background"/>
+				<img src="{{sliders.left_slider.img}}" alt="{{sliders.left_slider.title}} background"/>
 				<div>
-					<h3>{{slider.left.title}}</h3>
-					<p>{{slider.left.copy}}</p>
+					<h3>{{sliders.left_slider.heading}}</h3>
+					<p>{{sliders.left_slider.description}}</p>
 				</div>
 				<div>
-					<h3>{{slider.left.title}}</h3>
-					<ul>
-						{% for bullet in slider.left.bullets %}
-							<li class="bullet-neg">{{bullet.title}}
-								<p>{{bullet.copy}}</p>
-							</li>
-						{% endfor %}
-					</ul>
+					<h3>{{sliders.left_slider.heading}}</h3>
+					<p>{{sliders.left_slider.content}}</p>
 				</div>
 			</div>
 			<div id="slide-2" data-slide-trigger="#rb-2">
 				<div class="arrow-button right"></div>
-				<img src="{{slider.right.img}}" alt="{{slider.right.title}} background"/>
+				<img src="{{sliders.right_slider.img}}" alt="{{sliders.right_slider.title}} background"/>
 				<div>
-					<h3>{{slider.right.title}}</h3>
-					<p>{{slider.right.copy}}</p>
+					<h3>{{sliders.right_slider.heading}}</h3>
+					<p>{{sliders.right_slider.description}}</p>
 				</div>
 				<div>
-					<h3>{{slider.right.title}}</h3>
-					<ul>
-						{% for bullet in slider.right.bullets %}
-							<li class="bullet-check-mark">{{bullet.title}}
-								<p>{{bullet.copy}}</p>
-							</li>
-						{% endfor %}
-					</ul>
+					<h3>{{sliders.right_slider.heading}}</h3>
+					<p>{{sliders.right_slider.content}}</p>
 				</div>
 			</div>
 		</div>
@@ -61,15 +50,15 @@
 			<div>
 				{% for card in cards %}
 					<div>
-						<img src="{{card.img}}" alt="{{card.title}} background"/>
+						<img src="{{card.img}}" alt="{{card.header}} background"/>
 						<div>
-							<img src="{{card.icon}}" alt="{{card.title}} icon"/>
-							<h3>{{card.title}}</h3>
+							<img src="{{card.image}}" alt="{{card.header}} icon"/>
+							<h3>{{card.header}}</h3>
 							<div>Learn More ›</div>
 						</div>
 						<div>
-							<h3>{{card.title}}</h3>
-							<p>{{card.copy}}</p>
+							<h3>{{card.header}}</h3>
+							<p>{{card.description}}</p>
 						</div>
 					</div>
 				{% endfor %}

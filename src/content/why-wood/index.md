@@ -1,7 +1,7 @@
 ---
 heading: hgjjgtjtyuryf
 description: utyutyutyutyutyut
-layout:whywood.njk
+
 sliders:
   left_slider:
     heading: uytutuytuu
@@ -15,4 +15,5 @@ cards:
   - image: /media/uploads/2023-map.jpg
     header: tyutut
     description: utyutututyu
+layout: whywood.njk
 ---

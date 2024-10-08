@@ -297,8 +297,8 @@ const config = {
       ],
     },
     {
-      label: "Home Pages",
-      label_singular: "Home Page",
+      label: "Landing Pages",
+      label_singular: "Landing Page",
       name: "langindPages",
       folder: "src/content/landing-pages",
       create: true,
@@ -632,6 +632,77 @@ const config = {
         idField,
       ],
     },
+    {
+  name: "home",
+  label: "Home Page",
+  folder: "src/content/home",
+  create: true,
+  slug: "index",
+  fields: [
+    {
+      label: "Hero Section",
+      name: "hero",
+      widget: "object",
+      fields: [
+        { label: "Hero Image 1", name: "image1", widget: "image" },
+        { label: "Hero URL 1", name: "url1", widget: "string" },
+        { label: "Hero Image 2", name: "image2", widget: "image" },
+        { label: "Hero URL 2", name: "url2", widget: "string" },
+        { label: "Hero Description", name: "description", widget: "text" },
+      ],
+    },
+    {
+      label: "Second Section - Cards",
+      name: "cards",
+      widget: "list",
+      fields: [
+        { label: "Card Title", name: "title", widget: "string" },
+        { label: "Card Description", name: "description", widget: "text" },
+        { label: "Card URL", name: "url", widget: "string" },
+      ],
+      max: 2, // Limits to only 2 cards
+    },
+    {
+      label: "Did You Know Section",
+      name: "didYouKnow",
+      widget: "list",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Image", name: "image", widget: "image" },
+      ],
+      max: 1, // Single entry
+    },
+    {
+      label: "Read More About Section",
+      name: "readMoreAbout",
+      widget: "list",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Image", name: "image", widget: "image" },
+      ],
+      max: 1, // Single entry
+    },
+    {
+      label: "About Section",
+      name: "about",
+      widget: "object",
+      fields: [
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Description", name: "description", widget: "text" },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "URL", name: "url", widget: "string" },
+      ],
+    },
+    {
+      label: "Layout",
+      name: "layout",
+      widget: "hidden",
+      default: "home.njk",
+    },
+  ],
+},
     {
       name: "about",
       label: "About Page",

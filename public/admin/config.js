@@ -863,36 +863,61 @@ const config = {
           required: true,
         },
         {
-          label: "Sections",
-          name: "sections",
-          widget: "list",
+          label: "Sliders",
+          name: "sliders",
+          widget: "object",
           fields: [
             {
-              label: "Heading",
-              name: "heading",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              required: true,
-            },
-            {
-              label: "Points",
-              name: "points",
-              widget: "list",
+              label: "Left Slider",
+              name: "left_slider",
+              widget: "object",
               fields: [
                 {
-                  label: "Point",
-                  name: "point",
-                  widget: "text",
-                  required: true,
+                  label: "Heading",
+                  name: "heading",
+                  widget: "string",
+                  required: true
                 },
-              ],
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
+                  required: true
+                }
+              ]
             },
-          ],
+            {
+              label: "Right Slider",
+              name: "right_slider",
+              widget: "object",
+              fields: [
+                {
+                  label: "Heading",
+                  name: "heading",
+                  widget: "string",
+                  required: true
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
+                  required: true
+                }
+              ]
+            }
+          ]
         },
         {
           label: "Cards",

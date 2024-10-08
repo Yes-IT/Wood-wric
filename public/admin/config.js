@@ -709,6 +709,7 @@ const config = {
             },
           ],
         },
+          { label: 'Layout', name: 'layout', widget: 'hidden', default: 'vedios.njk' }
       ],
     },
     {

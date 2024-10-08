@@ -632,164 +632,232 @@ const config = {
         idField,
       ],
     },
-{
-  name: 'about',
-  label: 'About Page',
-  folder: 'src/content/about',
-  create: true,
-  slug: 'index',
-  fields: [
-    { label: 'Title', name: 'title', widget: 'string' },
-    { label: 'Hero Image', name: 'hero', widget: 'image' },
-    { label: 'Hero Title', name: 'heroTitle', widget: 'string' },
-    { label: 'Hero Description', name: 'heroDescription', widget: 'text' },
-    { label: 'SEO Description', name: 'seo.description', widget: 'text' },
-    { label: 'SEO Page Title', name: 'seo.pageTitle', widget: 'string' },
     {
-      label: 'Cards',
-      name: 'cards',
-      widget: 'list',
+      name: "about",
+      label: "About Page",
+      folder: "src/content/about",
+      create: true,
+      slug: "index",
       fields: [
-        { label: 'Card Title', name: 'title', widget: 'string' },
-        { label: 'Card Copy', name: 'copy', widget: 'text' },
-        { label: 'Card Image', name: 'img', widget: 'image' },
+        { label: "Title", name: "title", widget: "string" },
+        { label: "Hero Image", name: "hero", widget: "image" },
+        { label: "Hero Title", name: "heroTitle", widget: "string" },
+        { label: "Hero Description", name: "heroDescription", widget: "text" },
+        { label: "SEO Description", name: "seo.description", widget: "text" },
+        { label: "SEO Page Title", name: "seo.pageTitle", widget: "string" },
+        {
+          label: "Cards",
+          name: "cards",
+          widget: "list",
+          fields: [
+            { label: "Card Title", name: "title", widget: "string" },
+            { label: "Card Copy", name: "copy", widget: "text" },
+            { label: "Card Image", name: "img", widget: "image" },
+          ],
+        },
+        {
+          label: "Executive Associations",
+          name: "execAssociations",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Image", name: "img", widget: "image" },
+            { label: "URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "about.njk",
+        },
       ],
     },
-    {
-      label: 'Executive Associations',
-      name: 'execAssociations',
-      widget: 'list',
-      fields: [
-        { label: 'Title', name: 'title', widget: 'string' },
-        { label: 'Image', name: 'img', widget: 'image' },
-        { label: 'URL', name: 'url', widget: 'string' },
-      ],
-    },
-    {
-      label: 'Footer Section',
-      name: 'footer',
-      widget: 'object',
-      fields: [
-        { label: 'Footer Title', name: 'title', widget: 'string' },
-        { label: 'Button Label', name: 'btnLabel', widget: 'string' },
-        { label: 'Button URL', name: 'url', widget: 'string' },
-      ],
-    },
-    { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about.njk' }
-  ],
-},
 
-  
     {
-        label: "Get Started",
-        name: "get-started",
-        folder: "src/content/get-started",
-        create: true,
-        editor: { preview: false },
-        fields: [
-          { label: "Title", name: "title", widget: "string", required: true },
-          {
-            label: "Description",
-            name: "description",
-            widget: "text",
-            required: true,
-          },
-          {
-            label: "Steps",
-            name: "steps",
-            widget: "list",
-            fields: [
-              { label: "Title", name: "title", widget: "string", required: true },
-              { label: "Image", name: "image", widget: "image", required: true },
-              {
-                label: "Description",
-                name: "description",
-                widget: "object",
-                fields: [
-                  {
-                    label: "Text",
-                    name: "text",
-                    widget: "text",
-                    required: true,
-                  },
-                  {
-                    label: "Points",
-                    name: "points",
-                    widget: "list",
-                    fields: [
-                      {
-                        label: "Point",
-                        name: "point",
-                        widget: "text",
-                        required: true,
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: "Why Wood",
-        name: "why-wood",
-        folder: "src/content/why-wood",
-        create: true,
-        editor: { preview: false },
-        fields: [
-          { label: "Heading", name: "heading", widget: "string", required: true },
-          {
-            label: "Description",
-            name: "description",
-            widget: "text",
-            required: true,
-          },
-          {
-            label: "Sections",
-            name: "sections",
-            widget: "list",
-            fields: [
-              { label: "Heading", name: "heading", widget: "string", required: true },
-              {
-                label: "Description",
-                name: "description",
-                widget: "text",
-                required: true,
-              },
-              {
-                label: "Points",
-                name: "points",
-                widget: "list",
-                fields: [
-                  {
-                    label: "Point",
-                    name: "point",
-                    widget: "text",
-                    required: true,
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            label: "Cards",
-            name: "cards",
-            widget: "list",
-            fields: [
-              { label: "Image", name: "image", widget: "image", required: true },
-              { label: "Header", name: "header", widget: "string", required: true },
-              {
-                label: "Description",
-                name: "description",
-                widget: "text",
-                required: true,
-              },
-            ],
-          },
-        ],
-      },
+      label: "Videos",
+      name: "videos",
+      folder: "src/content/videos",
+      create: true,
+      editor: { preview: false },
+      fields: [
+        {
+          label: "Hero Image",
+          name: "heroImage",
+          widget: "image",
+          required: true,
+        },
+        { label: "Title", name: "title", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Video Sections",
+          name: "sections",
+          widget: "list",
+          fields: [
+            { label: "Image", name: "image", widget: "image", required: true },
+            { label: "Link", name: "link", widget: "string", required: true },
+            { label: "Title", name: "title", widget: "string", required: true },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "videos.njk",
+        },
+      ],
+    },
+    {
+      label: "Get Started",
+      name: "get-started",
+      folder: "src/content/get-started",
+      create: true,
+      editor: { preview: false },
+      fields: [
+        { label: "Title", name: "title", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Steps",
+          name: "steps",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string", required: true },
+            { label: "Image", name: "image", widget: "image", required: true },
+            {
+              label: "Description",
+              name: "description",
+              widget: "object",
+              fields: [
+                {
+                  label: "Text",
+                  name: "text",
+                  widget: "text",
+                  required: true,
+                },
+                {
+                  label: "Points",
+                  name: "points",
+                  widget: "list",
+                  fields: [
+                    {
+                      label: "Point",
+                      name: "point",
+                      widget: "text",
+                      required: true,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Why Wood",
+      name: "why-wood",
+      folder: "src/content/why-wood",
+      create: true,
+      editor: { preview: false },
+      fields: [
+        { label: "Heading", name: "heading", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Sections",
+          name: "sections",
+          widget: "list",
+          fields: [
+            {
+              label: "Heading",
+              name: "heading",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: true,
+            },
+            {
+              label: "Points",
+              name: "points",
+              widget: "list",
+              fields: [
+                {
+                  label: "Point",
+                  name: "point",
+                  widget: "text",
+                  required: true,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Cards",
+          name: "cards",
+          widget: "list",
+          fields: [
+            { label: "Image", name: "image", widget: "image", required: true },
+            {
+              label: "Header",
+              name: "header",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: true,
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
-const data = yaml.dump(config, { noRefs: true , flowLevel: -1});
+const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });
 console.log(data);

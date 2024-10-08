@@ -1,7 +1,7 @@
 ---
 heroImage: /media/uploads/822.jpg
 title: Vedio
-description: vediosssssssssssssssssssssssssssssssss
+description: vediosssssssssssssssssssssssssssssssssS
 sections:
   - image: /media/uploads/822.jpg
     link: https://www.youtube.com/watch?v=CgkZ7MvWUAA

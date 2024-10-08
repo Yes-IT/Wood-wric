@@ -720,7 +720,7 @@ const config = {
         { label: 'Button URL', name: 'url', widget: 'string' },
       ],
     },
-          { label: 'Layout', name: 'layout', widget: 'hidden', default: 'vedios.njk' }
+          { label: 'Layout', name: 'layout', widget: 'hidden', default: 'videos.njk' }
       ],
     },
     {

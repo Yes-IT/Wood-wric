@@ -699,7 +699,7 @@ const config = {
       label: "Layout",
       name: "layout",
       widget: "hidden",
-      default: "home.njk",
+      default: "index.njk",
     },
   ],
 },

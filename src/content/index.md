@@ -1,5 +1,4 @@
 ---
-layout: index.njk
 title: Home
 seo:
   description: >-

@@ -641,8 +641,8 @@ const config = {
   fields: [
     { label: 'Title', name: 'title', widget: 'string' },
     { label: 'Hero Image', name: 'hero', widget: 'image' },
-    { label: 'Hero Title', name: 'hero.title', widget: 'string' },
-    { label: 'Hero Description', name: 'hero.description', widget: 'text' },
+    { label: 'Hero Title', name: 'heroTitle', widget: 'string' },
+    { label: 'Hero Description', name: 'heroDescription', widget: 'text' },
     { label: 'SEO Description', name: 'seo.description', widget: 'text' },
     { label: 'SEO Page Title', name: 'seo.pageTitle', widget: 'string' },
     {

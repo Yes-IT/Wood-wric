@@ -686,6 +686,7 @@ const config = {
       create: true,
       editor: { preview: false },
       fields: [
+        { label: "Hero Image", name: "heroImage", widget: "image", required: true },
         { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",

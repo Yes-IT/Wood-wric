@@ -13,6 +13,6 @@ steps: []
 footer:
   title: hgfghfghfgh
   btnLabel: fghfgdhfg
-  url: https://fehr.yilstaging.com/
+  url: lkmlmo
 layout: getstarted.njk
 ---

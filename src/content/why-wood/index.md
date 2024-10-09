@@ -1,4 +1,6 @@
 ---
+bannerTitle: Why wood
+bannerImage: /media/uploads/dan-feature-2-get-started.jpg
 heading: hgjjgtjtyuryf
 description: utyutyutyutyutyut
 sliders:
@@ -14,6 +16,7 @@ cards:
   - image: /media/uploads/2023-map.jpg
     header: tyutut
     description: utyutututyu
+    b_image: /media/uploads/danarticle1.jpg
 footer:
   title: gjgjgjgjgjgjg
   btnLabel: ljljlkjljljljlkj

@@ -635,10 +635,14 @@ const config = {
     {
       name: "home",
       label: "Home Page",
-      file: "src/content/index.md",
+      folder: "src/content/",
       create: false,
       "delete": false,
       slug: "index",
+      "filter": {  // Filter to ensure you only target one file
+    "field": "layout",
+    "value": "index.njk"
+      },
       fields: [
         {
           label: "Hero Section",

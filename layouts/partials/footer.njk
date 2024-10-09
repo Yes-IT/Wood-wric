@@ -47,7 +47,8 @@
 			</div>
 			<div></div>
 			<div>
-                
+                {% set socialMedia = collections.all | filter(item => item.templateContent && item.data.layout === 'social-link.njk') | first %}
+
    {% if socialMedia %}
 
 				<a href="{{ socialMedia.data.instagram }}" target="_blank">

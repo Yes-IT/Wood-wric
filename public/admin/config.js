@@ -760,12 +760,13 @@ const config = {
       delete: false,
       editor: { preview: false },
       fields: [
-        {
-          label: "Hero Image",
+         {
+          label: "Banner Image",
           name: "heroImage",
           widget: "image",
           required: true,
         },
+        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
         { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",

@@ -633,67 +633,67 @@ const config = {
       ],
     },
     {
-  name: "home",
-  label: "Home Page",
-  folder: "src/content",
-  create: true,
-  slug: "index",
-  fields: [
-    {
-      label: "Hero Section",
-      name: "hero",
-      widget: "object",
+      name: "home",
+      label: "Home Page",
+      folder: "src/content",
+      create: true,
+      slug: "index",
       fields: [
-        { label: "Hero Image 1", name: "image1", widget: "image" },
-        { label: "Hero URL 1", name: "url1", widget: "string" },
-        { label: "Hero Image 2", name: "image2", widget: "image" },
-        { label: "Hero URL 2", name: "url2", widget: "string" },
-        { label: "Hero Description", name: "description", widget: "text" },
+        {
+          label: "Hero Section",
+          name: "hero",
+          widget: "object",
+          fields: [
+            { label: "Hero Image 1", name: "image1", widget: "image" },
+            { label: "Hero URL 1", name: "url1", widget: "string" },
+            { label: "Hero Image 2", name: "image2", widget: "image" },
+            { label: "Hero URL 2", name: "url2", widget: "string" },
+            { label: "Hero Description", name: "description", widget: "text" },
+          ],
+        },
+        {
+          label: "Second Section - Cards",
+          name: "cards",
+          widget: "list",
+          fields: [
+            { label: "Card Title", name: "title", widget: "string" },
+            { label: "Card image", name: "image", widget: "image" },
+            { label: "Card Description", name: "description", widget: "text" },
+            { label: "Card URL", name: "url", widget: "string" },
+          ],
+          max: 2, // Limits to only 2 cards
+        },
+        {
+          label: "Did You Know Section",
+          name: "didYouKnow",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Description", name: "description", widget: "text" },
+            { label: "Image", name: "image", widget: "image" },
+            { label: "Icon", name: "icon", widget: "image" },
+          ],
+          max: 1, // Single entry
+        },
+        {
+          label: "About Section",
+          name: "about",
+          widget: "object",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Description", name: "description", widget: "text" },
+            { label: "Image", name: "image", widget: "image" },
+            { label: "URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "index.njk",
+        },
       ],
     },
-    {
-      label: "Second Section - Cards",
-      name: "cards",
-      widget: "list",
-      fields: [
-        { label: "Card Title", name: "title", widget: "string" },
-        { label: "Card image", name: "image", widget: "image" },
-        { label: "Card Description", name: "description", widget: "text" },
-        { label: "Card URL", name: "url", widget: "string" },
-      ],
-      max: 2, // Limits to only 2 cards
-    },
-    {
-      label: "Did You Know Section",
-      name: "didYouKnow",
-      widget: "list",
-      fields: [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Description", name: "description", widget: "text" },
-        { label: "Image", name: "image", widget: "image" },
-        { label: "Icon", name: "icon", widget: "image" },
-      ],
-      max: 1, // Single entry
-    },
-    {
-      label: "About Section",
-      name: "about",
-      widget: "object",
-      fields: [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Description", name: "description", widget: "text" },
-        { label: "Image", name: "image", widget: "image" },
-        { label: "URL", name: "url", widget: "string" },
-      ],
-    },
-    {
-      label: "Layout",
-      name: "layout",
-      widget: "hidden",
-      default: "index.njk",
-    },
-  ],
-},
     {
       name: "about",
       label: "About Page",
@@ -800,7 +800,7 @@ const config = {
         },
       ],
     },
-   {
+    {
       label: "Get Started",
       name: "get-started",
       folder: "src/content/get-started",
@@ -876,21 +876,21 @@ const config = {
                   label: "Heading",
                   name: "heading",
                   widget: "string",
-                  required: true
+                  required: true,
                 },
                 {
                   label: "Description",
                   name: "description",
                   widget: "text",
-                  required: true
+                  required: true,
                 },
                 {
                   label: "Content",
                   name: "content",
                   widget: "markdown",
-                  required: true
-                }
-              ]
+                  required: true,
+                },
+              ],
             },
             {
               label: "Right Slider",
@@ -901,23 +901,23 @@ const config = {
                   label: "Heading",
                   name: "heading",
                   widget: "string",
-                  required: true
+                  required: true,
                 },
                 {
                   label: "Description",
                   name: "description",
                   widget: "text",
-                  required: true
+                  required: true,
                 },
                 {
                   label: "Content",
                   name: "content",
                   widget: "markdown",
-                  required: true
-                }
-              ]
-            }
-          ]
+                  required: true,
+                },
+              ],
+            },
+          ],
         },
         {
           label: "Cards",
@@ -939,10 +939,7 @@ const config = {
             },
           ],
         },
-        
-      ],
-    },
-     {
+        {
           label: "Footer Section",
           name: "footer",
           widget: "object",
@@ -952,13 +949,14 @@ const config = {
             { label: "Button URL", name: "url", widget: "string" },
           ],
         },
-    {
+        {
           label: "Layout",
           name: "layout",
           widget: "hidden",
           default: "whywood.njk",
         },
-    
+      ],
+    },
   ],
 };
 const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });

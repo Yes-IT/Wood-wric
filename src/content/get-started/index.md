@@ -1,6 +1,8 @@
 ---
 title: jljkljkljkl
 hero: /media/uploads/822.jpg
+bannerImage: /media/uploads/2screen-shot-2021-03-22-at-4.46.40-pm.png
+bannerTitle: GET STARTED
 description: l;'l;k'l;'l
 steps:
   - title: l;'l;k'l;

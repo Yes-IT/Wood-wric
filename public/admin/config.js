@@ -807,8 +807,9 @@ const config = {
       create: true,
       editor: { preview: false },
       fields: [
+        { label: "Banner Image", name: "bannerImage", widget: "image", required: true },
+        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
         { label: "Title", name: "title", widget: "string", required: true },
-        { label: "Hero Image", name: "hero", widget: "image", required: true },
         {
           label: "Description",
           name: "description",
@@ -852,7 +853,7 @@ const config = {
       label: "Why Wood",
       name: "why-wood",
       folder: "src/content/why-wood",
-      create: true,
+      create: false,
       editor: { preview: false },
       fields: [
         { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },

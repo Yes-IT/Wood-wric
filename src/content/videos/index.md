@@ -1,5 +1,6 @@
 ---
 heroImage: /media/uploads/822.jpg
+bannerTitle: Vedios
 title: Qui elit voluptas s
 description: Quibusdam autem labo
 sections:

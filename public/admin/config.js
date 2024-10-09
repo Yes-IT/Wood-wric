@@ -636,7 +636,8 @@ const config = {
       name: "home",
       label: "Home Page",
       folder: "src/content",
-      create: true,
+      create: false,
+      "delete": false,
       slug: "index",
       fields: [
         {
@@ -756,6 +757,7 @@ const config = {
       name: "videos",
       folder: "src/content/videos",
       create: false,
+      delete: false,
       editor: { preview: false },
       fields: [
         {
@@ -810,6 +812,7 @@ const config = {
       name: "get-started",
       folder: "src/content/get-started",
       create: true,
+      delete: false,
       editor: { preview: false },
       fields: [
         { label: "Banner Image", name: "bannerImage", widget: "image", required: true },
@@ -859,6 +862,7 @@ const config = {
       name: "why-wood",
       folder: "src/content/why-wood",
       create: false,
+      delete: false,
       editor: { preview: false },
       fields: [
         { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },

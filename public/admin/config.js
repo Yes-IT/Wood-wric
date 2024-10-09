@@ -635,7 +635,7 @@ const config = {
     {
       name: "home",
       label: "Home Page",
-      folder: "src/content",
+      file: "src/content/index.md",
       create: false,
       "delete": false,
       slug: "index",

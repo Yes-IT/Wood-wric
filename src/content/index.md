@@ -11,6 +11,10 @@ cards:
     image: /media/uploads/2screen-shot-2021-03-22-at-4.46.40-pm.png
     description: gfdgd
     url: gdfgdg
+  - title: ljkljkljklj
+    image: /media/uploads/about-wood.jpg
+    description: ljkljhl
+    url: /about
 didYouKnow:
   - title: gdfgdfg
     description: gdfgd

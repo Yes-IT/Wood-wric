@@ -811,7 +811,7 @@ const config = {
       label: "Get Started",
       name: "get-started",
       folder: "src/content/get-started",
-      create: true,
+      create: false,
       delete: false,
       editor: { preview: false },
       fields: [

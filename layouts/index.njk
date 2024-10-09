@@ -9,7 +9,7 @@
                 <input type="hidden" value="{{hero.url1}}" id="url">
                 <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
             </div>
-            <div id="video-embed" class="video-embed"><iframe width="560" height="315" src="{{hero.url1}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div id="video-embed" class="video-embed"></div>
             <p>{{hero.description}}</p>
 			<div class="square-graphics"></div>
             <div class="square-graphics"></div>
@@ -73,17 +73,17 @@
 		});
 
         
-  //  var embedToggle = document.getElementById('embed-toggle');
-  //      var embed = document.getElementById('video-embed');
-   //     var url = document.getElementById('url').value;
-   //      var embedCode = '';
-    //     embedToggle.addEventListener('click',function click(event) {
-      //       event.preventDefault();
-      //       embedToggle.parentNode.removeChild(embedToggle);
-       //      embed.classList.add('active');
-        //     embed.innerHTML = embedCode;
+    var embedToggle = document.getElementById('embed-toggle');
+        var embed = document.getElementById('video-embed');
+            var url = document.getElementById('url').value;
+            var embedCode = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ftLS7Iny5wY?autoplay=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        embedToggle.addEventListener('click',function click(event) {
+            event.preventDefault();
+            embedToggle.parentNode.removeChild(embedToggle);
+            embed.classList.add('active');
+            embed.innerHTML = embedCode;
             // document.getElementById('play-overlay').style.display = 'none';
-      //  });
+        });
     
     window.addEventListener('load', function (evt) {
         //modal

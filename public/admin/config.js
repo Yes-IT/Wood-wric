@@ -644,6 +644,12 @@ const config = {
     "value": "index.njk"
       },
       fields: [
+         {
+      "label": "Home Page",
+      "name": "title",   // This is important to set the top section title
+      "widget": "string",
+      "required": true
+    },
         {
           label: "Hero Section",
           name: "hero",

@@ -855,6 +855,8 @@ const config = {
       create: true,
       editor: { preview: false },
       fields: [
+        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
+        { label: "Banner Image", name: "bannerImage", widget: "image", required: true },
         { label: "Heading", name: "heading", widget: "string", required: true },
         {
           label: "Description",
@@ -925,6 +927,7 @@ const config = {
           widget: "list",
           fields: [
             { label: "Image", name: "image", widget: "image", required: true },
+            { label: "Background Image", name: "b_image", widget: "image", required: true },
             {
               label: "Header",
               name: "header",

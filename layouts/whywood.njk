@@ -2,8 +2,8 @@
 	<style>#nav{transform:translateZ(500px)}</style>
 	<section class="hero">
 		<div>
-			<img src="{{hero}}" alt="hero image"/>
-			<h1>{{title}}</h1>
+			<img src="{{bannerImage}}" alt="hero image"/>
+			<h1>{{bannerTitle}}</h1>
 		</div>
 	</section>
 	<section class="why-wood">
@@ -50,7 +50,7 @@
 			<div>
 				{% for card in cards %}
 					<div>
-						<img src="{{card.img}}" alt="{{card.header}} background"/>
+						<img src="{{card.b_image}}" alt="{{card.header}} background"/>
 						<div>
 							<img src="{{card.image}}" alt="{{card.header}} icon"/>
 							<h3>{{card.header}}</h3>

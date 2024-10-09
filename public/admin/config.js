@@ -637,19 +637,20 @@ const config = {
       label: "Home Page",
       folder: "src/content/",
       create: false,
-      "delete": false,
+      delete: false,
       slug: "index",
-      "filter": {  // Filter to ensure you only target one file
-    "field": "layout",
-    "value": "index.njk"
+      filter: {
+        // Filter to ensure you only target one file
+        field: "layout",
+        value: "index.njk",
       },
       fields: [
-         {
-      "label": "Home Page",
-      "name": "title",   // This is important to set the top section title
-      "widget": "string",
-      "required": true
-    },
+        {
+          label: "Home Page",
+          name: "title", // This is important to set the top section title
+          widget: "string",
+          required: true,
+        },
         {
           label: "Hero Section",
           name: "hero",
@@ -706,62 +707,122 @@ const config = {
       ],
     },
     {
-      "name": "about",
-      "label": "About Page",
-      "folder": "src/content/about",
-      "create": false,
-      "delete": false,
-      "slug": "index",
-      "fields": [
-        { "label": "Banner Title", "name": "title", "widget": "string", "required": true },
-        { "label": "Banner Image", "name": "bannerImage", "widget": "image", "required": true },
-        { "label": "Hero Image", "name": "hero", "widget": "image", "required": true },
-        { "label": "Hero Title", "name": "heroTitle", "widget": "string", "required": true },
-        { "label": "Hero Description", "name": "heroDescription", "widget": "text", "required": true },
-        { "label": "SEO Description", "name": "seo.description", "widget": "text", "required": true },
-        { "label": "SEO Page Title", "name": "seo.pageTitle", "widget": "string", "required": true },
+      name: "about",
+      label: "About Page",
+      folder: "src/content/about",
+      create: false,
+      delete: false,
+      slug: "index",
+      fields: [
         {
-          "label": "Cards",
-          "name": "cards",
-          "widget": "list",
-          "required": true,
-          "fields": [
-            { "label": "Card Title", "name": "title", "widget": "string", "required": true },
-            { "label": "Card Copy", "name": "copy", "widget": "text", "required": true },
-            { "label": "Card Image", "name": "img", "widget": "image", "required": true }
-          ]
+          label: "Banner Title",
+          name: "title",
+          widget: "string",
+          required: true,
         },
         {
-          "label": "Executive Associations",
-          "name": "execAssociations",
-          "widget": "list",
-          "required": true,
-          "fields": [
-            { "label": "Title", "name": "title", "widget": "string", "required": true },
-            { "label": "Image", "name": "img", "widget": "image", "required": true },
-            { "label": "URL", "name": "url", "widget": "string", "required": true }
-          ]
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
+        { label: "Hero Image", name: "hero", widget: "image", required: true },
+        {
+          label: "Hero Title",
+          name: "heroTitle",
+          widget: "string",
+          required: true,
         },
         {
-          "label": "Footer Section",
-          "name": "footer",
-          "widget": "object",
-          "required": true,
-          "fields": [
-            { "label": "Footer Title", "name": "title", "widget": "string", "required": true },
-            { "label": "Button Label", "name": "btnLabel", "widget": "string", "required": true },
-            { "label": "Button URL", "name": "url", "widget": "string", "required": true }
-          ]
+          label: "Hero Description",
+          name: "heroDescription",
+          widget: "text",
+          required: true,
         },
         {
-          "label": "Layout",
-          "name": "layout",
-          "widget": "hidden",
-          "default": "about.njk",
-          "required": true
-        }
-      ]
-    },    
+          label: "SEO Description",
+          name: "seo.description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "SEO Page Title",
+          name: "seo.pageTitle",
+          widget: "string",
+          required: true,
+        },
+        {
+          label: "Cards",
+          name: "cards",
+          widget: "list",
+          required: true,
+          fields: [
+            {
+              label: "Card Title",
+              name: "title",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Card Copy",
+              name: "copy",
+              widget: "text",
+              required: true,
+            },
+            {
+              label: "Card Image",
+              name: "img",
+              widget: "image",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Executive Associations",
+          name: "execAssociations",
+          widget: "list",
+          required: true,
+          fields: [
+            { label: "Title", name: "title", widget: "string", required: true },
+            { label: "Image", name: "img", widget: "image", required: true },
+            { label: "URL", name: "url", widget: "string", required: true },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          required: true,
+          fields: [
+            {
+              label: "Footer Title",
+              name: "title",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Button Label",
+              name: "btnLabel",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Button URL",
+              name: "url",
+              widget: "string",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "about.njk",
+          required: true,
+        },
+      ],
+    },
     {
       label: "Videos",
       name: "videos",
@@ -770,13 +831,18 @@ const config = {
       delete: false,
       editor: { preview: false },
       fields: [
-         {
+        {
           label: "Banner Image",
           name: "heroImage",
           widget: "image",
           required: true,
         },
-        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
+        {
+          label: "Banner Title",
+          name: "bannerTitle",
+          widget: "string",
+          required: true,
+        },
         { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",
@@ -826,8 +892,18 @@ const config = {
       delete: false,
       editor: { preview: false },
       fields: [
-        { label: "Banner Image", name: "bannerImage", widget: "image", required: true },
-        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
+        {
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
+        {
+          label: "Banner Title",
+          name: "bannerTitle",
+          widget: "string",
+          required: true,
+        },
         { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",
@@ -876,8 +952,18 @@ const config = {
       delete: false,
       editor: { preview: false },
       fields: [
-        { label: "Banner Title", name: "bannerTitle", widget: "string", required: true },
-        { label: "Banner Image", name: "bannerImage", widget: "image", required: true },
+        {
+          label: "Banner Title",
+          name: "bannerTitle",
+          widget: "string",
+          required: true,
+        },
+        {
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
         { label: "Heading", name: "heading", widget: "string", required: true },
         {
           label: "Description",
@@ -948,7 +1034,12 @@ const config = {
           widget: "list",
           fields: [
             { label: "Image", name: "image", widget: "image", required: true },
-            { label: "Background Image", name: "b_image", widget: "image", required: true },
+            {
+              label: "Background Image",
+              name: "b_image",
+              widget: "image",
+              required: true,
+            },
             {
               label: "Header",
               name: "header",
@@ -981,7 +1072,7 @@ const config = {
         },
       ],
     },
-   {
+    {
       name: "socialMedia",
       label: "Social Media Links",
       folder: "src/content/",
@@ -997,29 +1088,35 @@ const config = {
           label: "Facebook URL",
           name: "facebook",
           widget: "string",
-          required: false,
         },
         {
-          label: "Twitter URL",
-          name: "twitter",
+          label: "X URL",
+          name: "X",
           widget: "string",
-          required: false,
         },
         {
           label: "LinkedIn URL",
           name: "linkedin",
           widget: "string",
-          required: false,
         },
         {
           label: "Instagram URL",
           name: "instagram",
           widget: "string",
-          required: false,
         },
         {
           label: "YouTube URL",
           name: "youtube",
+          widget: "string",
+        }, 
+        {
+          label: "Tik Tok URL",
+          name: "tiktok",
+          widget: "string",
+        },
+        {
+          label: "Email URL",
+          name: "email",
           widget: "string",
           required: false,
         },

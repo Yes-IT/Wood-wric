@@ -981,6 +981,45 @@ const config = {
         },
       ],
     },
+    {
+  "name": "socialMedia",
+  "label": "Social Media Links",
+  "file": "src/content/social-media.md",  // Stores social media links in this file
+  "create": false,  // Prevent creation of new files
+  "delete": false,  // Prevent deletion
+  "fields": [
+    {
+      "label": "Facebook URL",
+      "name": "facebook",
+      "widget": "string",
+      "required": false
+    },
+    {
+      "label": "Twitter URL",
+      "name": "twitter",
+      "widget": "string",
+      "required": false
+    },
+    {
+      "label": "LinkedIn URL",
+      "name": "linkedin",
+      "widget": "string",
+      "required": false
+    },
+    {
+      "label": "Instagram URL",
+      "name": "instagram",
+      "widget": "string",
+      "required": false
+    },
+    {
+      "label": "YouTube URL",
+      "name": "youtube",
+      "widget": "string",
+      "required": false
+    }
+  ]
+},
   ],
 };
 const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });

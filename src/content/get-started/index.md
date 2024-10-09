@@ -1,82 +1,18 @@
 ---
-title: jljkljkljkl
+title: Start your new wood career today!
 hero: /media/uploads/822.jpg
 bannerImage: /media/uploads/2screen-shot-2021-03-22-at-4.46.40-pm.png
-bannerTitle: GET STARTED
+bannerTitle: Get Started
 description: >-
-  Thiruvananthapuram, Oct 9 ( IANS) Dissident Independent MLA P.V. Anvar, who
-  has been ousted from the Left Democratic Front, on Wednesday attended the
-  ongoing Assembly session, and claimed the Chief Minister was flying to the US
-  to settle some issues, the details of which he (Anvar) will reveal soon.
+  
+  Did you know that wood industry jobs pay $2,000 to $11,000 more a year than many jobs that require a bachelor’s degree? What’s more, you can sometimes get paid while starting an entry-level woodworking job or other wood industry position while you train as an apprentice.
 
 
-  On Tuesday Anvar did not attend the session as the Speaker allocated him a seat amongst the opposition.
-
-
-  Just before reaching the Assembly, he claimed that Chief Minister Pinarayi Vijayan and his family were leaving for the US very soon.
-
-
-  “The trip is to settle some issues and if need be I will come out with the reason for his visit,” said Anvar.
-
-
-  CM Vijayan did not attend the Assembly session as he was indisposed and down with a fever and was resting at his official residence.
-
-
-  For the past month, Anvar has been going hammer and tongs against CM Vijayan in particular and the CPI(M) in general levelling allegations against ADGP M.R. Ajith Kumar and the P.Sasi, the CM’s political secretary, for aiding the gold smugglers.
-steps:
-  - title: First
-    image: /media/uploads/822.jpg
-    content: >-
-      <!--StartFragment-->
-
-
-      Thiruvananthapuram, Oct 9 ( IANS) Dissident Independent MLA P.V. Anvar, who has been ousted from the Left Democratic Front, on Wednesday attended the ongoing Assembly session, and claimed the Chief Minister was flying to the US to settle some issues, the details of which he (Anvar) will reveal soon.
-
-
-      On Tuesday Anvar did not attend the session as the Speaker allocated him a seat amongst the opposition.
-
-
-      Just before reaching the Assembly, he claimed that Chief Minister Pinarayi Vijayan and his family were leaving for the US very soon.
-
-
-      “The trip is to settle some issues and if need be I will come out with the reason for his visit,” said Anvar.
-
-
-      CM Vijayan did not attend the Assembly session as he was indisposed and down with a fever and was resting at his official residence.
-
-
-      For the past month, Anvar has been going hammer and tongs against CM Vijayan in particular and the CPI(M) in general levelling allegations against ADGP M.R. Ajith Kumar and the P.Sasi, the CM’s political secretary, for aiding the gold smugglers.
-
-
-      <!--EndFragment-->
-  - title: second
-    image: /media/uploads/822.jpg
-    content: >-
-      <!--StartFragment-->
-
-
-      Thiruvananthapuram, Oct 9 ( IANS) Dissident Independent MLA P.V. Anvar, who has been ousted from the Left Democratic Front, on Wednesday attended the ongoing Assembly session, and claimed the Chief Minister was flying to the US to settle some issues, the details of which he (Anvar) will reveal soon.
-
-
-      On Tuesday Anvar did not attend the session as the Speaker allocated him a seat amongst the opposition.
-
-
-      Just before reaching the Assembly, he claimed that Chief Minister Pinarayi Vijayan and his family were leaving for the US very soon.
-
-
-      “The trip is to settle some issues and if need be I will come out with the reason for his visit,” said Anvar.
-
-
-      CM Vijayan did not attend the Assembly session as he was indisposed and down with a fever and was resting at his official residence.
-
-
-      For the past month, Anvar has been going hammer and tongs against CM Vijayan in particular and the CPI(M) in general levelling allegations against ADGP M.R. Ajith Kumar and the P.Sasi, the CM’s political secretary, for aiding the gold smugglers.
-
-
-      <!--EndFragment-->
+  To help you get started, here are some online resources for you to search for current jobs in the wood industry. No experience? No problem. Search the scholarship and apprenticeship opportunities below, to get the experience you need. In many cases, employers are looking for current apprentices to hire for entry-level jobs!
+steps: []
 footer:
   title: hgfghfghfgh
   btnLabel: fghfgdhfg
-  url: hfghfhfdghfgh
+  url: https://fehr.yilstaging.com/
 layout: getstarted.njk
 ---

@@ -981,50 +981,50 @@ const config = {
         },
       ],
     },
-    {
-  "name": "socialMedia",
-  "label": "Social Media Links",
-  "folder": "src/content/",  // Stores social media links in this file
-  "create": true,  // Prevent creation of new files
-  "delete": false,
-    "slug":"social-link",// Prevent deletion
-  "fields": [
-    "filter": {  // Filter to ensure you only target one file
-    "field": "layout",
-    "value": "social-link.njk"
+   {
+      name: "socialMedia",
+      label: "Social Media Links",
+      folder: "src/content/",
+      create: true,
+      delete: false,
+      slug: "social-link",
+      filter: {
+        field: "layout",
+        value: "social-link.njk",
       },
-    {
-      "label": "Facebook URL",
-      "name": "facebook",
-      "widget": "string",
-      "required": false
+      fields: [
+        {
+          label: "Facebook URL",
+          name: "facebook",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "Twitter URL",
+          name: "twitter",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "LinkedIn URL",
+          name: "linkedin",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "Instagram URL",
+          name: "instagram",
+          widget: "string",
+          required: false,
+        },
+        {
+          label: "YouTube URL",
+          name: "youtube",
+          widget: "string",
+          required: false,
+        },
+      ],
     },
-    {
-      "label": "Twitter URL",
-      "name": "twitter",
-      "widget": "string",
-      "required": false
-    },
-    {
-      "label": "LinkedIn URL",
-      "name": "linkedin",
-      "widget": "string",
-      "required": false
-    },
-    {
-      "label": "Instagram URL",
-      "name": "instagram",
-      "widget": "string",
-      "required": false
-    },
-    {
-      "label": "YouTube URL",
-      "name": "youtube",
-      "widget": "string",
-      "required": false
-    }
-  ]
-},
   ],
 };
 const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });

@@ -1118,7 +1118,6 @@ const config = {
           label: "Email URL",
           name: "email",
           widget: "string",
-          required: false,
         },
       ],
     },

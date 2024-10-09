@@ -11,6 +11,7 @@ execAssociations:
 hero.title: Natus labore enim voj
 hero.description: Consequuntur voluptaj
 title: Irure nobis omnis ea
+bannerImage: /media/uploads/about-wood.jpg
 hero: /media/uploads/dan-feature-2-get-started.jpg
 heroTitle: fhfhfghfh
 seo.description: Dolor temporibus dic

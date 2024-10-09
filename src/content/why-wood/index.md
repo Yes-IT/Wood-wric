@@ -1,5 +1,5 @@
 ---
-bannerTitle: Why wood
+bannerTitle: Why wood j
 bannerImage: /media/uploads/dan-feature-2-get-started.jpg
 heading: hgjjgtjtyuryf
 description: utyutyutyutyutyut

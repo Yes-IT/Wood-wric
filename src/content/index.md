@@ -1,4 +1,5 @@
 ---
+title: Home Page
 hero:
   image1: /media/uploads/2023-map.jpg
   url1: /about

@@ -1,4 +1,5 @@
 ---
+layout: partials/footer.njk
 facebook: facebok.com
 X: facebok.com
 linkedin: facebok.com

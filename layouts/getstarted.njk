@@ -1,8 +1,8 @@
 {% include "partials/header.njk" %}
 	<section class="hero">
 		<div>
-			<img src="{{hero}}" alt="hero image"/>
-			<h1>Get Started</h1>
+			<img src="{{bannerImage}}" alt="hero image"/>
+			<h1>{{bannerTitle}}</h1>
 		</div>
 	</section>
 	<div class="intro">
@@ -21,9 +21,5 @@
 			</div>
 		{% endfor %}
 	</section>
-	<!--<section class="events-footer">
-		<div>
-			{{contents}}
-		</div>
-	</section>-->
+	
 {% include "partials/footer.njk" %}

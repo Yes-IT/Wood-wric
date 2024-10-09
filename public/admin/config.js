@@ -695,57 +695,62 @@ const config = {
       ],
     },
     {
-      name: "about",
-      label: "About Page",
-      folder: "src/content/about",
-      create: false,
-      slug: "index",
-      fields: [
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Hero Image", name: "hero", widget: "image" },
-        { label: "Hero Title", name: "heroTitle", widget: "string" },
-        { label: "Hero Description", name: "heroDescription", widget: "text" },
-        { label: "SEO Description", name: "seo.description", widget: "text" },
-        { label: "SEO Page Title", name: "seo.pageTitle", widget: "string" },
+      "name": "about",
+      "label": "About Page",
+      "folder": "src/content/about",
+      "create": false,
+      "delete": false,
+      "slug": "index",
+      "fields": [
+        { "label": "Banner Title", "name": "title", "widget": "string", "required": true },
+        { "label": "Banner Image", "name": "bannerImage", "widget": "image", "required": true },
+        { "label": "Hero Image", "name": "hero", "widget": "image", "required": true },
+        { "label": "Hero Title", "name": "heroTitle", "widget": "string", "required": true },
+        { "label": "Hero Description", "name": "heroDescription", "widget": "text", "required": true },
+        { "label": "SEO Description", "name": "seo.description", "widget": "text", "required": true },
+        { "label": "SEO Page Title", "name": "seo.pageTitle", "widget": "string", "required": true },
         {
-          label: "Cards",
-          name: "cards",
-          widget: "list",
-          fields: [
-            { label: "Card Title", name: "title", widget: "string" },
-            { label: "Card Copy", name: "copy", widget: "text" },
-            { label: "Card Image", name: "img", widget: "image" },
-          ],
+          "label": "Cards",
+          "name": "cards",
+          "widget": "list",
+          "required": true,
+          "fields": [
+            { "label": "Card Title", "name": "title", "widget": "string", "required": true },
+            { "label": "Card Copy", "name": "copy", "widget": "text", "required": true },
+            { "label": "Card Image", "name": "img", "widget": "image", "required": true }
+          ]
         },
         {
-          label: "Executive Associations",
-          name: "execAssociations",
-          widget: "list",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            { label: "Image", name: "img", widget: "image" },
-            { label: "URL", name: "url", widget: "string" },
-          ],
+          "label": "Executive Associations",
+          "name": "execAssociations",
+          "widget": "list",
+          "required": true,
+          "fields": [
+            { "label": "Title", "name": "title", "widget": "string", "required": true },
+            { "label": "Image", "name": "img", "widget": "image", "required": true },
+            { "label": "URL", "name": "url", "widget": "string", "required": true }
+          ]
         },
         {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          fields: [
-            { label: "Footer Title", name: "title", widget: "string" },
-            { label: "Button Label", name: "btnLabel", widget: "string" },
-            { label: "Button URL", name: "url", widget: "string" },
-          ],
+          "label": "Footer Section",
+          "name": "footer",
+          "widget": "object",
+          "required": true,
+          "fields": [
+            { "label": "Footer Title", "name": "title", "widget": "string", "required": true },
+            { "label": "Button Label", "name": "btnLabel", "widget": "string", "required": true },
+            { "label": "Button URL", "name": "url", "widget": "string", "required": true }
+          ]
         },
         {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "about.njk",
-        },
-      ],
-    },
-
+          "label": "Layout",
+          "name": "layout",
+          "widget": "hidden",
+          "default": "about.njk",
+          "required": true
+        }
+      ]
+    },    
     {
       label: "Videos",
       name: "videos",

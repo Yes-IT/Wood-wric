@@ -1072,55 +1072,23 @@ const config = {
         },
       ],
     },
-    {
-      name: "socialMedia",
-      label: "Social Media Links",
-      folder: "src/content/",
-      create: false,
-      delete: false,
-      slug: "social-link",
-      filter: {
-        field: "layout",
-        value: "social-link.njk",
-      },
-      fields: [
-        {
-          label: "Facebook URL",
-          name: "facebook",
-          widget: "string",
-        },
-        {
-          label: "X URL",
-          name: "X",
-          widget: "string",
-        },
-        {
-          label: "LinkedIn URL",
-          name: "linkedin",
-          widget: "string",
-        },
-        {
-          label: "Instagram URL",
-          name: "instagram",
-          widget: "string",
-        },
-        {
-          label: "YouTube URL",
-          name: "youtube",
-          widget: "string",
-        }, 
-        {
-          label: "Tik Tok URL",
-          name: "tiktok",
-          widget: "string",
-        },
-        {
-          label: "Email URL",
-          name: "email",
-          widget: "string",
-        },
-      ],
-    },
+   {
+  name: "socialMedia",
+  label: "Social Media Links",
+  folder: "src/content/",
+  create: true,
+  delete: false,
+  slug: "social-media",
+  fields: [
+    { label: "Facebook URL", name: "facebook", widget: "string" },
+    { label: "X URL", name: "X", widget: "string" },
+    { label: "LinkedIn URL", name: "linkedin", widget: "string" },
+    { label: "Instagram URL", name: "instagram", widget: "string" },
+    { label: "YouTube URL", name: "youtube", widget: "string" },
+    { label: "TikTok URL", name: "tiktok", widget: "string" },
+    { label: "Email Address", name: "email", widget: "string", required: false },
+  ]
+}
   ],
 };
 const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });

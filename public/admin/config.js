@@ -1076,7 +1076,7 @@ const config = {
       name: "socialMedia",
       label: "Social Media Links",
       folder: "src/content/",
-      create: true,
+      create: false,
       delete: false,
       slug: "social-link",
       filter: {

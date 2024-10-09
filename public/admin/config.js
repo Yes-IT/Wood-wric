@@ -1073,22 +1073,22 @@ const config = {
       ],
     },
    {
-  name: "socialMedia",
-  label: "Social Media Links",
-  folder: "src/content/",
-  create: true,
-  delete: false,
-  slug: "social-media",
-  fields: [
-    { label: "Facebook URL", name: "facebook", widget: "string" },
-    { label: "X URL", name: "X", widget: "string" },
-    { label: "LinkedIn URL", name: "linkedin", widget: "string" },
-    { label: "Instagram URL", name: "instagram", widget: "string" },
-    { label: "YouTube URL", name: "youtube", widget: "string" },
-    { label: "TikTok URL", name: "tiktok", widget: "string" },
-    { label: "Email Address", name: "email", widget: "string", required: false },
-  ]
-}
+      name: 'socialMedia', // Name of the collection
+      label: 'Social Media Links', // Label for the admin panel
+      folder: 'src/content/social-media', // Folder where the social media links will be stored
+      create: true,
+      delete: false,
+      slug: 'social-media', // Slug for the file
+      fields: [
+        { label: 'Facebook URL', name: 'facebook', widget: 'string' },
+        { label: 'X URL', name: 'x', widget: 'string' },
+        { label: 'LinkedIn URL', name: 'linkedin', widget: 'string' },
+        { label: 'Instagram URL', name: 'instagram', widget: 'string' },
+        { label: 'YouTube URL', name: 'youtube', widget: 'string' },
+        { label: 'TikTok URL', name: 'tiktok', widget: 'string' },
+        { label: 'Email Address', name: 'email', widget: 'string', required: false },
+      ],
+    },
   ],
 };
 const data = yaml.dump(config, { noRefs: true, flowLevel: -1 });

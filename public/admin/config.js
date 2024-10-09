@@ -984,10 +984,15 @@ const config = {
     {
   "name": "socialMedia",
   "label": "Social Media Links",
-  "file": "src/content/social-media.md",  // Stores social media links in this file
-  "create": false,  // Prevent creation of new files
-  "delete": false,  // Prevent deletion
+  "folder": "src/content/",  // Stores social media links in this file
+  "create": true,  // Prevent creation of new files
+  "delete": false,
+    "slug":"social-link",// Prevent deletion
   "fields": [
+    "filter": {  // Filter to ensure you only target one file
+    "field": "layout",
+    "value": "social-link.njk"
+      },
     {
       "label": "Facebook URL",
       "name": "facebook",

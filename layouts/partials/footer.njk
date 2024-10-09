@@ -8,7 +8,7 @@
 		</div>
 	</section>
 {% endif %}
-{% set socialMedia = collections.all | filter(item => item.templateContent && item.data.layout === 'social-link.njk') | first %}
+{% set socialMedia = collections.all | filter(item => item.templateContent && item.data.layout === 'footer.njk') | first %}
 
 	<footer>
 		<div>

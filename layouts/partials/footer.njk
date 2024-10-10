@@ -8,8 +8,7 @@
 		</div>
 	</section>
 {% endif %}
-{% set footerData = fetch('/content/social-media/social-media.md') %}
-{% include footerData %}
+{% set footerData = include('content/social-media/social-media.md') %}
 
 
 {{ footerData }}

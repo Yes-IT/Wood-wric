@@ -8,9 +8,11 @@
 		</div>
 	</section>
 {% endif %}
+{% set socialMediaContent = fetch('/content/social-media/social-media.md') %}
+{% include socialMediaContent %}
 
 
-{{ socialMediaData }}
+{{ socialMediaContent }}
 
 	<footer>
 		<div>

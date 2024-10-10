@@ -1,5 +1,4 @@
 ---
-layouts: /partials/footer.njk
 facebook:  "https://www.instagram.com/woodwirc/"
 x:  "https://www.instagram.com/woodwirc/"
 linkedin: "https://www.instagram.com/woodwirc/"

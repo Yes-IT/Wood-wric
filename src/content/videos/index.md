@@ -4,10 +4,6 @@ bannerTitle: Vedioss
 title: Qui elit voluptas s
 description: Quibusdam autem labo
 sections:
-  - image: /media/uploads/822.jpg
-    link: https://www.youtube.com/watch?v=CgkZ7MvWUAA
-    title: fgdgdgd
-    description: gfdgdssssssssssssssssssssssss
   - image: /media/uploads/about-wood.jpg
     link: https://www.youtube.com/watch?v=CgkZ7MvWUAA
     title: dfgdfg
@@ -18,7 +14,7 @@ sections:
     description: Magna et lorem tempo
 footer:
   title: Sit velit fugiat au
-  btnLabel: Dolore amet aliqua
+  btnLabel: "hbhgbjhbvgh "
   url: Voluptatem exercitat
 layout: videos.njk
 ---

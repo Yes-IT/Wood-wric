@@ -21,4 +21,6 @@ footer:
   btnLabel: Doloremque cupiditat
   url: Duis inventore qui a
 layout: about.njk
+socialMediaInclude: "{% include 'content/social-media/social-media.md' %}"
+
 ---

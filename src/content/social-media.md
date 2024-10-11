@@ -1,10 +1,12 @@
----
 
-facebook: facebok.com
-X: facebok.com
-linkedin: facebok.com
-instagram: facebok.com
-youtube: facebok.com
-tiktok: facebok.com
-email: facebok.com
+---
+socialMedia:
+  - name: Instagram
+    url: https://instagram.com
+  - name: Facebook
+    url: https://facebook.com
+  - name: LinkedIn
+    url: https://linkedin.com
+  - name: YouTube
+    url: https://youtube.com
 ---

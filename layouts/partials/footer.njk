@@ -8,11 +8,17 @@
 		</div>
 	</section>
 {% endif %}
-  {% for platform in socialMedia %}
+ <!-- social.njk or your rendering template -->
+{% if page.socialMedia %}
+<div>
+    {% for platform in page.socialMedia %}
         <a href="{{ platform.url }}" target="_blank">
             {{ platform.name }}
         </a>
     {% endfor %}
+</div>
+{% endif %}
+
 	<footer>
 		<div>
 			<div>

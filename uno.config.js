@@ -1,5 +1,5 @@
 import { defineConfig } from 'unocss';
-import { readFrontMatter } from './src/lib/frontMatter.js'; // Import front matter function
+
 import fs from 'fs';
 import path from 'path';
 
@@ -23,9 +23,6 @@ function getMarkdownFiles(dir) {
     return markdownFiles;
 }
 
-// Get social media data from the Markdown file
-const socialMediaFilePath = './src/content/social-media/social-media.md';
-const socialMediaData = readFrontMatter(socialMediaFilePath);
 
 // Export Unocss configuration
 export default defineConfig({
@@ -63,7 +60,5 @@ export default defineConfig({
     ],
 
     // Expose the social media data to your templates (optional, if needed)
-    global: {
-        socialMedia: socialMediaData,
-    }
+  
 });

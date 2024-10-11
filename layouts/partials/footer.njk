@@ -8,7 +8,11 @@
 		</div>
 	</section>
 {% endif %}
-{{socialMedia.facebook}}
+  {% for platform in socialMedia %}
+        <a href="{{ platform.url }}" target="_blank">
+            {{ platform.name }}
+        </a>
+    {% endfor %}
 	<footer>
 		<div>
 			<div>

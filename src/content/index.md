@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: Home Pagee
 hero:
   image1: /media/uploads/2023-map.jpg
   url1: https://www.youtube.com/watch?v=yoX7NzVpX8w

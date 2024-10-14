@@ -1,7 +1,7 @@
 ---
 title: Home Page
 hero:
-  image1: /media/uploads/product-warranty_1_220x-2-.avif
+  image1: /media/uploads/2023-map.jpg
   url1: https://www.youtube.com/watch?v=yoX7NzVpX8w
   image2: /media/uploads/2-year-skilled-trades-programs-booming.png
   url2: https://mindscopic.com/

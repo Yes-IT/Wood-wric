@@ -1,5 +1,5 @@
 ---
-title: Home Pagee
+title: Home Page
 hero:
   image1: /media/uploads/2023-map.jpg
   url1: https://www.youtube.com/watch?v=yoX7NzVpX8w
@@ -10,6 +10,10 @@ cards:
   - title: "Test "
     image: /media/uploads/awi-2021-final-convention-01-architectural-woodwork-institute.jpg
     description: "Hlo client "
+    url: https://heavenlyconnects.com/admin/user-management
+  - title: fghsfghsfgh
+    image: /media/uploads/2023-map.jpg
+    description: fghfgh
     url: https://heavenlyconnects.com/admin/user-management
 didYouKnow:
   - title: Rupesh

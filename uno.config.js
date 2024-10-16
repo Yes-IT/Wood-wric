@@ -3,6 +3,22 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter'; // Import gray-matter for parsing frontmatter
 
+// Function to get social media data from Markdown file
+function getSocialMediaData() {
+  const filePath = './src/content/social-media/social-media.md'; // Path to your Markdown file
+  if (fs.existsSync(filePath)) {
+    const markdownContent = fs.readFileSync(filePath, 'utf8');
+    const parsedData = matter(markdownContent); // Parse the Markdown content
+    return parsedData.data; // Return the frontmatter as an object
+  }
+  return {}; // Return empty object if file doesn't exist
+}
+
+// Get social media data
+const socialMediaData = getSocialMediaData();
+console.log(socialMediaData); // Log the data to ensure it's fetched correctly
+
+// Function to get all Markdown files from a specified directory
 function getMarkdownFiles(dir) {
   const files = fs.readdirSync(dir);
   const markdownFiles = [];
@@ -24,16 +40,6 @@ function getMarkdownFiles(dir) {
 
 // Get all Markdown files from the specified directory
 const markdownFiles = getMarkdownFiles('./src/content');
-
-// Parse the specific social media Markdown file
-const socialMediaData = {};
-const socialMediaFile = './src/content/social-media/social-media.md'; // Adjust the path as necessary
-
-if (fs.existsSync(socialMediaFile)) {
-  const markdownContent = fs.readFileSync(socialMediaFile, 'utf8');
-  const parsedData = matter(markdownContent);
-  Object.assign(socialMediaData, parsedData.data); // Extract the frontmatter
-}
 
 // Export Unocss configuration
 export default defineConfig({

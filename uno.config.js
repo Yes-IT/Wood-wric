@@ -2,6 +2,19 @@ import { defineConfig } from 'unocss';
 
 import fs from 'fs';
 import path from 'path';
+const nunjucks = require('nunjucks');
+const getSocialMedia = require('./src/lib/getSocialMedia');
+
+// Fetch social media data
+const socialMediaLinks = getSocialMedia();
+
+// Configure Nunjucks environment
+const env = nunjucks.configure('src/views', { autoescape: true });
+
+// Pass social media links to all templates
+env.addGlobal('socialMediaLinks', socialMediaLinks);
+
+// Render your template files...
 
 // Function to get Markdown files from a directory
 function getMarkdownFiles(dir) {

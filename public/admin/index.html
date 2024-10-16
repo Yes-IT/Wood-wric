@@ -10,11 +10,38 @@
         }
     </style>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Markdown parser -->
 </head>
 <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
+        // Global variable to hold the social media data
+        let socialMediaData = {};
+
+        // Fetch the content of the Markdown file
+        async function fetchSocialMediaData() {
+            try {
+                const response = await fetch('/src/content/social-media/social-media.md');  // Ensure the correct path
+                const markdown = await response.text();
+
+                // Parse the Markdown content (if needed, you can use marked to convert to HTML)
+                const parsedData = marked(markdown);  // This converts Markdown to HTML
+                
+                // Optionally, you can store the raw markdown or convert it to JSON if structured
+                socialMediaData = parsedData;
+
+                // Now you can use this socialMediaData variable globally in your pages
+                console.log(socialMediaData);  // Check the parsed data in console
+
+            } catch (error) {
+                console.error('Error fetching social media data:', error);
+            }
+        }
+
+        // Call the function to fetch data when the page loads
+        fetchSocialMediaData();
+
         // Register the custom-string widget properly
         CMS.registerWidget('custom-string', window.WidgetStringControl.extend({
             pattern: ['^([^\\s]+\\s?){1,5}$', 'Title must not exceed 5 words'],

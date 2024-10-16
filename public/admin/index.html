@@ -45,6 +45,9 @@
         }
 
         CMS.registerWidget("uuid", uuidControl);
+        CMS.registerWidget('custom-string', window.WidgetStringControl.extend({
+            pattern: ['^([^\\s]+\\s?){1,5}$', 'Title must not exceed 5 words'],
+        }), window.WidgetStringPreview);
         CMS.registerPreviewStyle("/css/style.css");
     </script>
 </body>

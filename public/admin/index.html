@@ -11,6 +11,7 @@
     </style>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/gray-matter/gray-matter.min.js"></script> <!-- YAML parser -->
 </head>
 <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
@@ -25,18 +26,17 @@
                 const response = await fetch('/src/content/social-media/social-media.md');  // Ensure the correct path
                 const markdown = await response.text();
 
-                // Parse the Markdown content (if needed, you can use marked to convert to HTML)
-                const parsedData = marked(markdown);  // This converts Markdown to HTML
-                
-                // Optionally, you can store the raw markdown or convert it to JSON if structured
-                socialMediaData = parsedData;
-                    alert('hello');
+                // Use gray-matter to parse the Markdown and extract the data
+                const parsedData = matter(markdown);  // `matter` function parses the Markdown
+
+                // Store the frontmatter data (YAML part)
+                socialMediaData = parsedData.data;
+
                 // Now you can use this socialMediaData variable globally in your pages
                 console.log(socialMediaData);  // Check the parsed data in console
 
             } catch (error) {
-                   alert('hello2');
-                console.error('Error fetching social media dataaaaaaaaaaaaaaaa:', error);
+                console.error('Error fetching social media data:', error);
             }
         }
 

@@ -7,7 +7,7 @@ const fs = require("fs");
 
 //base fields that are common to many content types
 const baseFields = [
-  { name: "title", label: "Title", widget: "string" },
+  { name: "title", label: "Title", widget: "string" }, 
   {
     label: "Permalink",
     name: "permalink",

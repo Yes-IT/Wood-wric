@@ -668,7 +668,7 @@ const config = {
           name: "cards",
           widget: "list",
           fields: [
-            { label: "Card Title", name: "title", widget: "string" },
+            { label: "Card Title", name: "title",  widget: "custom-string" },
             { label: "Card image", name: "image", widget: "image" },
             { label: "Card Description", name: "description", widget: "text" },
             { label: "Card URL", name: "url", widget: "string" },

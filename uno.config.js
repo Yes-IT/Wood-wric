@@ -2,7 +2,7 @@ import { defineConfig } from 'unocss';
 import fs from 'fs';
 import path from 'path';
 const nunjucks = require('nunjucks');
-const getSocialMedia = require('./src/lib/getSocialMedia');
+const getSocialMedia = require('../src/lib/getSocialMedia');
 
 // Fetch social media data
 const socialMediaLinks = getSocialMedia();

@@ -15,8 +15,12 @@
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
-        const { CMS, initCMS: init } = window;
+        // Register the custom-string widget properly
+        CMS.registerWidget('custom-string', window.WidgetStringControl.extend({
+            pattern: ['^([^\\s]+\\s?){1,5}$', 'Title must not exceed 5 words'],
+        }), window.WidgetStringPreview);
 
+        // Register UUID widget (as in your original setup)
         const uuidControl = createClass({
             componentDidMount: function () {
                 if (!this.props.value) {
@@ -34,6 +38,7 @@
                 return h("input", { disabled: true, style: { color: '#cdcdcd' }, className: this.props.classNameWrapper, id: this.props.forID, type: "text", value: value, onChange: this.handleChange });
             }
         });
+
         function generateUUID() {
             var d = new Date().getTime();
             var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
@@ -45,9 +50,8 @@
         }
 
         CMS.registerWidget("uuid", uuidControl);
-        CMS.registerWidget('custom-string', window.WidgetStringControl.extend({
-            pattern: ['^([^\\s]+\\s?){1,5}$', 'Title must not exceed 5 words'],
-        }), window.WidgetStringPreview);
+
+        // Register preview style
         CMS.registerPreviewStyle("/css/style.css");
     </script>
 </body>

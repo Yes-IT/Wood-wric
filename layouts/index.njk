@@ -1,24 +1,22 @@
 {% include "partials/header.njk" %}
-	<style>html{overflow:hidden}body{overflow-x: hidden;perspective: 8px;perspective-origin: 0}
-#embed-toggle {
-    position: relative;
-    z-index: 99;
-    height: 50%;
-} 
-#embed-toggle img.video-poster {
-    width: 100%;
-    height: 100%;
-.hero-image {
-  max-width: 200px;
-  height: auto;
-}
-}</style>
+<style>
+	html{overflow:hidden}body{overflow-x: hidden;perspective: 8px;perspective-origin: 0}
+	#embed-toggle {
+	    position: relative;
+	    z-index: 99;
+	    height: 50%;
+	} 
+	#embed-toggle img.video-poster {
+	    width: 100%;
+	    height: 100%;
+	}
+</style>
 	<section class="home-header index-header">
 		<div class="parallax">
             <h1 class="sr-only">You are the wood industry</h1>
-			<img src="{{hero.image1}}" alt=" " class="hero-image"/><br><br>
+			<img src="{{hero.image1}}" alt=" "/><br><br>
 			<div class="relative" id="embed-toggle">
-                <img src="{{hero.image2}}" class="hero-image"/>
+                <img src="{{hero.image2}}" class="video-poster"/>
                 <input type="hidden" value="{{hero.url1}}" id="url">
                 <div class="play-overlay" id="play-overlay"><svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm-6 20v24l18-12-18-12z" fill="#FFF" fill-rule="evenodd" fill-opacity=".75"/></svg></div>
             </div>

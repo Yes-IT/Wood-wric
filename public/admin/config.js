@@ -685,7 +685,7 @@ const config = {
             { label: "Card Description", name: "description", widget: "text" },
             { label: "Card URL", name: "url", widget: "string" },
           ],
-          max: 2, // Limits to only 2 cards
+          max: 4, // Limits to only 2 cards
         },
         {
           label: "Did You Know Section",

@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Home Page
 hero:
   image1: /media/uploads/youare.svg
   url1: https://youtu.be/ftLS7Iny5wY

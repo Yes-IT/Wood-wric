@@ -55,3 +55,61 @@
 
     document.addEventListener('scroll', function() {main.scrollPeek()})
 })(typeof self !== 'undefined' && self || typeof window !== 'undefined' && window || this)
+
+let isToastVisible = false;  // Flag to track if the error message has been shown
+
+function validateForm() {
+    let requiredFields = document.querySelectorAll('[required]');
+    let hasError = false;
+
+    requiredFields.forEach(field => {
+        if (!field.value) {
+            hasError = true;
+            // Add a visual indicator (like red borders) to highlight the field
+            field.classList.add('error');
+        } else {
+            field.classList.remove('error');
+        }
+    });
+
+    // If there is an error and the toast hasn't been shown yet
+    if (hasError && !isToastVisible) {
+        showSingleErrorMessage("Oops, you've missed a required field. Please complete before saving.");
+        isToastVisible = true;  // Set the flag to true to prevent multiple messages
+
+        // Reset the flag after 5 seconds (optional)
+        setTimeout(() => {
+            isToastVisible = false;
+        }, 5000);  // Adjust the time as needed
+
+        return false;  // Prevent form submission
+    }
+
+    return true;  // Allow form submission
+}
+
+function showSingleErrorMessage(message) {
+    let errorElement = document.getElementById('single-error-message');
+
+    if (!errorElement) {
+        errorElement = document.createElement('div');
+        errorElement.id = 'single-error-message';
+        errorElement.classList.add('error-message');
+        document.body.appendChild(errorElement);
+    }
+
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+
+    // Hide the error after some time if needed
+    setTimeout(() => {
+        errorElement.style.display = 'none';
+    }, 5000);
+}
+
+// Attach validation to the form's publish button or submit event
+document.querySelector('#publish-button').addEventListener('click', function (event) {
+    if (!validateForm()) {
+        event.preventDefault();  // Prevent form submission if validation fails
+    }
+});

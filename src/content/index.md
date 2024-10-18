@@ -1,7 +1,7 @@
 ---
 title: Home Page
 hero:
-  image1: /media/uploads/client-image.png
+  image1: /media/uploads/youare.svg
   url1: https://youtu.be/ftLS7Iny5wY
   image2: /media/uploads/1724766919.png
   url2: https://fehr.yilstaging.com/

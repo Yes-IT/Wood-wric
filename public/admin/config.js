@@ -657,9 +657,9 @@ const config = {
           widget: "object",
           fields: [
             { label: "Hero Image 1", name: "image1", widget: "image" },
-            { label: "Hero URL 1", name: "url1", widget: "string", format: "url" },
+            { label: "Hero URL 1", name: "url1", widget: "string", pattern: "https?://.+", format: "url", },
             { label: "Hero Image 2", name: "image2", widget: "image" },
-            { label: "Hero URL 2", name: "url2", widget: "string", format: "url" },
+            { label: "Hero URL 2", name: "url2", widget: "string", pattern: "https?://.+", format: "url", },
             { label: "Hero Description", name: "description", widget: "text" },
           ],
         },

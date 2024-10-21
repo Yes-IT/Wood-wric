@@ -1,6 +1,6 @@
 ---
 bannerTitle: "Why wood "
-bannerImage: /media/uploads/client-image.png
+bannerImage: /media/uploads/img2.jpg
 heading: There are many variations of passages of Lorem Ipsum available, but the
   majority have suffered alteration in some form, by injected humour, or
   randomised words which don't look even slightly believable. If you are going

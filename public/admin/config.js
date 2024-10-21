@@ -1056,16 +1056,7 @@ const config = {
             },
           ],
         },
-        {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          fields: [
-            { label: "Footer Title", name: "title", widget: "string" },
-            { label: "Button Label", name: "btnLabel", widget: "string" },
-            { label: "Button URL", name: "url", widget: "string" },
-          ],
-        },
+        
         {
           label: "Layout",
           name: "layout",

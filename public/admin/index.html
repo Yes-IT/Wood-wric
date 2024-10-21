@@ -82,27 +82,5 @@
         // Register preview style
         CMS.registerPreviewStyle("/css/style.css");
     </script>
-    <script>
-        document.querySelector('.e1awjdnj6').addEventListener('click', function() {
-            var url = prompt("Please enter the URL:");
-            if (validateUrl(url)) {
-                // Proceed with replacing the image if the URL is valid
-                console.log("Valid URL entered: " + url);
-                // Add your code here to replace the image with the provided URL
-            } else {
-                alert("Invalid URL. Please enter a valid URL.");
-            }
-        });
-        
-        function validateUrl(value) {
-            var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
-                '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-                '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-                '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-            return !!pattern.test(value);
-        }
-    </script>
 </body>
 </html>

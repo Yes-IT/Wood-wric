@@ -11,28 +11,17 @@ const industrialPrivate = require("./src/lib/industrial.private.js");
 const marked = require('marked');
 const { DateTime } = require("luxon");
 const nunjucks = require('nunjucks');
-require('dotenv').config(); // Load environment variables from .env file
-
-// Set up Nunjucks environment
-const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src')); // Adjust 'src' to your templates folder
 // Add global variables for social media links
-const socialMediaData = require('fs').readFileSync('src/content/social-media/social-media.md', 'utf8');
-
-// Parse the markdown file into a format that can be used in Nunjucks templates
-env.addGlobal('socialMedia', socialMediaData);
-
-// Add global variables for social media links
-env.addGlobal('socialMediaLinks', {
-    facebook: process.env.FACEBOOK,
-    x: process.env.X,
-    linkedin: process.env.LINKEDIN,
-    instagram: process.env.INSTAGRAM,
-    youtube: process.env.YOUTUBE,
-    tiktok: process.env.TIKTOK,
-    email: process.env.EMAIL,
+env.addGlobal('socialMedia', {
+  facebook: process.env.FACEBOOK,
+  x: process.env.X,
+  linkedin: process.env.LINKEDIN,
+  instagram: process.env.INSTAGRAM,
+  youtube: process.env.YOUTUBE,
+  tiktok: process.env.TIKTOK,
+  email: process.env.EMAIL,
 });
 
-module.exports = env;
 
 // Configuration object for site metadata
 const siteConfig = {

@@ -11,16 +11,7 @@ const industrialPrivate = require("./src/lib/industrial.private.js");
 const marked = require('marked');
 const { DateTime } = require("luxon");
 const nunjucks = require('nunjucks');
-// Add global variables for social media links
-env.addGlobal('socialMedia', {
-  facebook: process.env.FACEBOOK,
-  x: process.env.X,
-  linkedin: process.env.LINKEDIN,
-  instagram: process.env.INSTAGRAM,
-  youtube: process.env.YOUTUBE,
-  tiktok: process.env.TIKTOK,
-  email: process.env.EMAIL,
-});
+
 
 
 // Configuration object for site metadata

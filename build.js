@@ -16,7 +16,13 @@ require('dotenv').config(); // Load environment variables from .env file
 // Set up Nunjucks environment
 const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src')); // Adjust 'src' to your templates folder
 // Add global variables for social media links
-env.addGlobal('socialMedia', {
+const socialMediaData = require('fs').readFileSync('src/content/social-media/social-media.md', 'utf8');
+
+// Parse the markdown file into a format that can be used in Nunjucks templates
+env.addGlobal('socialMedia', socialMediaData);
+
+// Add global variables for social media links
+env.addGlobal('socialMediaLinks', {
     facebook: process.env.FACEBOOK,
     x: process.env.X,
     linkedin: process.env.LINKEDIN,
@@ -25,6 +31,7 @@ env.addGlobal('socialMedia', {
     tiktok: process.env.TIKTOK,
     email: process.env.EMAIL,
 });
+
 module.exports = env;
 
 // Configuration object for site metadata

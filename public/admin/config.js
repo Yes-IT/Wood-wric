@@ -1001,9 +1001,9 @@ const config = {
                 },
                 
                 {
-                  label: "Content",
-                  name: "content",
-                  widget: "markdown",
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
                   required: true,
                 },
               ],
@@ -1021,9 +1021,9 @@ const config = {
                 },
                 
                 {
-                  label: "Content",
-                  name: "content",
-                  widget: "markdown",
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
                   required: true,
                 },
               ],

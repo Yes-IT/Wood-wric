@@ -44,7 +44,8 @@
         "rss": "^1.2.2",
         "uglify-js": "latest",
         "unocss": "^0.58.3",
-        "watch-cli": "latest"
+        "watch-cli": "latest",
+        "dotenv": "^16.0.0" 
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",

@@ -999,12 +999,7 @@ const config = {
                   widget: "string",
                   required: true,
                 },
-                {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: true,
-                },
+                
                 {
                   label: "Content",
                   name: "content",
@@ -1024,12 +1019,7 @@ const config = {
                   widget: "string",
                   required: true,
                 },
-                {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: true,
-                },
+                
                 {
                   label: "Content",
                   name: "content",

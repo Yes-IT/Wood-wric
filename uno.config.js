@@ -1,23 +1,15 @@
 import { defineConfig } from 'unocss';
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter'; // Import gray-matter for parsing frontmatter
+const nunjucks = require('nunjucks');
 
-// Function to get social media data from Markdown file
-function getSocialMediaData() {
-  const filePath = './src/content/social-media/social-media.md'; // Path to your Markdown file
-  if (fs.existsSync(filePath)) {
-    const markdownContent = fs.readFileSync(filePath, 'utf8');
-    const parsedData = matter(markdownContent); // Parse the Markdown content
-    return parsedData.data; // Return the frontmatter as an object
-  }
-  return {}; // Return empty object if file doesn't exist
-}
+const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'));
+const socialMediaData = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/social-media.json'), 'utf8'));
 
-// Get social media data
-const socialMediaData = getSocialMediaData();
-console.log(socialMediaData); // Log the data to ensure it's fetched correctly
+// Register social media data as a global variable in Nunjucks
+env.addGlobal('socialMedia', socialMediaData);
 
+module.exports = env;
 // Function to get all Markdown files from a specified directory
 function getMarkdownFiles(dir) {
   const files = fs.readdirSync(dir);

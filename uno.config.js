@@ -1,15 +1,7 @@
 import { defineConfig } from 'unocss';
 import fs from 'fs';
 import path from 'path';
-const nunjucks = require('nunjucks');
 
-const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'));
-const socialMediaData = JSON.parse(fs.readFileSync(path.join(__dirname, '/content/social-media.json'), 'utf8'));
-
-// Register social media data as a global variable in Nunjucks
-env.addGlobal('socialMedia', socialMediaData);
-
-module.exports = env;
 // Function to get all Markdown files from a specified directory
 function getMarkdownFiles(dir) {
   const files = fs.readdirSync(dir);

@@ -970,7 +970,12 @@ const config = {
           widget: "string",
           required: true,
         },
-        
+        {
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
         { label: "Heading", name: "heading", widget: "string", required: true },
         {
           label: "Description",

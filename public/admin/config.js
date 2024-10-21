@@ -975,8 +975,6 @@ const config = {
           name: "bannerImage",
           widget: "image",
           required: true,
-          pattern: ["https?://.+", "Must be a valid URL"],
-          format: "url",
         },
         { label: "Heading", name: "heading", widget: "string", required: true },
         {

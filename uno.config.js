@@ -4,7 +4,7 @@ import path from 'path';
 const nunjucks = require('nunjucks');
 
 const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('src'));
-const socialMediaData = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/social-media.json'), 'utf8'));
+const socialMediaData = JSON.parse(fs.readFileSync(path.join(__dirname, '/content/social-media.json'), 'utf8'));
 
 // Register social media data as a global variable in Nunjucks
 env.addGlobal('socialMedia', socialMediaData);

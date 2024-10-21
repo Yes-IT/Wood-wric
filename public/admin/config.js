@@ -999,11 +999,16 @@ const config = {
                   widget: "string",
                   required: true,
                 },
-                
                 {
                   label: "Description",
                   name: "description",
                   widget: "text",
+                  required: true,
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
                   required: true,
                 },
               ],
@@ -1019,11 +1024,16 @@ const config = {
                   widget: "string",
                   required: true,
                 },
-                
                 {
                   label: "Description",
                   name: "description",
                   widget: "text",
+                  required: true,
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
                   required: true,
                 },
               ],
@@ -1056,7 +1066,16 @@ const config = {
             },
           ],
         },
-        
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
         {
           label: "Layout",
           name: "layout",

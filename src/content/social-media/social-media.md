@@ -1,4 +1,3 @@
-social-media.md
 ---
 facebook: 'https://facebook.com/your-page'
 x: 'https://x.com/your-page'

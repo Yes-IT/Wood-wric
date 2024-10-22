@@ -18,7 +18,8 @@
         "build:css": "npm run unocss && node-sass --include-path scss public/sass/main.sass public/main.min.css --output-style compressed && cp public/main.min.css build/main.min.css",
         "postbuild:css" : "npm run concat:css",
         "concat:css" : "concat -o ./build/youwood.css ./build/main.min.css ./build/lp.css",
-        "dev:cms-proxy-server": "npx netlify-cms-proxy-server"
+        "dev:cms-proxy-server": "npx netlify-cms-proxy-server",
+        "start": "eleventy --serve"
     },
     "dependencies": {
         "browser-sync": "^3.0.0",

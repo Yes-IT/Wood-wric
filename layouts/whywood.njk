@@ -44,12 +44,12 @@
 			</div>
 		</div>
 	</section>
-	<section class="cards flooring-all-cards" tabindex="0">
+	<section class="cards" tabindex="0">
 		<div>
 			<h2>{{cardTitle}}</h2>
 			<div>
 				{% for card in cards %}
-					<div>
+					<div class="flooring-all-cards">
 						<img src="{{card.b_image}}" alt="{{card.header}} background"/>
 						<div>
 							<img src="{{card.image}}" alt="{{card.header}} icon"/>

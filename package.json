@@ -5,7 +5,7 @@
     "scripts": {
         "build": "node build.js && npm run build:css && npm run build:js && cp -R public/* build/ && npm run build:admin",
         "build:admin": "node public/admin/config.js > build/admin/config.yml",
-        "start": "export NODE_ENV=dev; npm run build && npm run watch & npm run serve & dev:cms-proxy-server",
+        "start": "export NODE_ENV=dev; npm run build && npm run watch & npm run serve & dev:cms-proxy-server & eleventy --serve",
         "debug": "npm run build",
         "watch": "npm run watch:metalsmith & npm run watch:css & npm run watch:js & unocss:dev",
         "watch:css": "watch -p 'public/sass/main.sass' -p 'layouts//**/*.njk' -p 'src/content/**/*.md' -c 'npm run build:css'",
@@ -19,7 +19,7 @@
         "postbuild:css" : "npm run concat:css",
         "concat:css" : "concat -o ./build/youwood.css ./build/main.min.css ./build/lp.css",
         "dev:cms-proxy-server": "npx netlify-cms-proxy-server",
-        "start": "eleventy --serve"
+
     },
     "dependencies": {
         "browser-sync": "^3.0.0",
@@ -45,7 +45,8 @@
         "rss": "^1.2.2",
         "uglify-js": "latest",
         "unocss": "^0.58.3",
-        "watch-cli": "latest"
+        "watch-cli": "latest",
+        "@11ty/eleventy": "^2.0.0"
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",

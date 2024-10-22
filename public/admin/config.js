@@ -1043,6 +1043,7 @@ const config = {
         {
           label: "Cards",
           name: "cards",
+          class: "florring-wpp",
           widget: "list",
           fields: [
             { label: "Image", name: "image", widget: "image", required: true },

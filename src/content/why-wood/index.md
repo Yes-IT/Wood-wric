@@ -56,7 +56,7 @@ sliders:
 
       <!--EndFragment-->
 cards:
-  - image: /media/uploads/cat-ross.png
+  - image: /media/uploads/icon-tape.svg
     b_image: /media/uploads/img1-sm.jpg
     header: Flooring
     description: Wood flooring is one of the fastest growing sectors of the industry

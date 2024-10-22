@@ -54,7 +54,18 @@
 				</ul>
 			</div>
 			<div></div>
+// layouts/partials/footer.njk
+{% set socialMediaPage = getCollection('pages').find('src/content/social-media/social-media.md') %}
 
+<h1>Social Media Links</h1>
+<ul>
+  <li>Facebook: {{ socialMediaPage.data.facebook }}</li>
+  <li>LinkedIn: {{ socialMediaPage.data.linkedin }}</li>
+  <li>Instagram: {{ socialMediaPage.data.instagram }}</li>
+  <li>YouTube: {{ socialMediaPage.data.youtube }}</li>
+  <li>TikTok: {{ socialMediaPage.data.tiktok }}</li>
+  <li>Email: {{ socialMediaPage.data.email }}</li>
+</ul>
 			<div>
 			
 				<a href="{{ socialMediaPage.data.facebook }}" target="_blank">

@@ -46,7 +46,7 @@
         "uglify-js": "latest",
         "unocss": "^0.58.3",
         "watch-cli": "latest",
-        "@11ty/eleventy": "^2.0.0",
+        "@11ty/eleventy": "^2.0.0"
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",

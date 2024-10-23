@@ -27,8 +27,8 @@ didYouKnow:
       structures, to generate Lorem Ipsum which looks reasonable. The generated
       Lorem Ipsum is therefore always free from repetition, injected humour, or
       non-characteristic words etc.
-    image: /media/uploads/closets-conference-and-expo.jpg
-    icon: /media/uploads/dummy-icons.jpeg
+    image: /media/uploads/card-img-1.jpg
+    icon: /media/uploads/icon-globe.svg
 about:
   title: We Are the Wood Industry Resource Collaborative (WIRC)
   description: As a collaboration between trade associations representing

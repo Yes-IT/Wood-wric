@@ -1,5 +1,5 @@
 ---
-title: "About "
+title: About .
 heroDescription: >-
   The Wood Industry Resource Collaborative (WIRC) is made up of amazing
   associations that support skilled trade education. Our purpose is to provide a

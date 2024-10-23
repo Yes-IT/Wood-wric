@@ -58,10 +58,7 @@ sliders:
 cards:
   - image: /media/uploads/icon-tape.svg
     b_image: /media/uploads/img1-sm.jpg
-    header: Wood flooring is one of the fastest growing sectors of the industry with
-      jobs in manufacturing, distribution, retail, finance and more. Careers
-      include operations, machinists, sales and marketing, installations and
-      more.tttttttttttttttttttttttttttttt
+    header: Wood flooring
     description: Wood flooring is one of the fastest growing sectors of the industry
       with jobs in manufacturing, distribution, retail, finance and more.
       Careers include operations, machinists, sales and marketing, installations

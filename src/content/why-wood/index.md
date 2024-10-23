@@ -62,7 +62,37 @@ sliders:
       site on the Internet, please consider donating a small sum to help pay for
       the hosting and bandwidth bill. There is no minimum donation, any sum is
       appreciated - click here to donate using PayPal. Thank you for your
-      support. Donate bitcoin: 16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyF"
+      support. Donate bitcoin: 16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you
+      use this site regularly and would like to help keep the site on the
+      Internet, please consider donating a small sum to help pay for the hosting
+      and bandwidth bill. There is no minimum donation, any sum is appreciated -
+      click here to donate using PayPal. Thank you for your support. Donate
+      bitcoin: 16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you use this site
+      regularly and would like to help keep the site on the Internet, please
+      consider donating a small sum to help pay for the hosting and bandwidth
+      bill. There is no minimum donation, any sum is appreciated - click here to
+      donate using PayPal. Thank you for your support. Donate bitcoin:
+      16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you use this site regularly
+      and would like to help keep the site on the Internet, please consider
+      donating a small sum to help pay for the hosting and bandwidth bill. There
+      is no minimum donation, any sum is appreciated - click here to donate
+      using PayPal. Thank you for your support. Donate bitcoin:
+      16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you use this site regularly
+      and would like to help keep the site on the Internet, please consider
+      donating a small sum to help pay for the hosting and bandwidth bill. There
+      is no minimum donation, any sum is appreciated - click here to donate
+      using PayPal. Thank you for your support. Donate bitcoin:
+      16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you use this site regularly
+      and would like to help keep the site on the Internet, please consider
+      donating a small sum to help pay for the hosting and bandwidth bill. There
+      is no minimum donation, any sum is appreciated - click here to donate
+      using PayPal. Thank you for your support. Donate bitcoin:
+      16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyFDonate: If you use this site regularly
+      and would like to help keep the site on the Internet, please consider
+      donating a small sum to help pay for the hosting and bandwidth bill. There
+      is no minimum donation, any sum is appreciated - click here to donate
+      using PayPal. Thank you for your support. Donate bitcoin:
+      16UQLq1HZ3CNwhvgrarV6pMoA2CDjb4tyF"
   right_slider:
     heading: What You Think It Is
     description: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem

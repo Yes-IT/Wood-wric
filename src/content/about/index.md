@@ -23,7 +23,7 @@ execAssociations:
     img: /media/uploads/2023-map.jpg
 hero.title: Natus labore enim voj
 hero.description: Consequuntur voluptaj
-bannerImage: /media/uploads/wp6846175.webp
+bannerImage: /media/uploads/dan-feature-2-get-started.jpg
 hero: /media/uploads/dan-feature-2-get-started.jpg
 heroTitle: Let’s Build Something Together
 seo.description: Dolor temporibus dic

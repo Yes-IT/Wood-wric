@@ -1,9 +1,9 @@
 ---
 title: Home Page
 hero:
-  image1: /media/uploads/youare.svg
+  image1: /media/uploads/wp6846175.webp
   url1: https://youtu.be/ftLS7Iny5wY
-  image2: /media/uploads/1724766919.png
+  image2: /media/uploads/wp6846175.webp
   url2: https://fehr.yilstaging.com/
   description: Hello This is the Fehr website Staging URL and if any user click on
     this URL then you redirect on the Fehr website.

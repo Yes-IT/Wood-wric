@@ -1,7 +1,7 @@
 ---
 title: Home Page
 hero:
-  image1: /media/uploads/wp6846175.webp
+  image1: /media/uploads/youare.svg
   url1: https://youtu.be/ftLS7Iny5wY
   image2: /media/uploads/wp6846175.webp
   url2: https://fehr.yilstaging.com/

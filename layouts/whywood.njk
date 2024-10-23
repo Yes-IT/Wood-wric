@@ -20,6 +20,32 @@
 			    -webkit-line-clamp: 6 !important;
 			    -webkit-box-orient: vertical !important;
 		}
+
+		.slide_left h3{
+
+		}
+
+		.slide_left p{
+font-size: 14px !important;
+		    text-align: center !important;
+			  overflow: hidden !important;
+			    display: -webkit-box !important;
+			    -webkit-line-clamp: 6 !important;
+			    -webkit-box-orient: vertical !important;
+		}
+
+                .slide_right h3{
+
+		}
+
+		.slide_right p{
+font-size: 14px !important;
+		    text-align: center !important;
+			  overflow: hidden !important;
+			    display: -webkit-box !important;
+			    -webkit-line-clamp: 6 !important;
+			    -webkit-box-orient: vertical !important;
+		}
 	</style>
 	<section class="hero">
 		<div>
@@ -42,7 +68,7 @@
 			<div id="slide-1" data-slide-trigger="#rb-1">
 				<div class="arrow-button left"></div>
 				<img src="{{sliders.left_slider.img}}" alt="{{sliders.left_slider.title}} background"/>
-				<div>
+				<div class="slide_left">
 					<h3>{{sliders.left_slider.heading}}</h3>
 					<p>{{sliders.left_slider.description}}</p>
 				</div>
@@ -54,7 +80,7 @@
 			<div id="slide-2" data-slide-trigger="#rb-2">
 				<div class="arrow-button right"></div>
 				<img src="{{sliders.right_slider.img}}" alt="{{sliders.right_slider.title}} background"/>
-				<div>
+				<div class="slide_right">
 					<h3>{{sliders.right_slider.heading}}</h3>
 					<p>{{sliders.right_slider.description}}</p>
 				</div>

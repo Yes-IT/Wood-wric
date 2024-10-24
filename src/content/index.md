@@ -16,11 +16,8 @@ cards:
       accusantium doloremquvoluptas nulla pariatur?"FSDFS '
     url: https://fehr.yilstaging.com/
   - title: The standard Lorem Ipsum passage, used since the 1500s
-    description: e laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-      veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-      consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-      Neque porro quisquam est, qui dolorem ipsum quia dolor sit a
+    description: e lau ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+      qui dolorem ipsum quia dolor sit a
     url: https://fehr.yilstaging.com/
     image: /media/uploads/awi-pic.png
 didYouKnow:

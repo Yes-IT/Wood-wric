@@ -6,36 +6,9 @@ hero:
   image2: /media/uploads/dan.png
   url2: https://fehr.yilstaging.com/
   description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat..asd asdfas fadasd dasdasdas cadasdas aadadasdaS
-    ASDAsdasdasdad dSADADASD um dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-    ea commodo consequat..asd asdfas fadasd dasdasdas cadasdas aadad GTYHTYR ore
-    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat..asd asdfas fadasd
-    dasdasdas cadasdas aadadasdaS ASDAsdasdasdad dSADADASD um dolor sit amet,
+    eiusmod tempor incid nisi ut daS ASDAsdasdasdad dSADADASD um dolor sit amet,
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua. ore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat..asd asdfas fadasd dasdasdas cadasdas aadadasdaS ASDAsdasdasdad
-    dSADADASD um dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. ore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    nisi ut aliquip ex ea commodo consequat..asd asdfas fadasd dasdasdas
-    cadasdas aadadasdaS ASDAsdasdasdad dSADADASD um dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..asd
-    asdfas fadasd dasdasdas cadasdas aadadasdaS ASDAsdasdasdad dSADADASD um
-    dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. ore et dolore magna aliqua. Ut
-    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat..asd asdfas fadasd dasdasdas cadasdas
-    aadadasdaS ASDAsdasdasdad dSADADASD um dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. "'
+    dolore magna aliqua. "'
 cards:
   - title: The standard Lorem Ipsum passage, used since the 1500s
     image: /media/uploads/awi-pic.png

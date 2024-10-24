@@ -672,10 +672,11 @@ const config = {
               pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
               format: "url", 
             },
-            { label: "Hero Description", name: "description", widget: "text", pattern: [
-    "^(\\S+\\s*){1,35}$", // Regex to limit to 35 words
-    "Must not exceed 35 words."
-  ] },
+            { label: "Hero Description", name: "description", widget: "text", validate: {
+              type: "function",
+              function: "value => value.trim() !== '' && value.split(' ').length <= 35",
+              message: "Must not exceed 35 words."
+            } },
           ]
         },
         {
@@ -685,10 +686,11 @@ const config = {
           fields: [
             { label: "Card Title", name: "title",  widget: "string" },
             { label: "Card image", name: "image", widget: "image" },
-            { label: "Card Description", name: "description", widget: "text" , pattern: [
-              "^(\\S+\\s*){1,20}$", // Regex to limit to 35 words
-              "Must not exceed 20 words."
-            ]},
+            { label: "Card Description", name: "description", widget: "text" ,validate: {
+              type: "function",
+              function: "value => value.trim() !== '' && value.split(' ').length <= 20",
+              message: "Must not exceed 20 words."
+            }},
             { label: "Card URL", name: "url", widget: "string" },
           ],
           max: 2, // Limits to only 2 cards
@@ -699,10 +701,11 @@ const config = {
           widget: "list",
           fields: [
             { label: "Title", name: "title", widget: "string" },
-            { label: "Description", name: "description", widget: "text" , pattern: [
-              "^(\\S+\\s*){1,10}$", // Regex to limit to 35 words
-              "Must not exceed 10 words."
-            ]},
+            { label: "Description", name: "description", widget: "text" , validate: {
+              type: "function",
+              function: "value => value.trim() !== '' && value.split(' ').length <= 10",
+              message: "Must not exceed 10 words."
+            }},
             { label: "Image", name: "image", widget: "image" },
             { label: "Icon", name: "icon", widget: "image" },
           ],
@@ -714,10 +717,11 @@ const config = {
           widget: "object",
           fields: [
             { label: "Title", name: "title", widget: "string" },
-            { label: "Description", name: "description", widget: "text" , pattern: [
-              "^(\\S+\\s*){1,25}$", // Regex to limit to 35 words
-              "Must not exceed 25 words."
-            ] },
+            { label: "Description", name: "description", widget: "text" , validate: {
+              type: "function",
+              function: "value => value.trim() !== '' && value.split(' ').length <= 25",
+              message: "Must not exceed 25 words."
+            }},
             { label: "Image", name: "image", widget: "image" },
             { label: "URL", name: "url", widget: "string" },
           ],

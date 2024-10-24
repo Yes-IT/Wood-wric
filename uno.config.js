@@ -1,5 +1,5 @@
 import { defineConfig } from 'unocss'
-const marked = require('marked');
+
 
 export default defineConfig({
     theme:{

@@ -55,7 +55,7 @@
 				</ul>
 			</div>
 			<div></div>
-
+<script src="/js/loadMarkdown.js"></script>
 			<div>
 			
 				<a href="{{ facebook }}" target="_blank">
@@ -101,8 +101,22 @@
 			</div>
 		</div>
 	</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script src="/js/main.js"></script>
     <script>
+// Load the markdown file, convert it, and insert into the page
+fetch('/path/to/content.md')
+    .then(response => response.text())
+    .then(md => {
+        // Convert markdown to HTML using a library like marked.js
+        const markdownToHtml = marked(md);
+
+        // Inject the result into the div with id "markdown-content"
+        document.getElementById('markdown-content').innerHTML = markdownToHtml;
+    })
+    .catch(error => console.error('Error loading markdown file:', error));
+
     if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
         if (!user) {

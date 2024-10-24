@@ -672,7 +672,10 @@ const config = {
               pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
               format: "url", 
             },
-            { label: "Hero Description", name: "description", widget: "text" },
+            { label: "Hero Description", name: "description", widget: "text", pattern: [
+    "^(\\S+\\s*){1,35}$", // Regex to limit to 35 words
+    "Must not exceed 35 words."
+  ], },
           ]
         },
         {

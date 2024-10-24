@@ -30,7 +30,7 @@ execAssociations:
     url: https://womensmedicinebowl.com/
   - title: " who loves pain it"
     img: /media/uploads/client-image.png
-    url: oluyilyol
+    url: https://chatgpt.com/
 hero.title: Natus labore enim voj
 hero.description: Consequuntur voluptaj
 bannerImage: /media/uploads/dan-hero-2.jpg

@@ -1,41 +1,61 @@
 ---
-title: Home Pagegfhg
+title: "Home page "
 hero:
-  image1: /media/uploads/youare.svg
-  url1: https://youtu.be/ftLS7Iny5wY
-  image2: /media/uploads/wp6846175.webp
+  image1: /media/uploads/thumb-solid-trade-careers.jpeg
+  url1: https://fehr.yilstaging.com/
+  image2: /media/uploads/dan.png
   url2: https://fehr.yilstaging.com/
-  description: Hello This is the Fehr website Staging URL and if any user click on
-    this URL then you redirect on the Fehr website.
+  description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum."'
 cards:
-  - title: Why Wood?
-    image: /media/uploads/wialogo_web_4c.png
-    description: If you think woodworking is just for DIY hobbyists or that the wood
-      industry has seen its best days, think again.
-    url: https://womensmedicinebowl.com/
+  - title: The standard Lorem Ipsum passage, used since the 1500s
+    image: /media/uploads/awi-pic.png
+    description: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+      illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+      explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+      odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+      voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+      quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+      voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+      corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+      nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+      nulla pariatur?"'
+    url: https://fehr.yilstaging.com/
+  - title: The standard Lorem Ipsum passage, used since the 1500s
+    description: e laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+      veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+      consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+      Neque porro quisquam est, qui dolorem ipsum quia dolor sit a
+    url: https://fehr.yilstaging.com/
+    image: /media/uploads/awi-pic.png
 didYouKnow:
-  - title: ": Can you help translate this site into a foreign language ? Please
-      email us with details if you can help."
-    description: There are many variations of passages of Lorem Ipsum available, but
-      the majority have suffered alteration in some form, by injected humour, or
-      randomised words which don't look even slightly believable. If you are
-      going to use a passage of Lorem Ipsum, you need to be sure there isn't
-      anything embarrassing hidden in the middle of text. All the Lorem Ipsum
-      generators on the Internet tend to repeat predefined chunks as necessary,
-      making this the first true generator on the Internet. It uses a dictionary
-      of over 200 Latin words, combined with a handful of model sentence
-      structures, to generate Lorem Ipsum which looks reasonable. The generated
-      Lorem Ipsum is therefore always free from repetition, injected humour, or
-      non-characteristic words etc.
-    image: /media/uploads/card-img-1.jpg
-    icon: /media/uploads/icon-globe.svg
+  - title: translation by H. Rackham
+    description: extremely painful. Nor again is there anyone who loves or pursues
+      or desires to obtain pain of itself, because it is pain, but because
+      occasionally circumstances occur in which toil and pain can procure him
+      some great pleasure. To take a trivial example, which of us ever
+      undertakes laborious physical exercise, except to obtain some advantage
+      from it? But who has any right to find fault with a man who chooses to
+      enjoy a pleasure that has no annoying consequences, or one who avoids a
+      pain that produces no resultant pleasure
+    image: /media/uploads/login-logo.png
+    icon: /media/uploads/fsconference.png
 about:
   title: We Are the Wood Industry Resource Collaborative (WIRC)
-  description: As a collaboration between trade associations representing
-    different sectors of the woodworking industry, our purpose is to improve the
-    perception of manufacturing industry careers and strengthen the wood
-    industry workforce.
-  image: /media/uploads/closets-conference-and-expo.jpg
-  url: https://woodwirc.com/about/
+  description: re. To take a trivial example, which of us ever undertakes
+    laborious physical exercise, except to obtain some advantage from it? But
+    who has any right to find fault with a man who chooses to enjoy a pleasure
+    that has no annoying consequences, or one who a
+  image: /media/uploads/dan-feature-4-events.jpg
+  url: https://fehr.yilstaging.com/
 layout: index.njk
 ---

@@ -126,28 +126,25 @@ fetch('../../../src/content/social-media/social-media.md')
         }
         });
     }
-// Fetch the .md file using fetch()
-fetch('../../src/content/social-media/social-media.md')
-  .then(response => response.text())  // Get the raw markdown text
-  .then(data => {
-    // Do something with the markdown data
-    console.log(data);
-
-    // Example: if your .md has a key-value format, you can process it manually
-    const lines = data.split('\n');
-    const socialMediaLinks = {};
-
-    lines.forEach(line => {
-      const [key, value] = line.split('=');
-      if (key && value) {
-        socialMediaLinks[key.trim()] = value.trim();
-      }
-    });
-
-    // You can now use socialMediaLinks object
-    console.log(socialMediaLinks);
+fetch('https://wood-wric.netlify.app/src/content/social-media/social-media.md')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.text();
   })
-  .catch(error => console.error('Error fetching the Markdown file:', error));
+  .then(markdownContent => {
+    // Here you can process the markdown content
+    console.log(markdownContent);
+
+    // If you want to convert it to HTML
+    const htmlContent = marked(markdownContent);
+    document.getElementById('content').innerHTML = htmlContent;
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
 
     </script>
 </body>

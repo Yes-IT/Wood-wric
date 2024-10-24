@@ -50,11 +50,11 @@ didYouKnow:
     image: /media/uploads/login-logo.png
     icon: /media/uploads/fsconference.png
 about:
-  title: We Are the Wood Industry Resource Collaborative (WIRC)
+  title: "We Are the Wood Industry Resource Collaborative (WIRC)tyagi "
   description: re. To take a trivial example, which of us ever undertakes
     laborious physical exercise, except to obtain some advantage from it? But
     who has any right to find fault with a man who chooses to enjoy a pleasure
-    that has no annoying consequences, or one who a
+    that has no annoying consequences, or one who a tyagi
   image: /media/uploads/dan-feature-4-events.jpg
   url: https://fehr.yilstaging.com/
 layout: index.njk

@@ -110,7 +110,7 @@ fetch('../../src/content/social-media/social-media.md')
     .then(response => response.text())
     .then(md => {
         // Convert markdown to HTML using a library like marked.js
-        const markdownToHtml = marked(md);
+        const markdownToHtml = md;
 
         // Inject the result into the div with id "markdown-content"
         document.getElementById('markdown-content').innerHTML = markdownToHtml;

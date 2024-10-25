@@ -1,5 +1,5 @@
 ---
-title: "Home page "
+title: Home page fgh
 hero:
   image1: /media/uploads/thumb-solid-trade-careers.jpeg
   url1: https://fehr.yilstaging.com/

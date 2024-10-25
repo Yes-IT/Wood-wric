@@ -153,4 +153,13 @@ font-size: 14px !important;
 
     </script>
 {% include "partials/footer.njk" %}
-{% include "./about2.njk" with { test1: test1, test2: test2 } %}
+
+{# index.njk #}
+
+<p>This is content from index.njk</p>
+
+{% include "./about2.njk" %}
+
+<p>Main page content using data from about2:</p>
+<p>TEST Link 1 from about2: <a href="{{ test1 }}">{{ test1 }}</a></p>
+<p>TEST Link 2 from about2: {{ test2 }}</p>

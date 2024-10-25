@@ -1,3 +1,5 @@
 
-		TEST LInk 1   <a href="{{test1}}">{{test1}}</a>
-TEST LInk 1    <p>{{test2}}</p>
+<p>TEST LInk 1 <a href="{{ test1 }}">{{ test1 }}</a></p>
+<p>TEST LInk 2 <p>{{ test2 }}</p>
+
+{% include "./about2.njk" with { test1: test1, test2: test2 } %}

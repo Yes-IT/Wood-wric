@@ -1,5 +1,9 @@
+{# about2.njk #}
 
-<p>TEST LInk 1 <a href="{{ test1 }}">{{ test1 }}</a></p>
-<p>TEST LInk 2 <p>{{ test2 }}</p>
+{% set test1 = "https://example.com/from-about2-test1" %}
+{% set test2 = "Text from about2 for TEST Link 2" %}
 
-{% include "./about2.njk" with { test1: test1, test2: test2 } %}
+<p>Included Data in about2.njk:</p>
+<p>TEST Link 1: <a href="{{ test1 }}">{{ test1 }}</a></p>
+<p>TEST Link 2: {{ test2 }}</p>
+

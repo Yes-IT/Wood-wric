@@ -44,6 +44,49 @@ steps:
       Veterans Hire Veterans Employment Network\r
 
       And more job sites can be found at woodindustryed.org"
+  - title: Search Wood Industry Apprenticeships & Trade Schools
+    content: "Architectural millwork, custom carpentry, CNC machining…these are just
+      the tip of the iceberg when it comes to scholarship opportunities. There
+      are scholarships for high school, trade school, and college students
+      seeking a new career in the wood industry. Scholarships are no longer
+      exclusive to four-year universities!\r
+
+      \r
+
+      Even if you already have a wood job, there may be a scholarship to
+      help you increase your skill level and increase your paycheck. We’ve
+      featured some exciting scholarship opportunities below:\r
+
+      \r
+
+      Wood industry association scholarship opportunities\r
+
+      Architectural Woodwork Institute (AWI) scholarships\r
+
+      Woodworking Machinery Industry Association (WMIA) scholarship
+      program\r
+
+      National Wood Flooring Association (NWFA) scholarships\r
+
+      International Furnishings and Design Association (IFDA) Educational
+      Foundation Scholarships\r
+
+      Architectural millwork, CNC machining and other wood career
+      scholarships:\r
+
+      Houzz Scholarship Program\r
+
+      CNC machining scholarships:\r
+
+      Machines Scholarship Opportunities\r
+
+      Trade school scholarships:\r
+
+      American Trucks' Student Scholarship Program\r
+
+      Search additional wood industry and skilled trade scholarships at
+      woodindustryed.org."
+    image: /media/uploads/wp6846175.webp
 footer:
   title: Not Sure Where to Start? We Can Help
   btnLabel: Get started

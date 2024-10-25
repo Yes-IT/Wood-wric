@@ -1,0 +1,216 @@
+{% if footer %}
+
+	<section class="footer">
+		<div>
+			<h2>{{footer.title}}</h2>
+			<a href="{{footer.url}}"><div>{{footer.btnLabel}}</div></a>
+		</div>
+	</section>
+{% endif %}
+ <!-- social.njk or your rendering template -->
+{% if page.socialMedia %}
+<div>
+    {% for platform in page.socialMedia %}
+        <a href="{{ platform.url }}" target="_blank">
+            {{ platform.name }}
+        </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+	<footer>
+
+		<div>
+			<div>
+				<img src="/imgs/WIRC_logo_hor3.svg" alt="{{siteConfig.siteName}} logo" id="signup"/>
+                <p>Sign up to get the latest updates and insights on the wood industry.</p>
+                {% include "partials/email-signup.njk" %}
+			</div>
+			<div>
+				<ul class="columns-2">
+					<li>
+						<a href="/why-wood">Why Wood</a>
+					</li>
+					<li>
+						<a href="/get-started">Get Started</a>
+					</li>
+					<li>
+						<a href="/about">About</a>
+					</li>
+					<li>
+						<a href="/videos">Videos</a>
+					</li>
+					<li>
+						<a href="/blog">Blog</a>
+					</li>
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+					<li>
+						<a href="/events">Events</a>
+					</li>
+					<li>
+						<a href="/workforce-analysis/">Wood Industry Report</a>
+					</li>
+				</ul>
+			</div>
+			<div></div>
+
+
+			<div >
+                
+
+
+				<a href="{{facebook}}" target="_blank">
+				<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-1115-84H325v303h-1440z" fill="#FFF"></path><path d="M8.94 0a56.14 56.14 0 011.698.021l.18.006.48.021c.852.039 1.433.174 1.942.372.526.204.973.478 1.417.923.445.444.719.89.923 1.417.198.509.333 1.09.372 1.942.008.177.015.33.02.48l.007.18c.012.393.018.827.02 1.699l.001.677V8.94a56.14 56.14 0 01-.021 1.7l-.006.18-.021.48c-.039.85-.174 1.432-.372 1.941a3.922 3.922 0 01-.923 1.417c-.444.445-.89.719-1.417.923-.509.198-1.09.333-1.942.372-.177.008-.33.015-.48.02l-.18.007a56.14 56.14 0 01-1.699.02L8.262 16H7.06a56.14 56.14 0 01-1.7-.021l-.18-.006-.48-.021c-.85-.039-1.432-.174-1.941-.372a3.922 3.922 0 01-1.417-.923A3.921 3.921 0 01.42 13.24c-.198-.509-.333-1.09-.372-1.942-.008-.177-.015-.33-.02-.48l-.007-.18a56.14 56.14 0 01-.02-1.699V7.061a56.14 56.14 0 01.02-1.7l.006-.18.021-.48C.087 3.852.222 3.27.42 2.76c.204-.526.478-.973.923-1.417.444-.445.89-.719 1.417-.923C3.269.222 3.85.087 4.702.048c.177-.008.33-.015.48-.02l.18-.007A56.14 56.14 0 017.06.001zm-.222 1.442H7.282c-.923.001-1.384.006-1.776.017l-.178.006c-.176.006-.35.013-.56.023-.78.036-1.204.166-1.486.276-.374.145-.64.318-.92.598-.28.28-.453.546-.598.92-.11.282-.24.705-.276 1.485-.01.211-.017.385-.023.56l-.006.179c-.011.392-.016.853-.017 1.776v1.436c.001.923.006 1.384.017 1.776l.006.178c.006.176.013.35.023.56.036.78.166 1.204.276 1.486.145.374.318.64.598.92.28.28.546.453.92.598.282.11.705.24 1.485.276.211.01.385.017.56.023l.179.006c.392.011.853.016 1.776.017h1.436a66.56 66.56 0 001.776-.017l.178-.006c.176-.006.35-.013.56-.023.78-.036 1.204-.166 1.486-.276.374-.145.64-.318.92-.598.28-.28.453-.546.598-.92.11-.282.24-.705.276-1.485.01-.211.017-.385.023-.56l.006-.179c.011-.392.016-.853.017-1.776V7.282a66.563 66.563 0 00-.017-1.776l-.006-.178c-.006-.176-.013-.35-.023-.56-.036-.78-.166-1.204-.276-1.486a2.478 2.478 0 00-.598-.92 2.478 2.478 0 00-.92-.598c-.282-.11-.705-.24-1.485-.276-.211-.01-.385-.017-.56-.023l-.179-.006a66.56 66.56 0 00-1.776-.017zM8 3.892a4.108 4.108 0 110 8.216 4.108 4.108 0 010-8.216zm0 1.441a2.667 2.667 0 110 5.334 2.667 2.667 0 010-5.334zm4.27-2.563a.96.96 0 110 1.92.96.96 0 010-1.92z" fill="#008783"></path></g></svg>
+                    Instagram
+				</a>
+				<a href="https://www.facebook.com/Wood-Industry-Careers-102616575144662/" target="_blank">
+					<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-1115-116H325v303h-1440z" fill="#FFF"></path><path d="M15.117 0H.883A.883.883 0 000 .883v14.234c0 .488.395.883.883.883h7.669V9.812H6.469V7.39h2.083V5.608c0-2.066 1.263-3.191 3.106-3.191a17.71 17.71 0 011.86.093v2.16h-1.27c-1.004 0-1.2.475-1.2 1.176v1.542h2.4l-.311 2.422h-2.103V16h4.083a.883.883 0 00.883-.883V.883A.883.883 0 0015.117 0z" fill="#008783"></path></g></svg>
+                    Facebook
+				</a>
+				<a href="https://www.linkedin.com/company/woodindustrycareers/?viewAsMember=true" target="_blank">
+					<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-1115-148H325v303h-1440z" fill="#FFF"></path><path d="M13.635 13.634h-2.373V9.92c0-.885-.016-2.024-1.234-2.024-1.234 0-1.422.965-1.422 1.96v3.778H6.235V5.998h2.274v1.044h.033c.317-.6 1.09-1.233 2.245-1.233 2.404 0 2.848 1.58 2.848 3.637v4.188zM3.559 4.956a1.377 1.377 0 11-.002-2.754 1.377 1.377 0 01.002 2.754zm-1.19 8.678h2.377V5.998H2.37v7.636zM14.817 0H1.18C.529 0 0 .516 0 1.154v13.691C0 15.483.529 16 1.18 16h13.636c.652 0 1.184-.517 1.184-1.155V1.154C16 .516 15.468 0 14.816 0z" fill="#008783"></path></g></svg>
+                    Linkedin
+				</a>
+				<a href="https://www.youtube.com/@woodindustrycareers8701" target="_blank">
+					<svg style="display:inline-block;vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#008783" class="bi bi-youtube" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path></svg>					
+					YouTube
+				</a>
+				<a href="https://www.x.com/woodwirc" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#008783" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+					X
+				</a>
+				<a href="https://www.tiktok.com/@wircwoodresources" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#008783" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"></path></svg>
+					TikTok
+				</a>
+				<a href="mailto:hello@woodwirc.com" target="_blank">
+				<svg style="display:inline-block;vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#008783" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path></svg>
+					Email
+				</a>
+
+
+
+			</div>
+		</div>
+		<div>
+			<div>
+				<div>
+					&copy; <span id="copyright-year">{{year}}</span> {{siteConfig.siteName}} <span>All Rights Reserved.</span>
+				</div>
+				<div>
+					<a href="/privacy-policy"><div>Privacy Policy</div></a>
+					{# <a href="/terms"><div>Terms of Service</div></a> #}
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script>
+// Sample data for social media links
+const socialMediaLinks = [
+    {
+        name: 'Instagram',
+        url: '{{ instagram }}', // Replace with the actual variable or string
+        svg: '<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8.94 0a56.14 56.14 0 011.698.021l.18.006.48.021c.852.039 1.433.174 1.942.372.526.204.973.478 1.417.923.445.444.719.89.923 1.417.198.509.333 1.09.372 1.942.008.177.015.33.02.48l.007.18c.012.393.018.827.02 1.699l.001.677V8.94a56.14 56.14 0 01-.021 1.7l-.006.18-.021.48c-.039.85-.174 1.432-.372 1.941a3.922 3.922 0 01-.923 1.417c-.444.445-.89.719-1.417.923-.509.198-1.09.333-1.942.372-.177.008-.33.015-.48.02l-.18.007a56.14 56.14 0 01-1.699.02L8.262 16H7.06a56.14 56.14 0 01-1.7-.021l-.18-.006-.48-.021c-.85-.039-1.432-.174-1.941-.372a3.922 3.922 0 01-1.417-.923A3.921 3.921 0 01.42 13.24c-.198-.509-.333-1.09-.372-1.942-.008-.177-.015-.33-.02-.48l-.007-.18a56.14 56.14 0 01-.02-1.699V7.061a56.14 56.14 0 01.02-1.7l.006-.18.021-.48C.087 3.852.222 3.27.42 2.76c.204-.526.478-.973.923-1.417.444-.445.89-.719 1.417-.923C3.269.222 3.85.087 4.702.048c.177-.008.33-.015.48-.02l.18-.007A56.14 56.14 0 017.06.001zm-.222 1.442H7.282c-.923.001-1.384.006-1.776.017l-.178.006c-.176.006-.35.013-.56.023-.78.036-1.204.166-1.486.276-.374.145-.64.318-.92.598-.28.28-.453.546-.598.92-.11.282-.24.705-.276 1.485-.01.211-.017.385-.023.56l-.006.179c-.011.392-.016.853-.017 1.776v1.436c.001.923.006 1.384.017 1.776l.006.178c.006.176.013.35.023.56.036.78.166 1.204.276 1.486.145.374.318.64.598.92.28.28.546.453.92.598.282.11.705.24 1.485.276.211.01.385.017.56.023l.179.006c.392.011.853.016 1.776.017h1.436a66.56 66.56 0 001.776-.017l.178-.006c.176-.006.35-.013.56-.023.78-.036 1.204-.166 1.486-.276.374-.145.64-.318.92-.598.28-.28.453-.546.598-.92.11-.282.24-.705.276-1.485.01-.211.017-.385.023-.56l.006-.179c.011-.392.016-.853.017-1.776V7.282a66.563 66.563 0 00-.017-1.776l-.006-.178c-.006-.176-.013-.35-.023-.56-.036-.78-.166-1.204-.276-1.486a2.478 2.478 0 00-.598-.92 2.478 2.478 0 00-.92-.598c-.282-.11-.705-.24-1.485-.276-.211-.01-.385-.017-.56-.023l-.179-.006a66.56 66.56 0 00-1.776-.017zM8 3.892a4.108 4.108 0 110 8.216 4.108 4.108 0 010-8.216zm0 1.441a2.667 2.667 0 110 5.334 2.667 2.667 0 010-5.334zm4.27-2.563a.96.96 0 110 1.92.96.96 0 010-1.92z" fill="#008783"/></g></svg>'
+    },
+    {
+        name: 'Facebook',
+        url: '{{ facebook }}', // Replace with the actual variable or string
+        svg: '<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M15.117 0H.883A.883.883 0 000 .883v14.234c0 .488.395.883.883.883h7.669V9.812H6.469V7.39h2.083V5.608c0-2.066 1.263-3.191 3.106-3.191a17.71 17.71 0 011.86.093v2.16h-1.27c-1.004 0-1.2.475-1.2 1.176v1.542h2.4l-.311 2.422h-2.103V16h4.083a.883.883 0 00.883-.883V.883A.883.883 0 0015.117 0z" fill="#008783"/></g></svg>'
+    },
+    {
+        name: 'LinkedIn',
+        url: '{{ linkedin }}', // Replace with the actual variable or string
+        svg: '<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M13.635 13.634h-2.373V9.92c0-.885-.016-2.024-1.234-2.024-1.234 0-1.422.965-1.422 1.96v3.778H6.235V5.998h2.274v1.044h.033c.317-.6 1.09-1.233 2.245-1.233 2.404 0 2.848 1.58 2.848 3.637v4.188zM3.559 4.956a1.377 1.377 0 11-.002-2.754 1.377 1.377 0 01.002 2.754zm-1.19 8.678h2.377V5.998H2.37v7.636zM14.817 0H1.18C.529 0 0 .516 0 1.154v13.691C0 15.483.529 16 1.18 16h13.636c.652 0 1.184-.517 1.184-1.155V1.154C16 .516 15.468 0 14.816 0z" fill="#008783"/></g></svg>'
+    },
+    {
+        name: 'YouTube',
+        url: '{{ youtube }}', // Replace with the actual variable or string
+        svg: '<svg style="display:inline-block;vertical-align: middle;" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M15.999 4.577c0-.4-.003-.788-.016-1.155a2.88 2.88 0 00-2.036-2.036C12.563 1.000 8 1.000 8 1.000s-4.563 0-5.947.386A2.88 2.88 0 00.016 3.422C0 3.788 0 4.177 0 4.577v2.667c0 .4.003.788.016 1.155a2.88 2.88 0 002.036 2.036C3.437 10.000 8 10.000 8 10.000s4.563 0 5.947-.386a2.88 2.88 0 002.036-2.036c.013-.366.016-.755.016-1.155V4.577zm-9.173 5.016V6.415l5.046 2.579-5.046 2.579z" fill="#008783"/></g></svg>'
+    },
+  {
+        name: 'X',
+        url: '{{ x }}', // Replace with the actual variable or string
+        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#008783" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>'
+    },
+  {
+        name: 'TikTok',
+        url: '{{ tiktok }}', // Replace with the actual variable or string
+        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#008783" d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>'
+    },
+  {
+        name: 'Email',
+        url: '{{ email }}', // Replace with the actual variable or string
+        svg: '<svg style="display:inline-block;vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#008783" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>'
+    },
+    // Add more social media links as needed
+];
+
+// Function to display social media links
+function displaySocialLinks() {
+    const socialLinksContainer = document.getElementById('social-links');
+
+    socialMediaLinks.forEach(link => {
+        const anchor = document.createElement('a');
+        anchor.href = link.url;
+        anchor.target = '_blank';
+        anchor.innerHTML = link.svg; // Add SVG icon
+        anchor.title = link.name; // Set title for accessibility
+        anchor.setAttribute('aria-label', link.name); // Add ARIA label
+
+        // Append anchor to the container
+        socialLinksContainer.appendChild(anchor);
+    });
+}
+
+// Call the function to display the links
+displaySocialLinks();
+
+// Load the markdown file, convert it, and insert into the page
+fetch('../../src/content/social-media/social-media.md')
+    .then(response => response.text())
+    .then(md => {
+        // Convert markdown to HTML using a library like marked.js
+        const markdownToHtml = md;
+
+        // Inject the result into the div with id "markdown-content"
+        document.getElementById('markdown-content').innerHTML = markdownToHtml;
+    })
+    .catch(error => console.error('Error loading markdown file:', error));
+
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+            window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+            });
+        }
+        });
+    }
+fetch('https://wood-wric.netlify.app/src/content/social-media/social-media.md')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.text();
+  })
+  .then(markdownContent => {
+    // Here you can process the markdown content
+    console.log(markdownContent);
+
+    // If you want to convert it to HTML
+    const htmlContent = marked(markdownContent);
+    document.getElementById('content').innerHTML = htmlContent;
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+
+    </script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 		{% set cls = cycler("img-right","img-left") %}
 		{% for section in steps %}
 			<div class="item-container {{ cls.next() }}  pb4 relative">
-					<img class="img" src="{{ section.image }}" alt="">
+					<img class="img" src="{{ section.image }}" alt=""  style="max-width:567px!important ;max-height:521px;!important">
 				<div class="content">
 					<h2>{{section.title}}</h2>
 					{{section.content | md }}

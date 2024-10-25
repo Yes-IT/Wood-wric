@@ -55,7 +55,15 @@
 				</ul>
 			</div>
 			<div></div>
-{{ socialMedia.index.x }} 
+{% set socialMedia = collections.socialMedia[0] %}
+<div class="social-links">
+    <a href="{{ socialMedia.facebook }}">Facebook</a>
+    <a href="{{ socialMedia.linkedin }}">LinkedIn</a>
+    <a href="{{ socialMedia.instagram }}">Instagram</a>
+    <a href="{{ socialMedia.youtube }}">YouTube</a>
+    <a href="{{ socialMedia.tiktok }}">TikTok</a>
+    <a href="mailto:{{ socialMedia.email }}">Email</a>
+</div>
 			<div >
                 
 

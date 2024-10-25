@@ -1,37 +1,45 @@
 ---
-title: Home page fgh
+title: "Home page "
 hero:
-  image1: /media/uploads/thumb-solid-trade-careers.jpeg
-  url1: https://fehr.yilstaging.com/
-  image2: /media/uploads/dan.png
-  url2: https://fehr.yilstaging.com/
-  description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incid nisi ut daS ASDAsdasdasdad dSADADASD um dolor sit amet,
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua. "'
+  image1: /media/uploads/youare.svg
+  url1: https://youtu.be/M3YjriOa9js?si=J1aILmyeW6k__zsF
+  image2: /media/uploads/cat-ross.png
+  url2: https://woodwirc.com/
+  description: "Whether you are thinking about what you want to do after high
+    school, beginning a new chapter in your life, or simply looking for a stable
+    career, one thing rings true: the wood industry has a place for you."
 cards:
-  - title: The standard Lorem Ipsum passage, used since the 1500s
-    image: /media/uploads/awi-pic.png
-    description: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-      accusantium doloremquvoluptas nulla pariatur?"FSDFS '
-    url: https://fehr.yilstaging.com/
-  - title: The standard Lorem Ipsum passage, used since the 1500s
-    description: e lau ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-      qui dolorem ipsum quia dolor sit a
-    url: https://fehr.yilstaging.com/
-    image: /media/uploads/awi-pic.png
+  - title: Why Wood?
+    image: /media/uploads/822.jpg
+    description: If you think woodworking is just for DIY hobbyists or that the wood
+      industry has seen its best days, think again.
+    url: https://woodwirc.com/why-wood/
+  - title: Explore Careers
+    image: /media/uploads/cat-ross.png
+    description: From craftsmen to carpenters and machine operators to CAD
+      designers, the wood industry is a sustainable, evolving industry.
+    url: https://woodwirc.com/careers/
 didYouKnow:
-  - title: translation by H. Rackham
-    description: extremelh a man who chooses to enjoy a pleasure that has no
-      annoying consequences, or one who avoids a pain that produces no resultant
-      pleasure
-    image: /media/uploads/login-logo.png
+  - title: 16,000+ companies hiring
+    description: Over 16,000 U.S. companies are hiring in the wood industry.
+    image: /media/uploads/danarticle1-thumb.jpg
+    icon: /media/uploads/dummy-icons.jpeg
+  - title: 120,000+ new openings
+    description: 120,000 new job openings were posted in 2023.
+    image: /media/uploads/dan-feature-3-cue-careers.jpg
     icon: /media/uploads/fsconference.png
+  - title: 25% increase in job postings
+    description: Wood industry job postings remain elevated with a 25% increase in
+      the prior 12 months.
+    image: /media/uploads/lightcast-blog-thumb.jpg
+    icon: /media/uploads/icon-globe.svg
 about:
-  title: "We Are the Wood Industry Resource Collaborative (WIRC)tyagi "
-  description: re. To ta es to enjoy a pleasure that has no annoying consequences,
-    or one who a tyagi
+  title: We Are the Wood Industry Resource Collaborative (WIRC)
+  description: As a collaboration between trade associations representing
+    different sectors of the woodworking industry, our purpose is to improve the
+    perception of manufacturing industry careers and strengthen the wood
+    industry workforce.
   image: /media/uploads/dan-feature-4-events.jpg
-  url: https://fehr.yilstaging.com/
+  url: https://woodwirc.com/about/
 layout: index.njk
 ---

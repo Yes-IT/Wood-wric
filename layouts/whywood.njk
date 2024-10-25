@@ -12,6 +12,17 @@
     top: 0 !important;
     z-index: 9 !important;
 }
+.flooring-all-cards-in::before {
+    background: #2E928B !important;
+    bottom: 0 !important;
+    content: '' !important;
+    left: 0 !important;
+    opacity: 0.8 !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    z-index: 9 !important;
+}
 		.flooring-all-cards h3{
 		    font-size: 24px !important;
 		    margin-top: 12px !important;
@@ -138,7 +149,7 @@ font-size: 14px !important;
 				{% for card in cards %}
 					<div class="flooring-all-cards">
 						<img src="{{card.b_image}}" alt="{{card.header}} background"/>
-						<div>
+						<div class="flooring-all-cards-in">
 							<img src="{{card.image}}" alt="{{card.header}} icon"/>
 							<h3>{{card.header}}</h3>
 							<div>Learn More ›</div>

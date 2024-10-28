@@ -1,9 +1,9 @@
 ---
-facebook: "vashu and aman dost "
-x: https://x.com/i/flow/login?redirect_after_login=%2Fwoodwirc
-linkedin: https://www.linkedin.com/company/woodindustrycareers/?viewAsMember=true
+facebook: https://www.facebook.com/MindScopicNutrition/
+x: https://www.facebook.com/MindScopicNutrition/
+linkedin: https://www.facebook.com/MindScopicNutrition/
 instagram: https://www.instagram.com/woodwirc/
-youtube: https://www.youtube.com/@woodindustrycareers8701
-tiktok: https://www.tiktok.com/@wircwoodresources
-email: hello@woodwirc.com
+youtube: https://www.youtube.com/channel/UCgnH8RgJfdHOXPf6fYhMWNw
+tiktok: https://www.facebook.com/MindScopicNutrition/
+email: https://www.facebook.com/MindScopicNutrition/
 ---

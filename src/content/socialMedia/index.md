@@ -1,9 +1,9 @@
 ---
-facebook: Aman
-x: fhfghfghf
-linkedin: hfghfghfh
-instagram: fghfhfghf
-youtube: fghfghfghf
-tiktok: fghfgdh
-email: fghfgh
+facebook: https://www.facebook.com/woodwirc
+x: https://x.com/i/flow/login?redirect_after_login=%2Fwoodwirc
+linkedin: https://www.linkedin.com/company/woodindustrycareers/?viewAsMember=true
+instagram: https://www.instagram.com/woodwirc/
+youtube: https://www.youtube.com/@woodindustrycareers8701
+tiktok: https://www.tiktok.com/@wircwoodresources
+email: hello@woodwirc.com
 ---

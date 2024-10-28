@@ -107,53 +107,40 @@
 		</div>
 	</footer>
 <script>
-    // Fetch the social links from the API
-    async function fetchSocialLinks() {
-      try {
-        const response = await fetch('https://staging.caviarlifestylesadmin.com/api/social_links');
-        
-        // Check if response is successful
-        if (!response.ok) {
-          throw new Error(`An error has occurred: ${response.status}`);
-        }
-        
-        // Parse the JSON response
-        const data = await response.json();
-        
-        // Get the container element
-        const container = document.getElementById('social-links-container');
-        
-        // Create a new <ul> element
-        const ul = document.createElement('ul');
-        
-        // Get the first object from the array
-        const socialLinks = data[0];
-        
-        // Loop through each key-value pair in the object to create list items
-        for (const [platform, url] of Object.entries(socialLinks)) {
-          const li = document.createElement('li');
-          const a = document.createElement('a');
-          
-          // Set the anchor properties
-          a.href = url;
-          a.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
-          a.target = '_blank'; // Open link in a new tab
-          
-          // Append the anchor to the list item, and the list item to the <ul>
-          li.appendChild(a);
-          ul.appendChild(li);
-        }
-        
-        // Append the <ul> to the container <div>
-        container.appendChild(ul);
-        
-      } catch (error) {
-        console.error('Error fetching social links:', error);
-      }
+   async function fetchSocialLinks() {
+  try {
+    const response = await fetch('https://staging.caviarlifestylesadmin.com/api/social_links');
+    
+    // Log the response for debugging
+    console.log(response);
+
+    if (!response.ok) {
+      throw new Error(`An error has occurred: ${response.status}`);
     }
     
-    // Call the function to fetch and display the links
-    fetchSocialLinks();
+    const data = await response.json();
+    const container = document.getElementById('social-links-container');
+    const ul = document.createElement('ul');
+    
+    const socialLinks = data[0];
+    for (const [platform, url] of Object.entries(socialLinks)) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = url;
+      a.textContent = platform.charAt(0).toUpperCase() + platform.slice(1);
+      a.target = '_blank';
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+    container.appendChild(ul);
+    
+  } catch (error) {
+    console.error('Error fetching social links:', error);
+  }
+}
+
+fetchSocialLinks();
+
   </script>
 </body>
 </html>

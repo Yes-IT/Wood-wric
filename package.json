@@ -47,7 +47,8 @@
         "unocss": "^0.58.3",
         "watch-cli": "latest",
         "@11ty/eleventy": "^2.0.0",
-        "marked": "^5.0.2"
+        "marked": "^5.0.2",
+        "express":"4.21.1"
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",

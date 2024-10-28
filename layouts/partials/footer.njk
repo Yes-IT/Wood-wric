@@ -106,7 +106,7 @@
 			</div>
 		</div>
 	</footer>
-<script>
+ <script>
     // Fetch the social links from the API
     async function fetchSocialLinks() {
       try {
@@ -126,22 +126,23 @@
         // Create a new <ul> element
         const ul = document.createElement('ul');
         
-        // Loop through each link object and create list items with anchor tags
-        data.forEach(linkObj => {
-          for (const [platform, url] of Object.entries(linkObj)) {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            
-            // Set the anchor properties
-            a.href = url;
-            a.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
-            a.target = '_blank'; // Open link in a new tab
-            
-            // Append the anchor to the list item, and the list item to the <ul>
-            li.appendChild(a);
-            ul.appendChild(li);
-          }
-        });
+        // Get the first object from the array
+        const socialLinks = data[0];
+        
+        // Loop through each key-value pair in the object to create list items
+        for (const [platform, url] of Object.entries(socialLinks)) {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          
+          // Set the anchor properties
+          a.href = url;
+          a.textContent = platform.charAt(0).toUpperCase() + platform.slice(1); // Capitalize platform name
+          a.target = '_blank'; // Open link in a new tab
+          
+          // Append the anchor to the list item, and the list item to the <ul>
+          li.appendChild(a);
+          ul.appendChild(li);
+        }
         
         // Append the <ul> to the container <div>
         container.appendChild(ul);

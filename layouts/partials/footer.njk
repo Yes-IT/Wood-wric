@@ -109,13 +109,17 @@
 		</div>
 	</footer>
 <script>
-// API endpoint
 const apiUrl = 'https://staging.caviarlifestylesadmin.com/api/social_links';
 
-fetch(apiUrl)
+fetch(apiUrl, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
   .then(response => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error(`Network response was not ok: ${response.statusText}`);
     }
     return response.json();
   })
@@ -138,7 +142,11 @@ fetch(apiUrl)
       socialLinksContainer.appendChild(listItem);
     });
   })
-  .catch(error => console.error('Error fetching social links:', error));
+  .catch(error => {
+    console.error('Error fetching social links:', error);
+    const socialLinksContainer = document.getElementById('social-links');
+    socialLinksContainer.innerHTML = `<li>Error loading social links. Please try again later.</li>`;
+  });
 
   </script>
 </body>

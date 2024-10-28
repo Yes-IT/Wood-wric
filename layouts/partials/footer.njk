@@ -56,7 +56,9 @@
 			</div>
 			<div></div>
 
- <div id="social-links-container"></div>
+ <ul id="social-links">
+    <!-- Social links will be populated here -->
+  </ul>
 			<div >
                 
 
@@ -107,22 +109,36 @@
 		</div>
 	</footer>
 <script>
- async function fetchSocialLinks() {
-  try {
-const response = await fetch('https://cors-anywhere.herokuapp.com/https://staging.caviarlifestylesadmin.com/api/social_links');
+// API endpoint
+const apiUrl = 'https://staging.caviarlifestylesadmin.com/api/social_links';
+
+fetch(apiUrl)
+  .then(response => {
     if (!response.ok) {
-      console.error(`HTTP error: ${response.status}`);
-      throw new Error(`An error occurred: ${response.status}`);
+      throw new Error('Network response was not ok');
     }
+    return response.json();
+  })
+  .then(data => {
+    const socialLinksContainer = document.getElementById('social-links');
+    
+    // Clear any existing content
+    socialLinksContainer.innerHTML = '';
 
-    const data = await response.json();
-    console.log("Data received from API:", data);
-  } catch (error) {
-    console.error('Fetch error:', error);
-  }
-}
+    // Loop through each social link in the data
+    data.forEach(link => {
+      const listItem = document.createElement('li');
+      const anchor = document.createElement('a');
 
-fetchSocialLinks();
+      anchor.href = link.url;
+      anchor.textContent = link.platform; // Display platform name
+      anchor.target = '_blank'; // Opens link in a new tab
+
+      listItem.appendChild(anchor);
+      socialLinksContainer.appendChild(listItem);
+    });
+  })
+  .catch(error => console.error('Error fetching social links:', error));
 
   </script>
 </body>

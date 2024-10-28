@@ -112,7 +112,7 @@
     const response = await fetch('https://staging.caviarlifestylesadmin.com/api/social_links');
     
     // Log the response for debugging
-    console.log(response);
+    alert(response);
 
     if (!response.ok) {
       throw new Error(`An error has occurred: ${response.status}`);

@@ -1101,7 +1101,7 @@ const config = {
       name: 'socialMedia', // Name of the collection
       label: 'Social Media Links', // Label for the admin panel
       folder: 'src/content/socialMedia', // Folder where the social media links will be stored
-      create: true,
+      create: false,
       delete: false,
       slug: 'index', // Slug for the file
       fields: [

@@ -61,7 +61,7 @@ function requestHandler(req, res) {
         };
 
         // Render the footer template
-        const footerHtml = renderTemplate(path.join(__dirname, 'views', 'partials/footer.njk'), footerData);
+        const footerHtml = renderTemplate(path.join(__dirname, 'layouts', 'partials/footer.njk'), footerData);
         
         // Send the response
         res.writeHead(200, {'Content-Type': 'text/html'});

@@ -152,6 +152,7 @@ const config = {
                 "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
                 "Must not exceed 35 words.",
               ],
+               "max": 255
             },
           ],
         },

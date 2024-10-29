@@ -7,7 +7,7 @@ const fs = require("fs");
 
 //base fields that are common to many content types
 const baseFields = [
-  { name: "title", label: "Title", widget: "string" }, 
+  { name: "title", label: "Title", widget: "string" },
   {
     label: "Permalink",
     name: "permalink",
@@ -105,79 +105,488 @@ const config = {
   show_preview_links: false,
   collections: [
     {
-      label: "Pages",
-      name: "pages",
-      editor: {
-        preview: false,
+      name: "home",
+      label: "Home Page",
+      folder: "src/content/",
+      create: false,
+      delete: false,
+      slug: "index",
+      filter: {
+        // Filter to ensure you only target one file
+        field: "layout",
+        value: "index.njk",
       },
-      files: [
+      fields: [
         {
-          label: "Privacy Policy",
-          name: "privacy-policy",
-          file: "src/content/privacy-policy.md",
-          fields: [...baseFields, ...seoFields],
+          label: "Home Page",
+          name: "title", // This is important to set the top section title
+          widget: "string",
+          required: true,
         },
         {
-          label: "Events",
-          name: "events",
-          file: "src/content/events/index.md",
-          fields: [baseFields[0], baseFields[1], ...seoFields],
+          label: "Hero Section",
+          name: "hero",
+          widget: "object",
+          fields: [
+            { label: "Hero Image 1", name: "image1", widget: "image" },
+            {
+              label: "Hero URL 1",
+              name: "url1",
+              widget: "string",
+              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
+              format: "url",
+            },
+            { label: "Hero Image 2", name: "image2", widget: "image" },
+            {
+              label: "Hero URL 2",
+              name: "url2",
+              widget: "string",
+              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
+              format: "url",
+            },
+            {
+              label: "Hero Description",
+              name: "description",
+              widget: "text",
+              pattern: [
+                "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
+                "Must not exceed 35 words.",
+              ],
+            },
+          ],
+        },
+        {
+          label: "Second Section - Cards",
+          name: "cards",
+          widget: "list",
+          fields: [
+            { label: "Card Title", name: "title", widget: "string" },
+            { label: "Card image", name: "image", widget: "image" },
+            {
+              label: "Card Description",
+              name: "description",
+              widget: "text",
+              pattern: [
+                "^(.+?\\s+){0,19}(.+)?$", // Allows up to 35 words
+                "Must not exceed 20 words.",
+              ],
+            },
+            { label: "Card URL", name: "url", widget: "string" },
+          ],
+          max: 2, // Limits to only 2 cards
+        },
+        {
+          label: "Did You Know Section",
+          name: "didYouKnow",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              pattern: [
+                "^(.+?\\s+){0,9}(.+)?$", // Allows up to 35 words
+                "Must not exceed 10 words.",
+              ],
+            },
+            { label: "Image", name: "image", widget: "image" },
+            { label: "Icon", name: "icon", widget: "image" },
+          ],
+          max: 3, // Single entry
+        },
+        {
+          label: "About Section",
+          name: "about",
+          widget: "object",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              pattern: [
+                "^(.+?\\s+){0,24}(.+)?$", // Allows up to 35 words
+                "Must not exceed 24 words.",
+              ],
+            },
+            { label: "Image", name: "image", widget: "image" },
+            { label: "URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "index.njk",
         },
       ],
     },
     {
-      label: "Events",
-      name: "events",
-      folder: "src/content/events",
-      create: true,
-      label_singular: "Event",
+      label: "Why Wood",
+      name: "why-wood",
+      folder: "src/content/why-wood",
+      create: false,
+      delete: false,
       editor: { preview: false },
-      sortable_fields: ["commit_date", "title", "date"],
-      summary: "{{date}} - {{title}}",
       fields: [
         {
-          name: "date",
-          label: "Drop Off Date",
-          widget: "datetime",
-          format: "YYYY-MM-DD",
-          required: true,
-          hint: "The date the event will disappear from the site (is not visible)",
-        },
-        {
-          name: "title",
-          label: "Event Name",
+          label: "Banner Title",
+          name: "bannerTitle",
           widget: "string",
           required: true,
         },
         {
-          name: "dateDisplay",
-          label: "Date Display",
-          widget: "string",
-          required: true,
-          hint: "This shows with the event.",
-        },
-        { name: "description", label: "Description", widget: "text" },
-        { name: "info", label: "Info Url", widget: "string", required: true },
-        {
-          name: "rsvp",
-          label: "Register Url",
-          widget: "string",
-          required: true,
-        },
-        {
-          name: "img",
-          label: "Image",
+          label: "Banner Image",
+          name: "bannerImage",
           widget: "image",
-          default: "/imgs/event-default.jpg",
-          required: false,
+          required: true,
+        },
+        { label: "Heading", name: "heading", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
         },
         {
-          name: "location",
-          label: "Location",
-          widget: "string",
-          required: false,
+          label: "Sliders",
+          name: "sliders",
+          widget: "object",
+          fields: [
+            {
+              label: "Left Slider",
+              name: "left_slider",
+              widget: "object",
+              fields: [
+                {
+                  label: "Heading",
+                  name: "heading",
+                  widget: "string",
+                  required: true,
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
+                  required: true,
+                },
+              ],
+            },
+            {
+              label: "Right Slider",
+              name: "right_slider",
+              widget: "object",
+              fields: [
+                {
+                  label: "Heading",
+                  name: "heading",
+                  widget: "string",
+                  required: true,
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                },
+                {
+                  label: "Content",
+                  name: "content",
+                  widget: "markdown",
+                  required: true,
+                },
+              ],
+            },
+          ],
         },
-        { name: "private", label: "Private", widget: "hidden", value: "true" },
+        {
+          label: "Cards",
+          name: "cards",
+          class: "florring-wpp",
+          widget: "list",
+          fields: [
+            { label: "Image", name: "image", widget: "image", required: true },
+            {
+              label: "Background Image",
+              name: "b_image",
+              widget: "image",
+              required: true,
+            },
+            {
+              label: "Header",
+              name: "header",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "whywood.njk",
+        },
+      ],
+    },
+    {
+      label: "Get Started",
+      name: "get-started",
+      folder: "src/content/get-started",
+      create: false,
+      delete: false,
+      editor: { preview: false },
+      fields: [
+        {
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
+        {
+          label: "Banner Title",
+          name: "bannerTitle",
+          widget: "string",
+          required: true,
+        },
+        { label: "Title", name: "title", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Steps",
+          name: "steps",
+          widget: "list",
+          fields: [
+            { label: "Title", name: "title", widget: "string", required: true },
+            { label: "Image", name: "image", widget: "image", required: true },
+            {
+              label: "Content",
+              name: "content",
+              widget: "markdown", // or use "text" with editor preview false for plain text input
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "getstarted.njk",
+        },
+      ],
+    },
+    {
+      name: "about",
+      label: "About Page",
+      folder: "src/content/about",
+      create: false,
+      delete: false,
+      slug: "index",
+      fields: [
+        {
+          label: "Banner Title",
+          name: "title",
+          widget: "string",
+          required: true,
+        },
+        {
+          label: "Banner Image",
+          name: "bannerImage",
+          widget: "image",
+          required: true,
+        },
+        { label: "Hero Image", name: "hero", widget: "image", required: true },
+        {
+          label: "Hero Title",
+          name: "heroTitle",
+          widget: "string",
+          required: true,
+        },
+        {
+          label: "Hero Description",
+          name: "heroDescription",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "SEO Description",
+          name: "seo.description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "SEO Page Title",
+          name: "seo.pageTitle",
+          widget: "string",
+          required: true,
+        },
+        {
+          label: "Cards",
+          name: "cards",
+          widget: "list",
+          required: true,
+          fields: [
+            {
+              label: "Card Title",
+              name: "title",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Card Copy",
+              name: "copy",
+              widget: "text",
+              required: true,
+            },
+            {
+              label: "Card Image",
+              name: "img",
+              widget: "image",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Executive Associations",
+          name: "execAssociations",
+          widget: "list",
+          required: true,
+          fields: [
+            { label: "Title", name: "title", widget: "string", required: true },
+            { label: "Image", name: "img", widget: "image", required: true },
+            { label: "URL", name: "url", widget: "string", required: true },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          required: true,
+          fields: [
+            {
+              label: "Footer Title",
+              name: "title",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Button Label",
+              name: "btnLabel",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Button URL",
+              name: "url",
+              widget: "string",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "about.njk",
+          required: true,
+        },
+      ],
+    },
+    {
+      label: "Videos",
+      name: "videos",
+      folder: "src/content/videos",
+      create: false,
+      delete: false,
+      editor: { preview: false },
+      fields: [
+        {
+          label: "Banner Image",
+          name: "heroImage",
+          widget: "image",
+          required: true,
+        },
+        {
+          label: "Banner Title",
+          name: "bannerTitle",
+          widget: "string",
+          required: true,
+        },
+        { label: "Title", name: "title", widget: "string", required: true },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        },
+        {
+          label: "Video Sections",
+          name: "sections",
+          widget: "list",
+          fields: [
+            { label: "Image", name: "image", widget: "image", required: true },
+            { label: "Link", name: "link", widget: "string", required: true },
+            { label: "Title", name: "title", widget: "string", required: true },
+            {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: true,
+            },
+          ],
+        },
+        {
+          label: "Footer Section",
+          name: "footer",
+          widget: "object",
+          fields: [
+            { label: "Footer Title", name: "title", widget: "string" },
+            { label: "Button Label", name: "btnLabel", widget: "string" },
+            { label: "Button URL", name: "url", widget: "string" },
+          ],
+        },
+        {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "videos.njk",
+        },
       ],
     },
     {
@@ -294,6 +703,168 @@ const config = {
           required: false,
         },
         idField,
+      ],
+    },
+    {
+      label: "Events",
+      name: "events",
+      folder: "src/content/events",
+      create: true,
+      label_singular: "Event",
+      editor: { preview: false },
+      sortable_fields: ["commit_date", "title", "date"],
+      summary: "{{date}} - {{title}}",
+      fields: [
+        {
+          name: "date",
+          label: "Drop Off Date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          required: true,
+          hint: "The date the event will disappear from the site (is not visible)",
+        },
+        {
+          name: "title",
+          label: "Event Name",
+          widget: "string",
+          required: true,
+        },
+        {
+          name: "dateDisplay",
+          label: "Date Display",
+          widget: "string",
+          required: true,
+          hint: "This shows with the event.",
+        },
+        { name: "description", label: "Description", widget: "text" },
+        { name: "info", label: "Info Url", widget: "string", required: true },
+        {
+          name: "rsvp",
+          label: "Register Url",
+          widget: "string",
+          required: true,
+        },
+        {
+          name: "img",
+          label: "Image",
+          widget: "image",
+          default: "/imgs/event-default.jpg",
+          required: false,
+        },
+        {
+          name: "location",
+          label: "Location",
+          widget: "string",
+          required: false,
+        },
+        { name: "private", label: "Private", widget: "hidden", value: "true" },
+      ],
+    },
+    
+    {
+      label: "Careers",
+      name: "careers",
+      folder: "src/content/careers",
+      create: true,
+      editor: { preview: false },
+      // filter: {field: "permalink", value: "false"},
+      fields: [
+        { label: "Title", name: "title", widget: "string", required: true },
+        {
+          label: "Position",
+          name: "position",
+          widget: "number",
+          value_type: "int",
+          required: true,
+          default: 0,
+        },
+        {
+          name: "img",
+          label: "Image",
+          widget: "image",
+          default: "/imgs/event-default.jpg",
+          required: false,
+        },
+        {
+          name: "largeImg",
+          label: "Large Image",
+          widget: "image",
+          default: "/imgs/event-default.jpg",
+          required: false,
+        },
+        { name: "what", label: "What", widget: "text", required: true },
+        {
+          name: "requirements",
+          label: "Requirements",
+          widget: "text",
+          required: true,
+        },
+        { name: "skills", label: "Skills", widget: "text", required: true },
+        {
+          name: "certificates",
+          label: "Certificates",
+          widget: "text",
+          required: true,
+        },
+        {
+          name: "education",
+          label: "Education",
+          widget: "text",
+          required: true,
+        },
+        { name: "salary", label: "Salary", widget: "string", required: true },
+        idField,
+      ],
+    },
+    {
+      label: "Quizzes",
+      label_singular: "Quiz",
+      name: "quizzes",
+      folder: "src/content/quizzes",
+      create: true,
+      editor: { preview: false },
+      fields: [
+        { label: "Title", name: "title", widget: "string", required: true },
+        idField,
+        {
+          label: "Questions",
+          name: "questions",
+          widget: "list",
+          fields: [
+            {
+              label: "Headline",
+              name: "headline",
+              widget: "string",
+              required: true,
+              default: "Think You Know Wood?",
+            },
+            {
+              label: "Quiz Question",
+              name: "question",
+              widget: "string",
+              required: true,
+            },
+            {
+              label: "Answers",
+              name: "answers",
+              widget: "list",
+              fields: [
+                {
+                  label: "Label",
+                  name: "label",
+                  widget: "string",
+                  required: true,
+                },
+                {
+                  label: "Explanation",
+                  name: "explanation",
+                  widget: "text",
+                  required: true,
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -527,591 +1098,53 @@ const config = {
       ],
     },
     {
-      label: "Quizzes",
-      label_singular: "Quiz",
-      name: "quizzes",
-      folder: "src/content/quizzes",
-      create: true,
-      editor: { preview: false },
-      fields: [
-        { label: "Title", name: "title", widget: "string", required: true },
-        idField,
-        {
-          label: "Questions",
-          name: "questions",
-          widget: "list",
-          fields: [
-            {
-              label: "Headline",
-              name: "headline",
-              widget: "string",
-              required: true,
-              default: "Think You Know Wood?",
-            },
-            {
-              label: "Quiz Question",
-              name: "question",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Answers",
-              name: "answers",
-              widget: "list",
-              fields: [
-                {
-                  label: "Label",
-                  name: "label",
-                  widget: "string",
-                  required: true,
-                },
-                {
-                  label: "Explanation",
-                  name: "explanation",
-                  widget: "text",
-                  required: true,
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Careers",
-      name: "careers",
-      folder: "src/content/careers",
-      create: true,
-      editor: { preview: false },
-      // filter: {field: "permalink", value: "false"},
-      fields: [
-        { label: "Title", name: "title", widget: "string", required: true },
-        {
-          label: "Position",
-          name: "position",
-          widget: "number",
-          value_type: "int",
-          required: true,
-          default: 0,
-        },
-        {
-          name: "img",
-          label: "Image",
-          widget: "image",
-          default: "/imgs/event-default.jpg",
-          required: false,
-        },
-        {
-          name: "largeImg",
-          label: "Large Image",
-          widget: "image",
-          default: "/imgs/event-default.jpg",
-          required: false,
-        },
-        { name: "what", label: "What", widget: "text", required: true },
-        {
-          name: "requirements",
-          label: "Requirements",
-          widget: "text",
-          required: true,
-        },
-        { name: "skills", label: "Skills", widget: "text", required: true },
-        {
-          name: "certificates",
-          label: "Certificates",
-          widget: "text",
-          required: true,
-        },
-        {
-          name: "education",
-          label: "Education",
-          widget: "text",
-          required: true,
-        },
-        { name: "salary", label: "Salary", widget: "string", required: true },
-        idField,
-      ],
-    },
-    {
-      name: "home",
-      label: "Home Page",
-      folder: "src/content/",
-      create: false,
-      delete: false,
-      slug: "index",
-      filter: {
-        // Filter to ensure you only target one file
-        field: "layout",
-        value: "index.njk",
+      label: "Pages",
+      name: "pages",
+      editor: {
+        preview: false,
       },
-      fields: [
+      files: [
         {
-          label: "Home Page",
-          name: "title", // This is important to set the top section title
-          widget: "string",
-          required: true,
+          label: "Privacy Policy",
+          name: "privacy-policy",
+          file: "src/content/privacy-policy.md",
+          fields: [...baseFields, ...seoFields],
         },
         {
-          label: "Hero Section",
-          name: "hero",
-          widget: "object",
-          fields: [
-            { label: "Hero Image 1", name: "image1", widget: "image" },
-            { 
-              label: "Hero URL 1", 
-              name: "url1", 
-              widget: "string", 
-              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
-              format: "url", 
-            },
-            { label: "Hero Image 2", name: "image2", widget: "image" },
-            { 
-              label: "Hero URL 2", 
-              name: "url2", 
-              widget: "string", 
-              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
-              format: "url", 
-            },
-            { label: "Hero Description", name: "description", widget: "text", pattern: [
-              "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
-              "Must not exceed 35 words."
-            ]},
-          ]
-        },
-        {
-          label: "Second Section - Cards",
-          name: "cards",
-          widget: "list",
-          fields: [
-            { label: "Card Title", name: "title",  widget: "string" },
-            { label: "Card image", name: "image", widget: "image" },
-            { label: "Card Description", name: "description", widget: "text" , pattern: [
-              "^(.+?\\s+){0,19}(.+)?$", // Allows up to 35 words
-              "Must not exceed 20 words."
-            ]},
-            { label: "Card URL", name: "url", widget: "string" },
-          ],
-          max: 2, // Limits to only 2 cards
-        },
-        {
-          label: "Did You Know Section",
-          name: "didYouKnow",
-          widget: "list",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            { label: "Description", name: "description", widget: "text" ,  pattern: [
-              "^(.+?\\s+){0,9}(.+)?$", // Allows up to 35 words
-              "Must not exceed 10 words."
-            ]},
-            { label: "Image", name: "image", widget: "image" },
-            { label: "Icon", name: "icon", widget: "image" },
-          ],
-          max: 3, // Single entry
-        },
-        {
-          label: "About Section",
-          name: "about",
-          widget: "object",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            { label: "Description", name: "description", widget: "text" ,  pattern: [
-              "^(.+?\\s+){0,24}(.+)?$", // Allows up to 35 words
-              "Must not exceed 24 words."
-            ]},
-            { label: "Image", name: "image", widget: "image" },
-            { label: "URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "index.njk",
+          label: "Events",
+          name: "events",
+          file: "src/content/events/index.md",
+          fields: [baseFields[0], baseFields[1], ...seoFields],
         },
       ],
     },
+   
+  
+    
+
+   
+   
+
     {
-      name: "about",
-      label: "About Page",
-      folder: "src/content/about",
+      name: "socialMedia", // Name of the collection
+      label: "Social Media Links", // Label for the admin panel
+      folder: "src/content/socialMedia", // Folder where the social media links will be stored
       create: false,
       delete: false,
-      slug: "index",
+      slug: "index", // Slug for the file
       fields: [
+        { label: "Facebook URL", name: "facebook", widget: "string" },
+        { label: "X URL", name: "x", widget: "string" },
+        { label: "LinkedIn URL", name: "linkedin", widget: "string" },
+        { label: "Instagram URL", name: "instagram", widget: "string" },
+        { label: "YouTube URL", name: "youtube", widget: "string" },
+        { label: "TikTok URL", name: "tiktok", widget: "string" },
         {
-          label: "Banner Title",
-          name: "title",
+          label: "Email Address",
+          name: "email",
           widget: "string",
-          required: true,
+          required: false,
         },
-        {
-          label: "Banner Image",
-          name: "bannerImage",
-          widget: "image",
-          required: true,
-        },
-        { label: "Hero Image", name: "hero", widget: "image", required: true },
-        {
-          label: "Hero Title",
-          name: "heroTitle",
-          widget: "string",
-          required: true,
-        },
-        {
-          label: "Hero Description",
-          name: "heroDescription",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "SEO Description",
-          name: "seo.description",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "SEO Page Title",
-          name: "seo.pageTitle",
-          widget: "string",
-          required: true,
-        },
-        {
-          label: "Cards",
-          name: "cards",
-          widget: "list",
-          required: true,
-          fields: [
-            {
-              label: "Card Title",
-              name: "title",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Card Copy",
-              name: "copy",
-              widget: "text",
-              required: true,
-            },
-            {
-              label: "Card Image",
-              name: "img",
-              widget: "image",
-              required: true,
-            },
-          ],
-        },
-        {
-          label: "Executive Associations",
-          name: "execAssociations",
-          widget: "list",
-          required: true,
-          fields: [
-            { label: "Title", name: "title", widget: "string", required: true },
-            { label: "Image", name: "img", widget: "image", required: true },
-            { label: "URL", name: "url", widget: "string", required: true },
-          ],
-        },
-        {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          required: true,
-          fields: [
-            {
-              label: "Footer Title",
-              name: "title",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Button Label",
-              name: "btnLabel",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Button URL",
-              name: "url",
-              widget: "string",
-              required: true,
-            },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "about.njk",
-          required: true,
-        },
-      ],
-    },
-    {
-      label: "Videos",
-      name: "videos",
-      folder: "src/content/videos",
-      create: false,
-      delete: false,
-      editor: { preview: false },
-      fields: [
-        {
-          label: "Banner Image",
-          name: "heroImage",
-          widget: "image",
-          required: true,
-        },
-        {
-          label: "Banner Title",
-          name: "bannerTitle",
-          widget: "string",
-          required: true,
-        },
-        { label: "Title", name: "title", widget: "string", required: true },
-        {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "Video Sections",
-          name: "sections",
-          widget: "list",
-          fields: [
-            { label: "Image", name: "image", widget: "image", required: true },
-            { label: "Link", name: "link", widget: "string", required: true },
-            { label: "Title", name: "title", widget: "string", required: true },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              required: true,
-            },
-          ],
-        },
-        {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          fields: [
-            { label: "Footer Title", name: "title", widget: "string" },
-            { label: "Button Label", name: "btnLabel", widget: "string" },
-            { label: "Button URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "videos.njk",
-        },
-      ],
-    },
-    {
-      label: "Get Started",
-      name: "get-started",
-      folder: "src/content/get-started",
-      create: false,
-      delete: false,
-      editor: { preview: false },
-      fields: [
-        {
-          label: "Banner Image",
-          name: "bannerImage",
-          widget: "image",
-          required: true,
-        },
-        {
-          label: "Banner Title",
-          name: "bannerTitle",
-          widget: "string",
-          required: true,
-        },
-        { label: "Title", name: "title", widget: "string", required: true },
-        {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "Steps",
-          name: "steps",
-          widget: "list",
-          fields: [
-            { label: "Title", name: "title", widget: "string", required: true },
-            { label: "Image", name: "image", widget: "image", required: true },
-            {
-              label: "Content",
-              name: "content",
-              widget: "markdown", // or use "text" with editor preview false for plain text input
-              required: true,
-            },
-          ],
-        },
-        {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          fields: [
-            { label: "Footer Title", name: "title", widget: "string" },
-            { label: "Button Label", name: "btnLabel", widget: "string" },
-            { label: "Button URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "getstarted.njk",
-        },
-      ],
-    },
-    {
-      label: "Why Wood",
-      name: "why-wood",
-      folder: "src/content/why-wood",
-      create: false,
-      delete: false,
-      editor: { preview: false },
-      fields: [
-        {
-          label: "Banner Title",
-          name: "bannerTitle",
-          widget: "string",
-          required: true,
-        },
-        {
-          label: "Banner Image",
-          name: "bannerImage",
-          widget: "image",
-          required: true,
-        },
-        { label: "Heading", name: "heading", widget: "string", required: true },
-        {
-          label: "Description",
-          name: "description",
-          widget: "text",
-          required: true,
-        },
-        {
-          label: "Sliders",
-          name: "sliders",
-          widget: "object",
-          fields: [
-            {
-              label: "Left Slider",
-              name: "left_slider",
-              widget: "object",
-              fields: [
-                {
-                  label: "Heading",
-                  name: "heading",
-                  widget: "string",
-                  required: true,
-                },
-                {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: true,
-                },
-                {
-                  label: "Content",
-                  name: "content",
-                  widget: "markdown",
-                  required: true,
-                },
-              ],
-            },
-            {
-              label: "Right Slider",
-              name: "right_slider",
-              widget: "object",
-              fields: [
-                {
-                  label: "Heading",
-                  name: "heading",
-                  widget: "string",
-                  required: true,
-                },
-                {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: true,
-                },
-                {
-                  label: "Content",
-                  name: "content",
-                  widget: "markdown",
-                  required: true,
-                },
-              ],
-            },
-          ],
-        },
-        {
-          label: "Cards",
-          name: "cards",
-          class: "florring-wpp",
-          widget: "list",
-          fields: [
-            { label: "Image", name: "image", widget: "image", required: true },
-            {
-              label: "Background Image",
-              name: "b_image",
-              widget: "image",
-              required: true,
-            },
-            {
-              label: "Header",
-              name: "header",
-              widget: "string",
-              required: true,
-            },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              required: true,
-            },
-          ],
-        },
-        {
-          label: "Footer Section",
-          name: "footer",
-          widget: "object",
-          fields: [
-            { label: "Footer Title", name: "title", widget: "string" },
-            { label: "Button Label", name: "btnLabel", widget: "string" },
-            { label: "Button URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "whywood.njk",
-        },
-      ],
-    },
-   {
-      name: 'socialMedia', // Name of the collection
-      label: 'Social Media Links', // Label for the admin panel
-      folder: 'src/content/socialMedia', // Folder where the social media links will be stored
-      create: false,
-      delete: false,
-      slug: 'index', // Slug for the file
-      fields: [
-        { label: 'Facebook URL', name: 'facebook', widget: 'string' },
-        { label: 'X URL', name: 'x', widget: 'string' },
-        { label: 'LinkedIn URL', name: 'linkedin', widget: 'string' },
-        { label: 'Instagram URL', name: 'instagram', widget: 'string' },
-        { label: 'YouTube URL', name: 'youtube', widget: 'string' },
-        { label: 'TikTok URL', name: 'tiktok', widget: 'string' },
-        { label: 'Email Address', name: 'email', widget: 'string', required: false },
       ],
     },
   ],

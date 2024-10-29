@@ -7,7 +7,15 @@ hero:
   url2: https://chatgpt.com/
   description: "Whether you are thinking about what you want to do after high
     school, beginning a new chapter in your life, or simply looking for a stable
-    career, one thing rings true: the wood industry has a place for you."
+    career, one thing rings true: the wood industry has a place for
+    you.gdfgdgdgsdfgdfgdfgggggggggggggggggg sfsf sdfs ffs ffsfsf sfsdfsf
+    sdfsfsfsdf sdfsfsf fsfsdf sfsdfsd fsdfsd  fsfsd sfs  fs sfsfs sf sf fsdf s f
+    sffsfs ssfs fs fsf f f s ffsd  f fsffafsffsdfs sdf sfs sdf  fsfsdf ff
+    fffsdfs f f sddf sfs f sf s f s fssd fss   f fdf f fdff    sfdf
+    fffff  sfsfdffdsfd sfdfdfd ffd fdfd fafsfd sfdfd sfdfd ffd sfdfd fdfd sfdsfd
+    sfdsfd sfdfd ssfd sdsd sfdsfd f rerw se df f dsfdd d fdsfd  fd  sfd f  sdsf
+    s fsfsd sfd xf   sfd sfd d sfd  sfd  fd fdfg  fg fdfgfgd frwrefdz sxczfrtr
+    ssreresr sffdf sfggz sfdgx  gd   re r "
 cards:
   - title: Why Wood?
     image: /media/uploads/dan-feature-3-cue-careers.jpg

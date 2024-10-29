@@ -104,98 +104,129 @@ const config = {
   public_folder: "/media/uploads",
   show_preview_links: false,
   collections: [
+ {
+  name: "home",
+  label: "Home Page",
+  folder: "src/content/",
+  create: false,
+  delete: false,
+  slug: "index",
+  filter: {
+    // Filter to ensure you only target one file
+    field: "layout",
+    value: "index.njk",
+  },
+  fields: [
     {
-      name: "home",
       label: "Home Page",
-      folder: "src/content/",
-      create: false,
-      delete: false,
-      slug: "index",
-      filter: {
-        // Filter to ensure you only target one file
-        field: "layout",
-        value: "index.njk",
-      },
+      name: "title",
+      widget: "string",
+      required: true,
+      max_length: 255, // Limit to 255 characters
+    },
+    {
+      label: "Hero Section",
+      name: "hero",
+      widget: "object",
       fields: [
+        { label: "Hero Image 1", name: "image1", widget: "image" },
         {
-          label: "Home Page",
-          name: "title", // This is important to set the top section title
+          label: "Hero URL 1",
+          name: "url1",
           widget: "string",
-          required: true,
+          pattern: ["https?://.+", "Must be a valid URL"],
+          max_length: 255, // Limit to 255 characters
+        },
+        { label: "Hero Image 2", name: "image2", widget: "image" },
+        {
+          label: "Hero URL 2",
+          name: "url2",
+          widget: "string",
+          pattern: ["https?://.+", "Must be a valid URL"],
+          max_length: 255, // Limit to 255 characters
         },
         {
-          label: "Hero Section",
-          name: "hero",
-          widget: "object",
-          fields: [
-            { label: "Hero Image 1", name: "image1", widget: "image" },
-            {
-              label: "Hero URL 1",
-              name: "url1",
-              widget: "string",
-              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
-              format: "url",
-            },
-            { label: "Hero Image 2", name: "image2", widget: "image" },
-            {
-              label: "Hero URL 2",
-              name: "url2",
-              widget: "string",
-              pattern: ["https?://.+", "Must be a valid URL"], // Add a pattern and a description
-              format: "url",
-            },
-            {
-              label: "Hero Description",
-              name: "description",
-              widget: "text",
-              pattern: [
-                "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
-                "Must not exceed 35 words.",
-              ],
-               "max": 255
-            },
+          label: "Hero Description",
+          name: "description",
+          widget: "text",
+          pattern: [
+            "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
+            "Must not exceed 35 words.",
           ],
+          max_length: 255, // Limit to 255 characters
         },
+      ],
+    },
+    {
+      label: "Second Section - Cards",
+      name: "cards",
+      widget: "list",
+      fields: [
+        { label: "Card Title", name: "title", widget: "string", max_length: 255 },
+        { label: "Card image", name: "image", widget: "image" },
         {
-          label: "Second Section - Cards",
-          name: "cards",
-          widget: "list",
-          fields: [
-            { label: "Card Title", name: "title", widget: "string" },
-            { label: "Card image", name: "image", widget: "image" },
-            {
-              label: "Card Description",
-              name: "description",
-              widget: "text",
-              pattern: [
-                "^(.+?\\s+){0,19}(.+)?$", // Allows up to 35 words
-                "Must not exceed 20 words.",
-              ],
-            },
-            { label: "Card URL", name: "url", widget: "string" },
+          label: "Card Description",
+          name: "description",
+          widget: "text",
+          pattern: [
+            "^(.+?\\s+){0,19}(.+)?$", // Allows up to 20 words
+            "Must not exceed 20 words.",
           ],
-          max: 2, // Limits to only 2 cards
+          max_length: 255, // Limit to 255 characters
         },
+        { label: "Card URL", name: "url", widget: "string", max_length: 255 },
+      ],
+      max: 2, // Limits to only 2 cards
+    },
+    {
+      label: "Did You Know Section",
+      name: "didYouKnow",
+      widget: "list",
+      fields: [
+        { label: "Title", name: "title", widget: "string", max_length: 255 },
         {
-          label: "Did You Know Section",
-          name: "didYouKnow",
-          widget: "list",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              pattern: [
-                "^(.+?\\s+){0,9}(.+)?$", // Allows up to 35 words
-                "Must not exceed 10 words.",
-              ],
-            },
-            { label: "Image", name: "image", widget: "image" },
-            { label: "Icon", name: "icon", widget: "image" },
+          label: "Description",
+          name: "description",
+          widget: "text",
+          pattern: [
+            "^(.+?\\s+){0,9}(.+)?$", // Allows up to 10 words
+            "Must not exceed 10 words.",
           ],
-          max: 3, // Single entry
+          max_length: 255, // Limit to 255 characters
         },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "Icon", name: "icon", widget: "image" },
+      ],
+      max: 3, // Limits to 3 entries
+    },
+    {
+      label: "About Section",
+      name: "about",
+      widget: "object",
+      fields: [
+        { label: "Title", name: "title", widget: "string", max_length: 255 },
+        {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          pattern: [
+            "^(.+?\\s+){0,24}(.+)?$", // Allows up to 24 words
+            "Must not exceed 24 words.",
+          ],
+          max_length: 255, // Limit to 255 characters
+        },
+        { label: "Image", name: "image", widget: "image" },
+        { label: "URL", name: "url", widget: "string", max_length: 255 },
+      ],
+    },
+    {
+      label: "Layout",
+      name: "layout",
+      widget: "hidden",
+      default: "index.njk",
+    },
+  ],
+},
         {
           label: "About Section",
           name: "about",

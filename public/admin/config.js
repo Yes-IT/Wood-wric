@@ -112,7 +112,6 @@ const config = {
   delete: false,
   slug: "index",
   filter: {
-    // Filter to ensure you only target one file
     field: "layout",
     value: "index.njk",
   },
@@ -122,8 +121,9 @@ const config = {
       name: "title",
       widget: "string",
       required: true,
+      max_length: 255, // Strict UI limit
       pattern: [
-        "^.{1,255}$",
+        "^.{1,255}$", // Strict pattern validation
         "Must not exceed 255 characters.",
       ],
     },
@@ -137,9 +137,9 @@ const config = {
           label: "Hero URL 1",
           name: "url1",
           widget: "string",
+          max_length: 255,
           pattern: [
-            "https?://.+", 
-            "^.{1,255}$", 
+            "https?://.{1,253}",
             "Must be a valid URL and not exceed 255 characters."
           ],
         },
@@ -148,9 +148,9 @@ const config = {
           label: "Hero URL 2",
           name: "url2",
           widget: "string",
+          max_length: 255,
           pattern: [
-            "https?://.+", 
-            "^.{1,255}$", 
+            "https?://.{1,253}",
             "Must be a valid URL and not exceed 255 characters."
           ],
         },
@@ -158,10 +158,10 @@ const config = {
           label: "Hero Description",
           name: "description",
           widget: "text",
+          max_length: 255,
           pattern: [
-            "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
-            "^.{1,255}$", 
-            "Must not exceed 35 words and 255 characters."
+            "^.{1,255}$",
+            "Must not exceed 255 characters.",
           ],
         },
       ],
@@ -171,61 +171,52 @@ const config = {
       name: "cards",
       widget: "list",
       fields: [
-        { label: "Card Title", name: "title", widget: "string", pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
+        { label: "Card Title", name: "title", widget: "string", max_length: 255, pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
         { label: "Card image", name: "image", widget: "image" },
         {
           label: "Card Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,19}(.+)?$", // Allows up to 20 words
-            "^.{1,255}$", 
-            "Must not exceed 20 words and 255 characters."
-          ],
+          max_length: 255,
+          pattern: ["^.{1,255}$", "Must not exceed 255 characters."],
         },
-        { label: "Card URL", name: "url", widget: "string", pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
+        { label: "Card URL", name: "url", widget: "string", max_length: 255, pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
       ],
-      max: 2, // Limits to only 2 cards
+      max: 2,
     },
     {
       label: "Did You Know Section",
       name: "didYouKnow",
       widget: "list",
       fields: [
-        { label: "Title", name: "title", widget: "string", pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
+        { label: "Title", name: "title", widget: "string", max_length: 255, pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
         {
           label: "Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,9}(.+)?$", // Allows up to 10 words
-            "^.{1,255}$", 
-            "Must not exceed 10 words and 255 characters."
-          ],
+          max_length: 255,
+          pattern: ["^.{1,255}$", "Must not exceed 255 characters."],
         },
         { label: "Image", name: "image", widget: "image" },
         { label: "Icon", name: "icon", widget: "image" },
       ],
-      max: 3, // Limits to 3 entries
+      max: 3,
     },
     {
       label: "About Section",
       name: "about",
       widget: "object",
       fields: [
-        { label: "Title", name: "title", widget: "string", pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
+        { label: "Title", name: "title", widget: "string", max_length: 255, pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
         {
           label: "Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,24}(.+)?$", // Allows up to 24 words
-            "^.{1,255}$", 
-            "Must not exceed 24 words and 255 characters."
-          ],
+          max_length: 255,
+          pattern: ["^.{1,255}$", "Must not exceed 255 characters."],
         },
         { label: "Image", name: "image", widget: "image" },
-        { label: "URL", name: "url", widget: "string", pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
+        { label: "URL", name: "url", widget: "string", max_length: 255, pattern: ["^.{1,255}$", "Must not exceed 255 characters."] },
       ],
     },
     {

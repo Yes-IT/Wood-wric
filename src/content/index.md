@@ -24,7 +24,8 @@ hero:
     stable career, one thing rings true: the wood industry has a place for
     you.  Whether you are thinking about what you want to do after high school,
     beginning a new chapter in your life, or simply looking for a stable career,
-    one thing rings true: the wood industry has a place for you.  "
+    one thing rings true: the wood industry has a place for
+    you.  ghjghjghjghjfghjg"
 cards:
   - title: Why Wood?
     image: /media/uploads/dan-feature-3-cue-careers.jpg

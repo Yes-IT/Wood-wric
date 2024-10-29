@@ -104,7 +104,7 @@ const config = {
   public_folder: "/media/uploads",
   show_preview_links: false,
   collections: [
- {
+    {
       name: "home",
       label: "Home Page",
       folder: "src/content/",
@@ -195,61 +195,6 @@ const config = {
           ],
           max: 3, // Single entry
         },
-        {
-          label: "About Section",
-          name: "about",
-          widget: "object",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              pattern: [
-                "^(.+?\\s+){0,24}(.+)?$", // Allows up to 35 words
-                "Must not exceed 24 words.",
-              ],
-            },
-            { label: "Image", name: "image", widget: "image" },
-            { label: "URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "index.njk",
-        },
-      ],
-    },
-    {
-      "label": "About Section",
-      "name": "about",
-      "widget": "object",
-      "fields": [
-        { "label": "Title", "name": "title", "widget": "string", "max": 255 },
-        {
-          "label": "Description",
-          "name": "description",
-          "widget": "text",
-          "pattern": [
-            "^(.+?\\s+){0,24}(.+)?$",
-            "Must not exceed 24 words."
-          ],
-          "max": 255
-        },
-        { "label": "Image", "name": "image", "widget": "image" },
-        { "label": "URL", "name": "url", "widget": "string", "max": 255 }
-      ]
-    },
-    {
-      "label": "Layout",
-      "name": "layout",
-      "widget": "hidden",
-      "default": "index.njk"
-    }
-  ]
-},
         {
           label: "About Section",
           name: "about",

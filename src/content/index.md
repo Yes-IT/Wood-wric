@@ -7,6 +7,28 @@ hero:
   url2: https://chatgpt.com/
   description: "Whether you are thinking about what you want to do after high
     school, beginning a new chapter in your life, or simply looking for a stable
+    career, one thing rings true: the wood industry has a place for you. Whether
+    you are thinking about what you want to do after high school, beginning a
+    new chapter in your life, or simply looking for a stable career, one thing
+    rings true: the wood industry has a place for you. Whether you are thinking
+    about what you want to do after high school, beginning a new chapter in your
+    life, or simply looking for a stable career, one thing rings true: the wood
+    industry has a place for you. Whether you are thinking about what you want
+    to do after high school, beginning a new chapter in your life, or simply
+    looking for a stable career, one thing rings true: the wood industry has a
+    place for you. Whether you are thinking about what you want to do after high
+    school, beginning a new chapter in your life, or simply looking for a stable
+    career, one thing rings true: the wood industry has a place for you. Whether
+    you are thinking about what you want to do after high school, beginning a
+    new chapter in your life, or simply looking for a stable career, one thing
+    rings true: the wood industry has a place for you. Whether you are thinking
+    about what you want to do after high school, beginning a new chapter in your
+    life, or simply looking for a stable career, one thing rings true: the wood
+    industry has a place for you. Whether you are thinking about what you want
+    to do after high school, beginning a new chapter in your life, or simply
+    looking for a stable career, one thing rings true: the wood industry has a
+    place for you. Whether you are thinking about what you want to do after high
+    school, beginning a new chapter in your life, or simply looking for a stable
     career, one thing rings true: the wood industry has a place for you. "
 cards:
   - title: Why Wood?

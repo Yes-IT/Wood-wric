@@ -117,43 +117,51 @@ const config = {
     value: "index.njk",
   },
   fields: [
+  {
+  name: "home",
+  label: "Home Page",
+  folder: "src/content/",
+  create: false,
+  delete: false,
+  slug: "index",
+  filter: {
+    field: "layout",
+    value: "index.njk",
+  },
+  fields: [
     {
-      label: "Home Page",
+      label: "Home Page Title",
       name: "title",
       widget: "string",
       required: true,
-      max_length: 255, // Limit to 255 characters
     },
     {
       label: "Hero Section",
       name: "hero",
       widget: "object",
       fields: [
-        { label: "Hero Image 1", name: "image1", widget: "image" },
+        { label: "Hero Image 1", name: "image1", widget: "image", required: true },
         {
           label: "Hero URL 1",
           name: "url1",
           widget: "string",
           pattern: ["https?://.+", "Must be a valid URL"],
-          max_length: 255, // Limit to 255 characters
+          required: true,
         },
-        { label: "Hero Image 2", name: "image2", widget: "image" },
+        { label: "Hero Image 2", name: "image2", widget: "image", required: true },
         {
           label: "Hero URL 2",
           name: "url2",
           widget: "string",
           pattern: ["https?://.+", "Must be a valid URL"],
-          max_length: 255, // Limit to 255 characters
+          required: true,
         },
         {
           label: "Hero Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,34}(.+)?$", // Allows up to 35 words
-            "Must not exceed 35 words.",
-          ],
-          max_length: 255, // Limit to 255 characters
+          pattern: ["^(.+?\\s+){0,34}(.+)?$", "Must not exceed 35 words."],
+          required: true,
         },
       ],
     },
@@ -162,61 +170,52 @@ const config = {
       name: "cards",
       widget: "list",
       fields: [
-        { label: "Card Title", name: "title", widget: "string", max_length: 255 },
-        { label: "Card image", name: "image", widget: "image" },
+        { label: "Card Title", name: "title", widget: "string", required: true },
+        { label: "Card Image", name: "image", widget: "image", required: true },
         {
           label: "Card Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,19}(.+)?$", // Allows up to 20 words
-            "Must not exceed 20 words.",
-          ],
-          max_length: 255, // Limit to 255 characters
+          pattern: ["^(.+?\\s+){0,19}(.+)?$", "Must not exceed 20 words."],
+          required: true,
         },
-        { label: "Card URL", name: "url", widget: "string", max_length: 255 },
+        { label: "Card URL", name: "url", widget: "string", required: true },
       ],
-      max: 2, // Limits to only 2 cards
+      max: 2,
     },
     {
       label: "Did You Know Section",
       name: "didYouKnow",
       widget: "list",
       fields: [
-        { label: "Title", name: "title", widget: "string", max_length: 255 },
+        { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,9}(.+)?$", // Allows up to 10 words
-            "Must not exceed 10 words.",
-          ],
-          max_length: 255, // Limit to 255 characters
+          pattern: ["^(.+?\\s+){0,9}(.+)?$", "Must not exceed 10 words."],
+          required: true,
         },
-        { label: "Image", name: "image", widget: "image" },
-        { label: "Icon", name: "icon", widget: "image" },
+        { label: "Image", name: "image", widget: "image", required: true },
+        { label: "Icon", name: "icon", widget: "image", required: true },
       ],
-      max: 3, // Limits to 3 entries
+      max: 3,
     },
     {
       label: "About Section",
       name: "about",
       widget: "object",
       fields: [
-        { label: "Title", name: "title", widget: "string", max_length: 255 },
+        { label: "Title", name: "title", widget: "string", required: true },
         {
           label: "Description",
           name: "description",
           widget: "text",
-          pattern: [
-            "^(.+?\\s+){0,24}(.+)?$", // Allows up to 24 words
-            "Must not exceed 24 words.",
-          ],
-          max_length: 255, // Limit to 255 characters
+          pattern: ["^(.+?\\s+){0,24}(.+)?$", "Must not exceed 24 words."],
+          required: true,
         },
-        { label: "Image", name: "image", widget: "image" },
-        { label: "URL", name: "url", widget: "string", max_length: 255 },
+        { label: "Image", name: "image", widget: "image", required: true },
+        { label: "URL", name: "url", widget: "string", required: true },
       ],
     },
     {
@@ -227,33 +226,6 @@ const config = {
     },
   ],
 },
-        {
-          label: "About Section",
-          name: "about",
-          widget: "object",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            {
-              label: "Description",
-              name: "description",
-              widget: "text",
-              pattern: [
-                "^(.+?\\s+){0,24}(.+)?$", // Allows up to 35 words
-                "Must not exceed 24 words.",
-              ],
-            },
-            { label: "Image", name: "image", widget: "image" },
-            { label: "URL", name: "url", widget: "string" },
-          ],
-        },
-        {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "index.njk",
-        },
-      ],
-    },
     {
       label: "Why Wood",
       name: "why-wood",

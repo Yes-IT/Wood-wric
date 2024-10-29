@@ -760,7 +760,7 @@ const config = {
         { name: "private", label: "Private", widget: "hidden", value: "true" },
       ],
     },
-    
+
     {
       label: "Careers",
       name: "careers",
@@ -1098,7 +1098,7 @@ const config = {
       ],
     },
     {
-      label: "Pages",
+      label: "Privacy Policy",
       name: "pages",
       editor: {
         preview: false,
@@ -1110,20 +1110,14 @@ const config = {
           file: "src/content/privacy-policy.md",
           fields: [...baseFields, ...seoFields],
         },
-        {
-          label: "Events",
-          name: "events",
-          file: "src/content/events/index.md",
-          fields: [baseFields[0], baseFields[1], ...seoFields],
-        },
+        // {
+        //   label: "Events",
+        //   name: "events",
+        //   file: "src/content/events/index.md",
+        //   fields: [baseFields[0], baseFields[1], ...seoFields],
+        // },
       ],
     },
-   
-  
-    
-
-   
-   
 
     {
       name: "socialMedia", // Name of the collection

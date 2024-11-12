@@ -25,7 +25,7 @@ didYouKnow:
     image: /media/uploads/hero-221605.jpg
     icon: /media/uploads/fsconference.png
 about:
-  title: "We Are the Wood Industry Resource Collaborative (WIRC) "
+  title: "We Are the Wood Industry Resource Collaborative "
   description: As a collaboration between trade associations representing
     different sectors of the woodworking industry, our purpose is to improve the
     perception of manufacturing industry careers and strengthen the wood

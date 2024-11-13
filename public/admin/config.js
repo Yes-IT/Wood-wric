@@ -138,10 +138,7 @@ const config = {
           name: "url1",
           widget: "string",
           max_length: 255,
-          pattern: [
-            "https?://.{1,253}",
-            "Must be a valid URL and not exceed 255 characters."
-          ],
+          
         },
         { label: "Hero Image 2", name: "image2", widget: "image" },
         {
@@ -149,10 +146,7 @@ const config = {
           name: "url2",
           widget: "string",
           max_length: 255,
-          pattern: [
-            "https?://.{1,253}",
-            "Must be a valid URL and not exceed 255 characters."
-          ],
+         
         },
         {
           label: "Hero Description",

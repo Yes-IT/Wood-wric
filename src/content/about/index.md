@@ -7,6 +7,7 @@ heroDescription: >-
   employees, while improving the overall perception of the industry.
 
 
+
   Our mission is to ensure that the wood industry continues to thrive and evolve as a vital sector of the global economy, and that the workforce of the future is equipped with everything needed to help us get there.
 cards:
   - title: Improve Perceptions

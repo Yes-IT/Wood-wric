@@ -34,35 +34,21 @@ sliders:
       industry has seen its best days, or taken a back seat to metals and
       plastics, think again. Wood is a sustainable economic engine that is in
       more demand than ever."
-    content: "\r
-
-      The Industry Is Stagnant\r
-
-      The wood industry is expected to grow by 4.6% annually through 2025,
-      which is driven by increased demand for high-quality flooring, cabinetry,
-      furniture and other uses for wood products.
-
-
-      \r
-
-      \r
-
-      The Future is Unsustainable\r
-
-      With modern forestry practices focused on sustainable harvesting,
-      the rise in demand for green buildings, and emerging wood technologies
-      increasingly being used in commercial buildings, wood is good for more
-      than just business.
-
-      \r
-
-      \r
-
-      It’s All Low-Tech Work\r
-
-      High-tech skills in engineering and software are in high demand, and
-      automation and robotic machinery are among the emerging trends in the wood
-      industry and modern manufacturing."
+    content: >-
+      <div>
+      					<h3>What You Think It Is</h3>
+      					<ul>
+      							<li class="bullet-check-mark">The Industry Is Stagnant
+      								<p>The wood industry is expected to grow by 4.6% annually through 2025, which is driven by increased demand for high-quality flooring, cabinetry, furniture and other uses for wood products.</p>
+      							</li>
+      							<li class="bullet-check-mark">The Future is Unsustainable
+      								<p>With modern forestry practices focused on sustainable harvesting, the  rise in demand for green buildings, and emerging wood technologies  increasingly being used in commercial buildings, wood is good for  more than just business.</p>
+      							</li>
+      							<li class="bullet-check-mark">It’s All Low-Tech Work
+      								<p>High-tech skills in engineering and software are in high demand, and automation and robotic machinery are among the emerging trends in the wood industry and modern manufacturing.</p>
+      							</li>
+      					</ul>
+      				</div>
 cards:
   - header: Get to Know the Wood Industry
     image: https://woodwirc.com/imgs/img1-sm.jpg

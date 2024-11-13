@@ -14,19 +14,20 @@ sliders:
       helped make many new careers possible in engineering, manufacturing,
       design and education.
     content: >-
-      **A Home For Creators**
-
-      From craftsman to carpenters, builders and designers, the wood industry has many ways to put your passion to work and make a career out of something you love or something you love or to use the skills you have.
-
-
-      New Possibilities
-
-      The intersection of technology and improvements in machinery, supplies, and wood materials has allowed new design possibilities. Creating products from renewable sources is another path with big upsides.
-
-
-      Viable Career Paths
-
-      There are multiple paths to a career in the wood industry. Some employers offer on-the-job training and apprenticeship programs, and you can also attain certifications through community colleges and trade schools.
+      <div>
+      					<h3>What It Really Is</h3>
+      					<ul>
+      							<li class="bullet-neg">A Home For Creators
+      								<p>From craftsman to carpenters, builders and designers, the wood industry has many ways to put your passion to work and make a career out of something you love or something you love or to use the skills you have.</p>
+      							</li>
+      							<li class="bullet-neg">New Possibilities
+      								<p>The intersection of technology and improvements in machinery, supplies, and wood materials has allowed new design possibilities. Creating products from renewable sources is another path with big upsides.</p>
+      							</li>
+      							<li class="bullet-neg">Viable Career Paths
+      								<p>There are multiple paths to a career in the wood industry. Some employers offer on-the-job training and apprenticeship programs, and you can also attain certifications through community colleges and trade schools.</p>
+      							</li>
+      					</ul>
+      				</div>
   right_slider:
     heading: What You Think It Is
     description: " If you think woodworking is just for hobbyists, that the wood

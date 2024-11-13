@@ -15,7 +15,7 @@ cards:
       industry has seen its best days, think again.
     url: https://wood-wric.netlify.app/why-wood/
   - title: Explore Careers
-    image: /media/uploads/danarticle1.jpg
+    image: /media/uploads/img2.jpg
     description: From craftsmen to carpenters and machine operators to CAD
       designers, the wood industry is a sustainable, evolving industry.
     url: https://wood-wric.netlify.app/careers/

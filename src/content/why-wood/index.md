@@ -64,6 +64,20 @@ cards:
     description: Shipping cost and concerns over the carbon footprint of products
       produced abroad are driving the demand to manufacture products locally
       using advanced technology.
+  - image: /media/uploads/icon-plane.svg
+    b_image: /media/uploads/img1-sm.jpg
+    header: Architectural Millwork
+    description: Ranging from residential and commercial cabinetry to just about
+      anything made of wood that is built for, in, or attached to a building,
+      architectural millwork (also known as architectural woodworking) is a
+      growing field with exciting opportunities.
+  - b_image: /media/uploads/img1-sm.jpg
+    image: /media/uploads/icon-sawblade.svg
+    header: Technology & Machinery
+    description: Technology and machining jobs are projected to grow by
+      approximately 7% annually through 2025 as more engineers and technicians
+      are needed for CAD, programming automated systems and monitoring controls
+      and production cells.
 footer:
   title: From Craftsman to Machinists, the Wood Industry Has a Place for You
   btnLabel: Explore Careers

@@ -13,34 +13,20 @@ sliders:
       renewable sources and higher quality products. Tools and automation have
       helped make many new careers possible in engineering, manufacturing,
       design and education.
-    content: "A Home For Creators\r
+    content: >-
+      **A Home For Creators**
 
-      From craftsman to carpenters, builders and designers, the wood
-      industry has many ways to put your passion to work and make a career out
-      of something you love or something you love or to use the skills you have.
-
-
-      \r
-
-      \r
-
-      New Possibilities\r
-
-      The intersection of technology and improvements in machinery,
-      supplies, and wood materials has allowed new design possibilities.
-      Creating products from renewable sources is another path with big upsides.
+      From craftsman to carpenters, builders and designers, the wood industry has many ways to put your passion to work and make a career out of something you love or something you love or to use the skills you have.
 
 
-      \r
+      New Possibilities
 
-      \r
+      The intersection of technology and improvements in machinery, supplies, and wood materials has allowed new design possibilities. Creating products from renewable sources is another path with big upsides.
 
-      Viable Career Paths\r
 
-      There are multiple paths to a career in the wood industry. Some
-      employers offer on-the-job training and apprenticeship programs, and you
-      can also attain certifications through community colleges and trade
-      schools."
+      Viable Career Paths
+
+      There are multiple paths to a career in the wood industry. Some employers offer on-the-job training and apprenticeship programs, and you can also attain certifications through community colleges and trade schools.
   right_slider:
     heading: What You Think It Is
     description: " If you think woodworking is just for hobbyists, that the wood

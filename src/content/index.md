@@ -4,7 +4,7 @@ hero:
   image1: /media/uploads/youare.svg
   url1: https://youtu.be/AlmK64-o8d4?si=BT0GdNuQ6rNTG07O
   image2: /media/uploads/vid-home.png-2-.jpg
-  url2: https://chatgpt.com/
+  url2: "#signup"
   description: "Whether you are thinking about what you want to do after high
     school, beginning a new chapter in your life, or simply looking for a stable
     career, one thing rings true: the wood industry has a place for you."

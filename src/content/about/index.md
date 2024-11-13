@@ -1,63 +1,51 @@
 ---
-title: About RFC
-heroDescription: Lorem Ipsum is simply dummy text of the printing and
-  typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-  ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five
-  centuries, but also the leap into electronic typesetting, remaining
-  essentially unchanged. It was popularised in the 1960s with the release of
-  Letraset sheets containing Lorem Ipsum passages, and more recently with
-  desktop publishing software like Aldus PageMaker including versions of Lorem
-  Ipsum.
+title: About
+heroDescription: >-
+  The Wood Industry Resource Collaborative (WIRC) is made up of amazing
+  associations that support skilled trade education. Our purpose is to provide a
+  collection of tools and solutions for the wood industry to attract and retain
+  employees, while improving the overall perception of the industry.
+
+
+  Our mission is to ensure that the wood industry continues to thrive and evolve as a vital sector of the global economy, and that the workforce of the future is equipped with everything needed to help us get there.
 cards:
-  - title: Why do we use it?
-    copy: >-
-      eque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit..."
-
-      "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-    img: /media/uploads/icon-globe.svg
-  - title: Why do we use it?
-    copy: >-
-      pisci velit..."
-
-      "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-    img: /media/uploads/fsconference.png
+  - title: Improve Perceptions
+    copy: We partner with educators, legislators, associations and the media to
+      communicate what the wood industry of today (and tomorrow) really looks
+      like.
+    img: https://woodwirc.com/imgs/icon-sawblade-primary.svg
+  - title: Strengthen Workforce
+    copy: We work with trade schools, colleges, and workforce advocacy organizations
+      to develop programs that support people entering the wood industry.
+    img: https://woodwirc.com/imgs/icon-saw.svg
+  - title: Create Better Environments
+    copy: We collaborate with our members and member companies to improve
+      engagement, satisfaction and work culture at every level.
+    img: https://woodwirc.com/imgs/icon-chisel.svg
 execAssociations:
-  - title: pisci velit..." "There is no one who loves pain itself, who seeks after
-      it and wants to have it, simply because it is pain..."
-    img: /media/uploads/dan-vid-poster.jpg
-    url: https://womensmedicinebowl.com/
-  - title: " who loves pain it"
-    img: /media/uploads/client-image.png
-    url: https://chatgpt.com/
+  - title: WIRC Executive Committee
+    img: /media/uploads/assoc-awi.png
+    url: https://awinet.org/
+  - title: WIRC Executive Committee
+    img: https://woodwirc.com/imgs/assoc-awfs.png
+    url: https://www.awfs.org/
+  - title: WIRC Executive Committee
+    img: https://woodwirc.com/imgs/assoc-nbmda.png
+    url: https://www.nbmda.org/
+  - title: WIRC Executive Committee
+    img: https://woodwirc.com/imgs/WIALogo_Web_4C.png
+    url: https://woodindustry.org/
 hero.title: Natus labore enim voj
 hero.description: Consequuntur voluptaj
-bannerImage: /media/uploads/dan-hero-2.jpg
-hero: /media/uploads/dan-feature-4-events.jpg
-heroTitle: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-  consectetur, adipisci velit..."
-seo.description: Lorem Ipsum is simply dummy text of the printing and
-  typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-  ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five
-  centuries, but also the leap into electronic typesetting, remaining
-  essentially unchanged. It was popularised in the 1960s with the release of
-  Letraset sheets containing Lorem Ipsum passages, and more recently with
-  desktop publishing software like Aldus PageMaker including versions of Lorem
-  Ipsum.
-seo.pageTitle: Lorem Ipsum is simply dummy text of the printing and typesetting
-  industry. Lorem Ipsum has been the industry's standard dummy text ever since
-  the 1500s, when an unknown printer took a galley of type and scrambled it to
-  make a type specimen book. It has survived not only five centuries, but also
-  the leap into electronic typesetting, remaining essentially unchanged. It was
-  popularised in the 1960s with the release of Letraset sheets containing Lorem
-  Ipsum passages, and more recently with desktop publishing software like Aldus
-  PageMaker including versions of Lorem Ipsum.
+bannerImage: https://woodwirc.com/imgs/img2.jpg
+hero: https://woodwirc.com/imgs/img2.jpg
+heroTitle: Let’s Build Something Together
+seo.description: Test
+seo.pageTitle: "Test "
 layout: about.njk
 socialMediaInclude: "{% include 'content/social-media/social-media.md' %}"
 footer:
-  title: Where can I get some?
-  btnLabel: Start with 'Lorem
-  url: https://chatgpt.com/
+  title: Get Involved and Support Our Mission
+  btnLabel: "Contact us "
+  url: https://wood-wric.netlify.app/contact/
 ---

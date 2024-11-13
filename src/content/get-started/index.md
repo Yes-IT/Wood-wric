@@ -44,44 +44,51 @@ steps:
       Veterans Hire Veterans Employment Network\r
 
       And more job sites can be found at woodindustryed.org"
-  - title: Search Wood Industry Apprenticeships & Trade Schools
+  - title: Search Wood Jobs & Careers
     image: /media/uploads/get-started-section-2.jpg
-    content: "From carpenter to millwork to CNC machinist, apprenticeships can give
-      you the training you need for a new wood career. Many employers are
-      looking for current apprentices for entry-level positions. Trade schools
-      are also a great first step to getting the training you need.\r
+    content: >-
+      <div class="content">
+      					<h2>Search Wood Jobs &amp; Careers</h2>
+      					<p>From custom cabinetmaking and woodworking to CNC machining and CAD design to woodturning and architectural millwork, the right wood industry job is waiting for you. If you are a military vet, you may already have the experience level to qualify.</p>
+      <p>Most wood industry careers do require some level of experience. But some jobs, such as an entry-level interior trim carpenter, will train you if you have no experience.</p>
 
-      \r
+      <h3>U.S. wood industry jobs</h3>
 
-      Learn about some apprenticeship opportunities:\r
+      <ul>
 
-      Wood Flooring Specialist Apprenticeship through the National Wood
-      Flooring Association (NWFA)\r
+      <li><a href="https://www.woodweb.com/cgi-bin/exchanges/jobs.cgi" target="_blank">WOODWEB Job Board</a></li>
 
-      Apprenticeship 2000 in the Charlotte, NC region\r
+      <li><a href="https://jobs.woodworkingnetwork.com/" target="_blank">Woodworking Network Job Board</a></li>
 
-      Woodwork Manufacturing Specialist at Burke Architectural Millwork in
-      Detroit, MI\r
+      <li><a href="https://www.awfs.org/jobs/" target="_blank">Association of Woodworking &amp; Furnishing Suppliers Job Board</a></li>
 
-      Joint Millwork Apprenticeship with Associate Degree in Advanced
-      Manufacturing at Eastern Millwork in Jersey City, NJ\r
+      </ul>
 
-      Learn how to get started as a Carpenter Apprentice, and where to
-      apply\r
+      <h3>Canada wood industry jobs</h3>
 
-      Learn about some trade school opportunities:\r
+      <ul>
 
-      Pittsburg State University’s Architectural Manufacturing Management
-      and Technology (AMMT) Program in Pittsburg, KS\r
+      <li><a href="http://WoodworkingJobs.ca" target="_blank">WoodworkingJobs.ca</a></li>
 
-      Madison College’s Cabinetmaking and Millwork Program in Madison,
-      WI\r
+      </ul>
 
-      Cerritos College’s Woodworking Program in Norwalk, CA\r
+      <h3>U.S. jobs after the military for veterans</h3>
 
-      If none of these apprenticeships or trade schools are near you, or
-      interest you, check out more wood industry training and school programs at
-      woodindustryed.org."
+      <ul>
+
+      <li><a href="https://careers.militaryfriendly.com/" target="_blank">G.I. Jobs Career Portal</a></li>
+
+      <li><a href="https://veteranshireveterans.com/jobs/advanced-search/" target="_blank">Veterans Hire Veterans Employment Network</a></li>
+
+      </ul>
+
+      <p>And more job sites can be found at <a href="https://woodindustryed.org/career-info-jobs/" target="_blank">woodindustryed.org</a></p>
+
+
+      ```
+
+
+      ```
   - title: Search Wood Industry Scholarships
     image: /media/uploads/get-started-section-3-1-.jpg
     content: "Architectural millwork, custom carpentry, CNC machining…these are just

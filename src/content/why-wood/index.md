@@ -58,6 +58,12 @@ cards:
       jobs in manufacturing, distribution, retail, finance and more. Careers
       include operations, machinists, sales and marketing, installations and
       more.
+  - image: /media/uploads/icon-tape.svg
+    b_image: /media/uploads/img1-sm.jpg
+    header: Cabinetry
+    description: Shipping cost and concerns over the carbon footprint of products
+      produced abroad are driving the demand to manufacture products locally
+      using advanced technology.
 footer:
   title: From Craftsman to Machinists, the Wood Industry Has a Place for You
   btnLabel: Explore Careers

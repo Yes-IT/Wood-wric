@@ -81,6 +81,71 @@ steps:
 
 
       <!--EndFragment-->
+  - image: /media/uploads/get-started-section-2.jpg
+    content: >-
+      <!--StartFragment-->
+
+
+      <div class="content">
+
+
+          <h2>Search Wood Industry Apprenticeships &amp; Trade Schools</h2>
+
+
+          <p>From carpenter to millwork to CNC machinist, apprenticeships can give you the training you need for a new wood career. Many employers are looking for current apprentices for entry-level positions. Trade schools are also a great first step to getting the training you need.</p>
+
+
+      <h3>Learn about some apprenticeship opportunities:</h3>
+
+
+      <ul>
+
+
+      <li><a href="https://nwfa.org/apprenticeship-program/" target="_blank">Wood Flooring Specialist Apprenticeship</a> through the National Wood Flooring Association (NWFA)</li>
+
+
+      <li><a href="https://apprenticeship2000.com/gs/" target="_blank">Apprenticeship 2000</a> in the Charlotte, NC region</li>
+
+
+      <li><a href="https://www.burkemillwork.com/woodwork-manufacturing-specialist-department-of-labor-registered-apprenticeship/" target="_blank">Woodwork Manufacturing Specialist</a> at Burke Architectural Millwork in Detroit, MI</li>
+
+
+      <li><a href="http://easternmillwork.com/apprentice-program/" target="_blank">Joint Millwork Apprenticeship with Associate Degree in Advanced Manufacturing</a> at Eastern Millwork in Jersey City, NJ</li>
+
+
+      <li>Learn how to get started as a <a href="https://www.thimble.com/blog/carpentry-apprentice-guide" target="_blank">Carpenter Apprentice</a>, and where to apply</li>
+
+
+      </ul>
+
+
+      <h3>Learn about some trade school opportunities:</h3>
+
+
+      <ul>
+
+
+      <li>Pittsburg State University’s <a href="https://www.pittstate.edu/twl/architectural-manufacturing-management-technology.html" target="_blank">Architectural Manufacturing Management and Technology (AMMT) Program</a> in Pittsburg, KS</li>
+
+
+      <li>Madison College’s <a href="https://madisoncollege.edu/academics/programs/cabinetmaking-millwork" target="_blank">Cabinetmaking and Millwork Program</a> in Madison, WI</li>
+
+
+      <li>Cerritos College’s <a href="https://www.cerritos.edu/woodworking/default.htm" target="_blank">Woodworking Program</a> in Norwalk, CA</li>
+
+
+      </ul>
+
+
+      <p> If none of these apprenticeships or trade schools are near you, or interest you, check out more wood industry training and school programs at <a href="https://woodindustryed.org/search-the-database/" target="_blank">woodindustryed.org</a>.</p>
+
+
+
+
+      </div>
+
+
+      <!--EndFragment-->
 footer:
   title: Not Sure Where to Start? We Can Help
   btnLabel: "Contact us "

@@ -1,9 +1,9 @@
 ---
-facebook: https://www.facebook.com/MindScopicNutrition/
-x: https://www.facebook.com/MindScopicNutrition/
-linkedin: https://www.facebook.com/MindScopicNutrition/
+facebook: https://www.facebook.com/woodwirc
+x: https://x.com/woodwirc
+linkedin: https://www.linkedin.com/company/woodindustrycareers/?viewAsMember=true
 instagram: https://www.instagram.com/woodwirc/
-youtube: https://www.youtube.com/channel/UCgnH8RgJfdHOXPf6fYhMWNw
-tiktok: https://chatgpt.com/
-email: https://www.facebook.com/MindScopicNutrition/
+youtube: https://www.youtube.com/@woodindustrycareers8701
+tiktok: https://www.linkedin.com/company/woodindustrycareers/?viewAsMember=true
+email: ""
 ---

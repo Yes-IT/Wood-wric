@@ -82,8 +82,8 @@ cards:
     b_image: https://woodwirc.com/imgs/img1-sm.jpg
     description: dfg
 footer:
-  title: The standard Lorem Ipsum passage, used since the 1500s
-  btnLabel: " Cicero in 45 BC"
-  url: https://chatgpt.com/
+  title: From Craftsman to Machinists, the Wood Industry Has a Place for You
+  btnLabel: Explore Careers
+  url: https://wood-wric.netlify.app/careers/
 layout: whywood.njk
 ---

@@ -15,7 +15,7 @@ sliders:
       design and education.
     content: >-
       <div>
-      					<h3>What It Really Is</h3>
+      		
       					<ul>
       							<li class="bullet-neg">A Home For Creators
       								<p>From craftsman to carpenters, builders and designers, the wood industry has many ways to put your passion to work and make a career out of something you love or something you love or to use the skills you have.</p>
@@ -36,7 +36,7 @@ sliders:
       more demand than ever."
     content: >-
       <div>
-      					<h3>What You Think It Is</h3>
+      			
       					<ul>
       							<li class="bullet-check-mark">The Industry Is Stagnant
       								<p>The wood industry is expected to grow by 4.6% annually through 2025, which is driven by increased demand for high-quality flooring, cabinetry, furniture and other uses for wood products.</p>

@@ -30,7 +30,7 @@ about:
     different sectors of the woodworking industry, our purpose is to improve the
     perception of manufacturing industry careers and strengthen the wood
     industry workforce.
-  image: /media/uploads/dan-vid-poster.jpg
+  image: /media/uploads/img1.jpg
   url: https://wood-wric.netlify.app/about/
 layout: index.njk
 ---

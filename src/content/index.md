@@ -22,8 +22,8 @@ cards:
 didYouKnow:
   - title: 16,000+ companies hiring
     description: Over 16,000 U.S. companies are hiring in the wood industry.
-    image: /media/uploads/hero-221605.jpg
-    icon: /media/uploads/fsconference.png
+    image: /media/uploads/card-img-1.jpg
+    icon: https://woodwirc.com/imgs/icon-globe.svg
 about:
   title: We Are the Wood Industry Resource Collaborative (WIRC)
   description: As a collaboration between trade associations representing

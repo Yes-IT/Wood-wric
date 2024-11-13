@@ -146,6 +146,89 @@ steps:
 
 
       <!--EndFragment-->
+  - content: >-
+      <!--StartFragment-->
+
+
+      <div class="content">
+
+
+          <h2>Search Wood Industry Scholarships</h2>
+
+
+          <p>Architectural millwork, custom carpentry, CNC machining…these are just the tip of the iceberg when it comes to scholarship opportunities. There are scholarships for high school, trade school, and college students seeking a new career in the wood industry. Scholarships are no longer exclusive to four-year universities!</p>
+
+
+      <p>Even if you already have a wood job, there may be a scholarship to help you increase your skill level and increase your paycheck. We’ve featured some exciting scholarship opportunities below:</p>
+
+
+      <h3>Wood industry association scholarship opportunities</h3>
+
+
+      <ul>
+
+
+      <li><a href="https://www.awinet.org/about/education/scholarships" target="_blank">Architectural Woodwork Institute (AWI) scholarships</a></li>
+
+
+      <li><a href="https://www.wmia.org/scholarships" target="_blank">Woodworking Machinery Industry Association (WMIA) scholarship program</a></li>
+
+
+      <li><a href="https://nwfa.org/scholarships/" target="_blank">National Wood Flooring Association (NWFA) scholarships</a></li>
+
+
+      <li><a href="https://www.ifdaef.org/contact" target="_blank">International Furnishings and Design Association (IFDA) Educational Foundation Scholarships</a></li>
+
+
+      </ul>
+
+
+      <h3>Architectural millwork, CNC machining and other wood career scholarships:</h3>
+
+
+      <ul>
+
+
+      <li><a href="https://www.houzz.com/scholarships" target="_blank">Houzz Scholarship Program</a></li>
+
+
+      </ul>
+
+
+      <h3>CNC machining scholarships:</h3>
+
+
+      <ul>
+
+
+      <li><a href="https://cncmachines.com/scholarship" target="_blank">Machines Scholarship Opportunities</a></li>
+
+
+      </ul>
+
+
+      <h3>Trade school scholarships:</h3>
+
+
+      <ul>
+
+
+      <li><a href="https://www.americantrucks.com/scholarships.html" target="_blank">American Trucks' Student Scholarship Program</a></li>
+
+
+      </ul>
+
+
+      <p>Search additional wood industry and skilled trade scholarships at <a href="https://woodindustryed.org/scholarships-list/" target="_blank">woodindustryed.org</a>.</p>
+
+
+
+
+      </div>
+
+
+      <!--EndFragment-->
+    image: /media/uploads/get-started-section-3.jpg
 footer:
   title: Not Sure Where to Start? We Can Help
   btnLabel: "Contact us "

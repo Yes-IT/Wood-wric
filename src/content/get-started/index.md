@@ -22,10 +22,10 @@ steps:
                           <h2>Search Wood Jobs &amp; Careers</h2>
 
 
-                          <p>From custom cabinetmaking and woodworking to CNC machining and CAD design to woodturning and architectural millwork, the right wood industry job is waiting for you. If you are a military vet, you may already have the experience level to qualify.</p>
+                          <p>From custom cabinetmaking and woodworking to CNC machining and CAD design to woodturning and architectural millwork, the right wood industry job is waiting for you. If you are a military vet, you may already have the experience level to qualify.
 
 
-      <p>Most wood industry careers do require some level of experience. But some jobs, such as an entry-level interior trim carpenter, will train you if you have no experience.</p>
+      Most wood industry careers do require some level of experience. But some jobs, such as an entry-level interior trim carpenter, will train you if you have no experience.</p>
 
 
       <h3>U.S. wood industry jobs</h3>

@@ -10,8 +10,7 @@ description: >-
 
   To help you get started, here are some online resources for you to search for current jobs in the wood industry. No experience? No problem. Search the scholarship and apprenticeship opportunities below, to get the experience you need. In many cases, employers are looking for current apprentices to hire for entry-level jobs!
 steps:
-  - title: Search Wood Jobs & Careers
-    image: /media/uploads/get-started-section-1.jpg
+  - image: /media/uploads/get-started-section-1.jpg
     content: >-
       <!--StartFragment-->
 

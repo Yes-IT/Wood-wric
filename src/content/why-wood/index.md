@@ -50,10 +50,14 @@ sliders:
       					</ul>
       				</div>
 cards:
-  - header: Get to Know the Wood Industry
+  - header: Flooring
     image: /media/uploads/icon-flooring.svg
     b_image: https://woodwirc.com/imgs/img1-sm.jpg
-    description: dfg
+    description: >
+      Wood flooring is one of the fastest growing sectors of the industry with
+      jobs in manufacturing, distribution, retail, finance and more. Careers
+      include operations, machinists, sales and marketing, installations and
+      more.
 footer:
   title: From Craftsman to Machinists, the Wood Industry Has a Place for You
   btnLabel: Explore Careers

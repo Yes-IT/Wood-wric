@@ -24,6 +24,10 @@ didYouKnow:
     description: Over 16,000 U.S. companies are hiring in the wood industry.
     image: /media/uploads/card-img-1.jpg
     icon: https://woodwirc.com/imgs/icon-globe.svg
+  - title: 120,000+ new openings
+    description: 120,000 new job openings were posted in 2023.
+    image: /media/uploads/card-img-2.jpg
+    icon: https://woodwirc.com/imgs/icon-doc.svg
 about:
   title: We Are the Wood Industry Resource Collaborative (WIRC)
   description: As a collaboration between trade associations representing

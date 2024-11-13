@@ -1,14 +1,19 @@
 ---
 title: About
 heroDescription: >-
-  The Wood Industry Resource Collaborative (WIRC) is made up of amazing
+  <p>The Wood Industry Resource Collaborative (WIRC) is made up of amazing
+
   associations that support skilled trade education. Our purpose is to provide a
+
   collection of tools and solutions for the wood industry to attract and retain
-  employees, while improving the overall perception of the industry.
 
+  employees, while improving the overall perception of the industry. </p>
 
+  <p>Our mission is to ensure that the wood industry continues to thrive and evolve
 
-  Our mission is to ensure that the wood industry continues to thrive and evolve as a vital sector of the global economy, and that the workforce of the future is equipped with everything needed to help us get there.
+  as a vital sector of the global economy, and that the workforce of the future
+
+  is equipped with everything needed to help us get there.</p>
 cards:
   - title: Improve Perceptions
     copy: We partner with educators, legislators, associations and the media to

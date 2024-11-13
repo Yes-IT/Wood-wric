@@ -51,7 +51,7 @@ sliders:
       				</div>
 cards:
   - header: Get to Know the Wood Industry
-    image: https://woodwirc.com/imgs/img1-sm.jpg
+    image: /media/uploads/icon-flooring.svg
     b_image: https://woodwirc.com/imgs/img1-sm.jpg
     description: dfg
 footer:

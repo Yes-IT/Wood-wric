@@ -382,7 +382,6 @@ const config = {
           name: "steps",
           widget: "list",
           fields: [
-            { label: "Title", name: "title", widget: "string", required: false },
             { label: "Image", name: "image", widget: "image", required: true },
             {
               label: "Content",

@@ -28,6 +28,11 @@ didYouKnow:
     description: 120,000 new job openings were posted in 2023.
     image: /media/uploads/card-img-2.jpg
     icon: https://woodwirc.com/imgs/icon-doc.svg
+  - title: 25% increase in job postings
+    description: Wood industry job postings remain elevated with a 25% increase in
+      the prior 12 months.
+    image: /media/uploads/card-img-3.jpg
+    icon: https://woodwirc.com/imgs/icon-increase.svg
 about:
   title: We Are the Wood Industry Resource Collaborative (WIRC)
   description: As a collaboration between trade associations representing

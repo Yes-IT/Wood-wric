@@ -264,6 +264,12 @@ const config = {
                   widget: "string",
                   required: true,
                 },
+                 {
+                  label: "Background Image",
+                  name: "b_image1",
+                  widget: "image",
+                  required: true,
+                },
                 {
                   label: "Description",
                   name: "description",
@@ -287,6 +293,12 @@ const config = {
                   label: "Heading",
                   name: "heading",
                   widget: "string",
+                  required: true,
+                },
+                {
+                  label: "Background Image",
+                  name: "b_image2",
+                  widget: "image",
                   required: true,
                 },
                 {

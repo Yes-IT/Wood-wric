@@ -28,6 +28,7 @@ sliders:
       							</li>
       					</ul>
       				</div>
+    b_image1: /media/uploads/img1.jpg
   right_slider:
     heading: What You Think It Is
     description: " If you think woodworking is just for hobbyists, that the wood
@@ -49,6 +50,7 @@ sliders:
       							</li>
       					</ul>
       				</div>
+    b_image2: /media/uploads/img2.jpg
 cards:
   - header: Flooring
     image: /media/uploads/icon-flooring.svg
